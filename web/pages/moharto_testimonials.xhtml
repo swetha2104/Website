@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="testimonials.css"/>
+        <h:outputStylesheet library="css" name="mohartohome.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="pagetitle">
+                OUR TESTIMONIALS
+            </div> 
+            <div class="testinomial_container">
+                <div class="testinomial_text">
+
+                    <p:dataGrid var="dt" value="#{dGBean.data}" columns="2" rows="2" paginator="true" style="margin: 25px;"  paginatorPosition="bottom" >  
+
+                        <div class="data">
+                            <p:panel style="width: 309px;height: 197px;border: 1px solid;">  
+
+                                <div class="testcontent">      
+                                    <h:outputText value="#{dt.content}" />
+                                </div>
+
+                                <h:panelGrid columns="2" style="background-color: white;">
+                                    <p:graphicImage value="../resources/images/#{dt.imgname}.png" height="90px" width="90px;"/>   
+                                    <h:panelGrid columns="1">
+                                        <h:outputText value="" />  
+                                        <h:outputText value="#{dt.name}" style="color: crimson;font-size: 14px;font-weight: bold;font-style: italic;"/>
+                                        <h:outputText value="- #{dt.college}" style="font-size: 14px;font-style: italic;"/>  
+                                        <h:outputText value="" />  
+
+                                    </h:panelGrid>
+                                </h:panelGrid>
+                            </p:panel>  
+                        </div>      
+                    </p:dataGrid>
+                </div>
+                <div class="testinomial_vid" >
+                    <p:dataGrid var="dt2" value="#{vTBean.url}" columns="2" rows="2" paginator="true" paginatorPosition="bottom" >
+                        <p:panelGrid columns="1" >
+
+                            <p:media value="#{dt2}" width="290px" height="230px" player="flash"/>
+
+                        </p:panelGrid>
+
+                    </p:dataGrid>   
+                </div>
+            </div>    
+            <div class="ads_bottom">
+                <div style="float: left;width: 470px;">
+                    <h:graphicImage value="../resources/images/pages/ad1.png" width="468" height="84" />
+                    <h:graphicImage value="../resources/images/pages/ad2.png" width="468" height="84" style="margin-top: 6px;"/>
+                </div>
+                <div style="float: left;">
+                    <h:graphicImage value="../resources/images/pages/ad-san.jpg" width="265" height="178" style="margin-left: 10px;"/>
+                </div>
+            </div>      
+
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+
+
+
+     <div>
+     <p:panel header="Register Form" style="width: 265px;font-size: 14px;border: 0px;" styleClass="regpanel">
+         <p:inputText id="fname" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/><br/>
+                            <p:watermark for="fname" value="First Name *" />
+
+                            <p:inputText id="lname" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/><br/>
+                            <p:watermark for="lname" value="Last Name *" /> 
+
+                            <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/><br/>
+                            <p:watermark for="email" value="Email *" /> 
+
+                            <p:inputText id="pw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/><br/>
+                            <p:watermark for="pw" value="Password *" />
+
+                            <p:inputText id="cpw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/><br/>
+                            <p:watermark for="cpw" value="Confirm Password *" /> 
+
+                            <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/>
+                            <p:watermark for="mn" value="Mobile No. *" /> 
+
+                            <p:inputText id="city" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 0px;"/>
+                            <p:watermark for="city" value="Current City *" /> 
+
+                            <p:inputTextarea cols="10" rows="10" id="edu" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                             height: 33px;margin-left: 0px;"/>
+                            <p:watermark for="edu" value="Education Preference *" /> 
+
+                            <div style="">
+                            <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-top:6px;">
+                            </h:selectBooleanCheckbox> 
+                            <p style="margin-left: 27px;
+                               padding: 0px;
+                               margin-top: -18px;text-align: left;font-size: 10px;">I agree to the <span style="color: #4251A2;font-size: 10px;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-size: 10px;font-style: italic;">Privacy Policy</span>
+                            </p>
+                            </div>
+
+                            <h:commandButton value="JOIN" action="#" style="margin-top: -3px;margin-left: 168px;margin-bottom: 9px;"/>
+     </p:panel>   
+     
+            <h:graphicImage url="../resources/images/pages/ad4.png" style="margin-left:13px;" height="350" width="230"/>
+        </div>   
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+

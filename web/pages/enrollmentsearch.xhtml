@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="enrollsearch.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+
+        <ui:define name='main'>
+
+
+            <h:form>
+                <div class="wholeenroll">
+                    <div class="enrolltext"><p:outputLabel value="Find the colleges applicable for admission online, Select the college and start with Enrollment process."  /></div>
+
+
+                    <div class ="enrollmain">
+
+
+                        <p:watermark value="Course of your choice" for="basicPojo" />
+
+
+                        <p:autoComplete value="#{autosearchbean.selectedPlayer1}" 
+                                        id="basicPojo" completeMethod="#{autosearchbean.completePlayer}"
+                                        var="p" itemLabel="#{p.name}" itemValue="#{p}" converter="playerConverter" forceSelection="true"  immediate="true" size="35" styleClass="coursechoice" scrollHeight="100">
+
+
+
+                        </p:autoComplete>
+                        <p:outputLabel value="in" styleClass="inlabel"/>
+
+
+                        <p:selectOneMenu  id="slct" value="#{enrollmentsearchbean.city}" styleClass="slct" immediate="true" height="100" filter="true" filterMatchMode="startsWith">
+                            <f:selectItem itemLabel="Select place/city  " itemValue=""/>
+                            <f:selectItem itemLabel="Bangalore" itemValue="bangalore"/>
+                            <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                            <f:selectItem itemLabel="Kolkata" itemValue="kolkata"/>
+                            <f:selectItem itemLabel="Chennai" itemValue="chennai"/>
+                            <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                        </p:selectOneMenu>
+
+
+
+                        <h:commandLink value=" "   actionListener="#{enrollmentsearchbean.submit}"   styleClass="searchbtn">
+                            <a href="moharto_available_seats_new.xhtml"><h:graphicImage value="../resources/images/home/Search1_1.png" style="float: right;
+                                                                                        margin-top: -50px;"/></a>
+                        </h:commandLink>     </div>             
+
+                </div>
+            </h:form>
+        </ui:define>
+
+
+    </ui:composition>
+</html>

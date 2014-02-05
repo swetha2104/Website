@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="trackrecord.css"/>
+        <!--<h:outputStylesheet library="css" name="mohartohome.css"/>-->
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate_microsite.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="maincontainer" >
+                <!-- <div class="header">
+                 </div>
+                -->
+
+                <!--  <div style="width: 540px; float:left;margin-left: 19px">-->
+                <div class="content8">
+                    <p:carousel id="tabsCarousel" value="#{managedBean.students}" numVisible="5" var="stud" headerText="Rank Holders"  style="height:auto; width:730px; font-size:  small;" effect="slide" circular="true" autoPlayInterval="4000"> 
+
+                        <h:panelGrid columns="2" style="width:100%" cellpadding="5">  
+                            <p:graphicImage value="#{stud.imagename}.png" height="100px" width="129px"/>
+                        </h:panelGrid>
+                        <h:panelGrid columns="2" style="width:100%; font-size: 12.5px;" cellpadding="5"> 
+
+                            <h:panelGrid columns="1">
+                                <h:outputText value="Name: #{stud.name}" />
+                                <h:outputText value="Course:#{stud.course}" />
+                                <h:outputText value="Rank:#{stud.rank}" />
+                            </h:panelGrid>
+
+                        </h:panelGrid>
+
+                        <!--  <h:graphicImage url="#image2.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image3.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image4.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                          <h:graphicImage url="image1.jpg" width="100" height="100"/>
+                        -->
+
+                    </p:carousel>
+                </div>
+                <!--           </div>-->
+
+
+                <!--      <div style="float:left; margin-top: 0px; margin-left: 19px;">-->
+                <div class="content">
+                    <p:carousel id="tabsCarouse2" numVisible="1" itemStyle="height:135px;width:735px; font-size:small;" effect="slide"  style=" margin-top: -1px;" headerText="Awards"> 
+                        <p:tab title="Godfather Part I">  
+                            <h:panelGrid columns="2" cellpadding="10" style="float: left" >  
+                                <h:graphicImage value="../resources/images/pages/awards.png" height="115" width="150"  style="border-radius: 10px"/>   
+                                <div class="justify">
+                                    <p style=" color: black;font-size: 14px">
+                                        Her Excellency Mr.Eid Al Qathani, Consul General for the Kingdom 
+                                        of Bahrain Presenting an Award to Miss Nisha Bhandari, the Best 
+                                        Outgoing Student(Physical Sciences).
+
+                                        She got the Award for securing 2nd Rank in MCA for Karnataka Region.
+                                    </p>
+
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>
+                        <p:tab title="Godfather Part II">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/awards.png" height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style=" color: black;font-size: 14px">
+                                        Her Excellency Mr.Eid Al Qathani, Consul General for the Kingdom 
+                                        of Bahrain Presenting an Award to Miss Nisha Bhandari, the Best 
+                                        Outgoing Student(Physical Sciences).
+
+                                        She got the Award for securing 2nd Rank in MCA for Karnataka Region.
+                                    </p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>  
+                        <p:tab title="Godfather Part III">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/awards.png"  height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style=" color: black;font-size: 14px">
+                                        Her Excellency Mr.Eid Al Qathani, Consul General for the Kingdom 
+                                        of Bahrain Presenting an Award to Miss Nisha Bhandari, the Best 
+                                        Outgoing Student(Physical Sciences).
+
+                                        She got the Award for securing 2nd Rank in MCA for Karnataka Region.
+                                    </p>
+                                </div>>
+                            </h:panelGrid>  
+                        </p:tab>  
+                    </p:carousel> 
+                </div>
+                <!--</div>-->
+
+
+
+
+
+
+
+                <div class="content3">
+
+                    <p:carousel id="tabsCarouse3" numVisible="1" itemStyle="height:135px
+                                ;width:736px; font-size:  small;" effect="slide" circular="true"   headerText="Sports" > 
+                        <p:tab title="Godfather Part I">  
+                            <h:panelGrid columns="2" cellpadding="10" style="float: left" > 
+                                <h:graphicImage value="../resources/images/pages/fest.png"  height="115" width="150"  style="border-radius: 10px" /> 
+
+                                <!--            <h:outputText  style="font-size: medium;"
+                                                           value="BRINDAVAN COLLEGE OF ENGINEERING boys have won VTU single 
+                                                zone(state level) intercollegiate men basketball tournament against 
+                                                RVCE in the finals.Conducted during 19th-21st April 2011 at New National
+                                                Indoor Stadium in Bangalore." />-->
+                                <div class="justify">
+                                    <p style="color: black; font-size: 14px"> <span style="color: red;">BRINDAVAN COLLEGE OF ENGINEERING</span> boys have won VTU single 
+                                        zone(state level) intercollegiate men basketball tournament against 
+                                        RVCE in the finals.Conducted during 19th-21st April 2011 at New National
+                                        Indoor Stadium in Bangalore.</p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>
+                        <p:tab title="Godfather Part II">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/fest.png" height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style="color: black; font-size: 14px"> <span style="color: red;">BRINDAVAN COLLEGE OF ENGINEERING</span> boys have won VTU single 
+                                        zone(state level) intercollegiate men basketball tournament against 
+                                        RVCE in the finals.Conducted during 19th-21st April 2011 at New National
+                                        Indoor Stadium in Bangalore.</p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>  
+                        <p:tab title="Godfather Part III">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/fest.png"  height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style="color: black; font-size: 14px"> <span style="color: red;">BRINDAVAN COLLEGE OF ENGINEERING</span> boys have won VTU single 
+                                        zone(state level) intercollegiate men basketball tournament against 
+                                        RVCE in the finals.Conducted during 19th-21st April 2011 at New National
+                                        Indoor Stadium in Bangalore.</p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>  
+                    </p:carousel> 
+
+                </div>
+
+                <!--      <div style="float:left; margin-top: 0px; margin-left: 19px">-->
+                <div class="content4">
+                    <p:carousel id="tabsCarouse4" numVisible="1" itemStyle="height:135px;width:738px;"  effect="slide"  headerText="College Fest" > 
+                        <p:tab title="Godfather Part I">  
+                            <h:panelGrid columns="2" cellpadding="10" style="float: left" > 
+                                <h:graphicImage value="../resources/images/pages/sports.png"  height="115" width="150"  style="border-radius: 10px"  /> 
+                                <div class="justify">
+                                    <p style="color: black;font-size: 14px">
+                                        Our Honourable President Dr. A.P.J Abdul Kalam,has visited our
+                                        College in the occation of Anniversary Function.
+
+                                        Brindavan College is Unique in it's own style of Conducting Student
+                                        Events like Freshers Day, Melange, Graduation Day, Food Festival,
+                                        Department Festivals, Engineer's Day etc.
+                                    </p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>
+                        <p:tab title="Godfather Part II">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/sports.png"  height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style="color: black;font-size: 14px">
+                                        Our Honourable President Dr. A.P.J Abdul Kalam,has visited our
+                                        College in the occation of Anniversary Function.
+
+                                        Brindavan College is Unique in it's own style of Conducting Student
+                                        Events like Freshers Day, Melange, Graduation Day, Food Festival,
+                                        Department Festivals, Engineer's Day etc.
+                                    </p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>  
+                        <p:tab title="Godfather Part III">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="../resources/images/pages/sports.png"  height="115" width="150"  style="border-radius: 10px"/>  
+                                <div class="justify">
+                                    <p style="color: black;font-size: 14px">
+                                        Our Honourable President Dr. A.P.J Abdul Kalam,has visited our
+                                        College in the occation of Anniversary Function.
+
+                                        Brindavan College is Unique in it's own style of Conducting Student
+                                        Events like Freshers Day, Melange, Graduation Day, Food Festival,
+                                        Department Festivals, Engineer's Day etc.
+                                    </p>
+                                </div>
+                            </h:panelGrid>  
+                        </p:tab>  
+                    </p:carousel>
+                </div>
+
+                <div class="right">
+
+
+                    <!--             <div class="content9" >-->
+                    <p:graphicImage value="../resources/images/pages/img1.jpg" width="230" height="418" />
+                    <!--      </div>   -->
+                    <!--         <div class="content1">-->
+                    <p:graphicImage value="../resources/images/pages/img3.jpg" width="230" height="178" style="margin-top: 8px;"/>
+                    <!--          </div>-->
+                    <!--                <div class="content5">-->
+                    <p:graphicImage value="../resources/images/pages/Gradmen.png"  height="78" width="230" style="margin-top: 8px;"/>
+                    <!--                </div>-->
+
+                    <!--           <div class="content10" >-->
+                    <p:graphicImage value="../resources/images/pages/img2.jpg" width="230" height="40" style="margin-top: 45px;"/>
+                    <!--      </div>  -->
+                </div>
+            </div>        
+            <!--</div>-->
+
+        </ui:define>
+    </ui:composition>
+</html>

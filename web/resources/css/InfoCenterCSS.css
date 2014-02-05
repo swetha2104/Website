@@ -1,0 +1,49 @@
+body{}
+
+
+
+.Main{ margin:0px auto;  height:530px; width:908px; margin-top: 13px;text-align: left;  }
+
+#Form-panel{height: 500px; border-bottom-left-radius: 20px; font-size: 9pt;}
+.Forum-page{ height: 520px; width: 225px; float: left; }
+#form-panelgrid{font-size: 9pt;}
+
+.form-questions{height:290px; width:215px; margin-left: -18px; margin-right: -16px;}
+
+.form-label{height: 143px; width: 200px; margin-left:-15px; margin-right: -16px;}
+#form-outputlabel{font-weight: bold}
+#form-textarea{width: 198px;}
+#form-button{margin-left: 50px;}
+
+.icon-width{width: 25px; float: left; height: 25px}
+
+.form-view{ height: 20px; width: 200px;  padding-left: 130px; font-size: 9pt; color: red}
+#form-view-link{color: #990000}
+
+#blog-panel{height: 500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px; font-size: 9pt;}
+.Blog-Page{ height: 520px; width: 225px; float: left}
+
+.blogs{height:440px; width:200px}
+.blogs-view{height: 20px; width: 200px;  padding-left: 130px;}
+#blog-view-link{color: #990000}
+
+#news-panel{height:500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px; font-size: 9pt;}
+.News-upadate-Page{height: 520px; width: 225px;float: left}
+#new-link-color{color: red}
+
+.news-panelgrid{height:440px; width:200px}
+
+.news-view{height: 20px; width: 200px;  padding-left: 130px;}
+#news-view-link{color: #990000}
+
+#FAQ-panel{height: 500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px; font-size: 9pt;}
+.FAQ-Page{height: 520px; width: 225px;float: left}
+
+.faqs{height:427px; width:200px}
+.faq-header{color: black; font-size: 16px; font-style: italic}
+
+.faq-view{height: 20px; width: 200px;  padding-left: 130px;}
+#faq-view-link{color: #990000}
+#faq-commandlink {font-size: 9pt;}
+
+

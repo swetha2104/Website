@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="college_dashboard.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+
+        <ui:define name='main'>
+            <f:view>
+                <div class="college_dashboard_maincontainer">
+                    <div class="college_dashboard_menu">
+                        <h:form>
+                            <p:menubar autoDisplay="false">
+
+                                <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                                <p:submenu label="My College" styleClass="dashboard" >
+                                    <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                                </p:submenu>                                   
+                                <p:submenu label="Admissions"  styleClass="dashboard">
+                                    <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                    <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                    <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                </p:submenu>
+                                <p:submenu label="Ads" styleClass="dashboard">
+                                    <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                                    <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                </p:submenu>
+
+                                <p:submenu label="Messages"  styleClass="dashboard">
+                                    <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                    <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                </p:submenu>
+
+                            </p:menubar>
+                            <br/>
+                            <h2 style="text-align: center;">Messages</h2>
+
+                            <p:dataTable id="dtle" var="tt" value="#{messages.lst}">
+                                <p:column headerText="From" >
+                                    <h:outputText value="#{tt.name}"/>
+                                </p:column>
+
+                                <p:column headerText="Date" >
+                                    <h:outputText value="#{tt.time}"/>
+                                </p:column>
+                                <p:column headerText="Message/Question" >
+                                    <h:outputText value="#{tt.description}"/>
+                                </p:column>
+                                <p:column headerText="Actions"  colspan="5" width="20" >
+                                    <center> <a href="moharto_dashboard_reply.xhtml"><button type="button" class="btn" style="height: 29px;
+                                                                                             margin-left: -1px;">View</button></a>
+
+                                        <p:commandButton value="Delete"/></center>
+                                </p:column>
+                            </p:dataTable> 
+
+
+                        </h:form>
+                    </div>
+                </div>
+            </f:view>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+

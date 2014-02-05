@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <!--<h:outputStylesheet library="css" name="testimonials.css"/>-->
+        <h:outputStylesheet library="css" name="about_moharto.css"/>
+        <style>
+
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+        </style>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="main">
+                    <div class="one">
+                        <div class="one1">
+                            <h:outputText value="About Moharto" style="float: left;font-size: 15px;color: chocolate;margin-top: 7px;margin-left:6px;"/>
+
+                            <p style="float: left;
+                               text-align: justify;
+                               font-size: 13px;
+                               margin-left: 17px;
+                               margin-top: 8px;"> Moharto intends to bring all colleges on a common platform for online admissions so that course 
+                                seekers can enroll themselves online with the college of their choice subject to selection criteria.It
+                                aims to ease the life of students who can sit anywhere before a computer and take admission online by following
+                                few easy steps and just in matter of few minutes</p >
+
+                            <h:outputText value="For Colleges" style="font-size: 15px;
+                                          float: left;
+                                          color: chocolate;
+                                          margin-top: 1px;
+                                          margin-left: 7px;
+
+
+                                          "/>
+                            <p style="font-size: 13px;float: left;text-align: justify;margin-left: 17px;margin-top: 8px;">Since mohato aims to draw huge traffic of students to its portal,colleges may look
+                                forward to close their admissions faster with the help of moharto.Moharto is not just a directory
+                                listing of all colleges and courses;it would even promote its members to online admission seekers</p>
+
+                            <h:outputText value="For Students" style="font-size: 15px;
+                                          color: chocolate;
+                                          float: left;
+                                          margin-top: -7px;
+                                          margin-left: 7px;"/>
+                            <p style="font-size: 13px;text-align: justify;float: left;margin-left: 17px;margin-top: 8px;">Moharto provides the facility of selecting a course with your own preference of location
+                                and college from anywhere in india for online admission. hence students sitting in north india 
+                                can take admission into colleges of south india and students sitting in south india 
+                                can take admission into colleges of north india.</p>
+
+                            <h:outputText value="How to make admission easy" style="float: left;
+                                          font-size: 15px;
+                                          margin-top: 7px;margin-left: 7px;color: chocolate;"/>
+                            <p style="font-size: 13px;text-align: justify;float: left;margin-left: 17px;margin-top: 8px;">
+                                Moharto is giving you the easiest way to take admission online by following few simple easy steps. You may select the course, location, college, have a fee budget set and then enroll ONLINE to take your ADMISSION in your preferred college.
+                                Isn’t it fascinating that your college admission could be in a matter of being there on moharto for 15 minutes..!!!
+
+                            </p>
+
+
+
+                        </div>
+                        <div class="one2">
+                            <center>
+<!--                            <h:outputText value="Take Admission in 15 Minutes" style="float: left;
+                                          margin-top: -75px;
+                                          font-size: 17px;
+                                          margin-left: 147px;
+                                          "/>-->
+<h3 style="margin-top: -75px;
+margin-left: -60px;">Take Admission in 15 Minutes</h3>
+                          
+<p:commandButton value="Enroll now" action="moharto_register.xhtml?faces-redirect=true" style="float: left;
+margin-left: 522px;
+height: 28px;
+margin-left: 277px;
+margin-top: 6px;
+width: 107px;
+font-size: 15px;
+
+                                             "/>
+ <h:graphicImage value="../resources/images/pages/flower.png" style="width: 230;
+height: 418px;
+float: left;
+margin-left: 142px;
+"/>
+ <h:outputText value="Process of 15 minutes,your admission is done." style="float: left;
+font-size: 14px;
+margin-left: 197px;margin-top: -10px;"/>
+                            </center>
+                        </div>
+
+                    </div>
+                    <div class="two">
+
+                        <h4 style="float: left;
+font-size: 15px;
+margin-left: 18px;
+margin-top: 5px;
+                            ">Colleges in selected city</h4> 
+                        <p:selectOneMenu id="city" value="#{amoharttoBean.city1}" style="margin-left: 23px;font-size:13px; 
+                                         width: 171px;
+
+                                         " >
+                            <f:selectItem itemLabel="select city" itemValue=""/>
+                            <f:selectItems value="#{amoharttoBean.getCity2()}"/>
+                        </p:selectOneMenu><br/>
+
+
+                        <p:dataTable id="dataTable1" var="car" value="#{amoharttoBean.colleges}"  
+                                     emptyMessage="No Data found" style=" font-size: 12px;
+                                     width: 75%;height: 100px;
+                                     margin-left: 23px;margin-top: 4px;" scrollable="true" scrollHeight="123px" >
+
+
+                            <p:column id="colorColumn"   > 
+
+                                <h:outputText value="#{car.college}" style="font-size: 10px;" />
+
+                            </p:column>
+                        </p:dataTable>
+
+
+
+                        <h3 style="margin-top: 48px;
+                            margin-left: 57px;
+                            ">I want to do</h3>
+                        <h:panelGrid columns="2">
+                            <p:tabView id="tv" effect="slide" style="width: 222px;
+                                       font-size: 14px;
+                                       margin-left: 1px;
+                                       margin-top: -7px;
+
+                                       ">
+                                <p:tab id="pgtab" title="PG" titleStyleClass="width:25px;" >
+                                    <h:form>
+                                        <h:panelGrid columns="1" style="text-align: left;">
+                                            <p:selectOneMenu id="selcourse"  style="width:150px;" >
+                                                <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                <f:selectItem itemLabel="M.COM" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.TECH" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="MBA" itemValue="MBA"/>
+                                            </p:selectOneMenu>
+                                            <p:selectOneMenu id="selcity" style="width:150px;">
+                                                <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid>
+                                        <p:commandButton value="GO" update="sa" />
+                                        <h:outputText id="sa" />
+                                    </h:form>
+                                </p:tab>
+                                <p:tab title="UG" >
+                                    <h:form>
+                                        <h:panelGrid columns="1" style="text-align: left;">
+                                            <p:selectOneMenu id="selcourse" style="width:150px;" >
+                                                <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                <f:selectItem itemLabel="B.COM" itemValue="B.COM"/>
+                                                <f:selectItem itemLabel="B.TECH" itemValue="B.TECH"/>
+                                                <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                            </p:selectOneMenu>
+                                            <p:selectOneMenu id="selcity"  style="width:150px;">
+                                                <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid>
+                                        <p:commandButton value="GO" update="sa" />
+                                        <h:outputText id="sa" />
+                                    </h:form>
+                                </p:tab>
+                                <p:tab id="aftr10tab" title="AFTER 10" >
+                                    <h:form>
+                                        <h:panelGrid columns="1" style="text-align: left;">
+                                            <p:selectOneMenu id="selcourse"  style="width:150px;" >
+                                                <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                <f:selectItem itemLabel="PUC" itemValue="PUC"/>
+                                                <f:selectItem itemLabel="DIPLOMA" itemValue="DIPLOMA"/>
+                                                <f:selectItem itemLabel="I.T.I" itemValue="I.T.I"/>
+                                            </p:selectOneMenu>
+                                            <p:selectOneMenu id="selcity" style="width:150px;">
+                                                <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid>
+                                        <p:commandButton value="GO" update="sa" />
+                                        <h:outputText id="sa"/>
+                                    </h:form>
+                                </p:tab>
+                            </p:tabView>
+                        </h:panelGrid>
+
+
+
+                        <h:graphicImage value="../resources/images/pages/Untitled.png" style="float: left;
+                                        width: 230px;
+                                        height: 418px;
+                                        margin-top: 2px;
+                                        margin-left: 5px;
+
+                                        "/>
+
+
+                    </div>
+
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

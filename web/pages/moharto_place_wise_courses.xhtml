@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+           <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="placewise_courses.css"/>
+
+        <style>
+             .tabview ul{
+                padding: 0px!important;
+       
+            }
+            
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <h:form>
+                <div class="top-cities-container">
+                <div class="pagetitle"> PlaceWise Courses</div><br/>
+                <div class="paratitle">Cities in India</div>
+             
+                
+                          
+                            <div class="top-cities"  style="margin-left: 8px;">
+                                <ul class="top-cities-list">
+                                    <li ><p:commandLink value="Bangalore" action="moharto_place_courses" ajax="false"/></li><br/>
+                                    <li style="margin-top: -6px;">    <p:commandLink value="Hyderabad"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Chandigarh"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bhopal"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Dharwad"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="top-cities" style="margin-left: 20px;">
+                                <ul  class="top-cities-list">
+
+                                    <li >    <p:commandLink value="Chennai"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Kolkatta"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Jharkhand"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Jaipur"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Pune"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="top-cities" style="margin-left: 23px;">
+                                <ul  class="top-cities-list">
+
+                                    <li>    <p:commandLink value="Delhi"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Mumbai"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Mangalore"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="New Delhi"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Navi Mumbai"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="top-cities" style="margin-left: 29px;">
+                                <ul  class="top-cities-list">
+
+                                    <li >    <p:commandLink value="Srinagar"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Aurangabad"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Guwahati"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Patna"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Jamshedpur"/></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="top-cities" style="margin-left: 30px;">
+                                <ul  class="top-cities-list">
+
+                                    <li >    <p:commandLink value="Cochin"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Noida"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Agartala"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Visakhapatnam"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Kanpur"/></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clear"/>
+                            <p:separator id="separator" style="width: 570px;float: left;margin-left: 12px;"/> 
+                            <div class="clear"/>
+                            <div class="sub-cities" style="margin-left: 6px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ahmedabad"/></li> 
+                                    <li class="top-cities-sublist">    <p:commandLink value="Agra"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Aizawl"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Allahabad"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ajmer"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ambala"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Amravathi"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Belgaum"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bhubaneswar"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bijapur"/></li>
+                               
+
+
+
+                                </ul>
+                            </div>
+                            <div class="sub-cities" style="margin-left: 21px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bhiwandi"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bikaner"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Bharatpur"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Calicut"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Chittoor"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Cuttack"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Dehradun"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Darjeeling"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Dhanbad"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Daman Diu"/></li>
+            
+
+
+                                </ul>
+                            </div>
+                            <div class="sub-cities" style="margin-left: 21px;">
+
+
+
+
+
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li class="top-cities-sublist">    <p:commandLink value="Erode"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ferozpur"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Faridkot"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Gangtok"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Gaya"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Gulbarga"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Haryana"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Haridwar"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Hubli"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Imphal"/></li>
+                       
+
+
+
+
+                                </ul>
+                            </div>
+                            <div class="sub-cities" style="margin-left:26px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li class="top-cities-sublist">    <p:commandLink value="Junagad"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Jalgaon"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Kanchipuram"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Kota"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Lucknow"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ludhiana"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Meerut"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Madurai"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Mysore"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Malegaon"/></li>
+
+                             
+
+
+
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="sub-cities" style="margin-left:27px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Patiala"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Ranchi"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Raipur"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Rajkot"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Roorkela"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Surat"/></li>
+                                    <li class="top-cities-sublist">    <p:commandLink value="Solapur"/></li>
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Salem"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Thane"/></li>
+
+
+                                    <li class="top-cities-sublist">    <p:commandLink value="Trivandrum"/></li>
+
+
+                            
+
+
+
+                                </ul>
+                            </div>
+                    
+                        </div>
+                       </h:form>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+              <h:graphicImage value="../resources/images/pages/ad3.png" width="230" height="218" style="float: left;margin-top: 10px;"/>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

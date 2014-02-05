@@ -1,0 +1,357 @@
+body
+ {
+  min-width: 972px;
+}
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.contentcontainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 972px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_1,
+.grid_2,
+.bigwidth3,
+.grid_4,
+.grid_5,
+.bigwidth6,
+.grid_7,
+.bigwidth,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12 {
+	position:relative;
+}
+
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.contentcontainer .grid_1 {
+	width:81px;
+}
+
+.contentcontainer .grid_2 {
+	width:162px;
+}
+
+.contentcontainer .bigwidth3 {
+	width:243px;
+}
+
+.contentcontainer .grid_4 {
+	width:324px;
+}
+
+.contentcontainer .grid_5 {
+	width:405px;
+}
+
+.contentcontainer .bigwidth6 {
+	width:486px;
+}
+
+.contentcontainer .grid_7 {
+	width:567px;
+}
+
+.contentcontainer .bigwidth {
+	width:648px;
+}
+
+.contentcontainer .grid_9 {
+	width:729px;
+}
+
+.contentcontainer .grid_10 {
+	width:810px;
+}
+
+.contentcontainer .grid_11 {
+	width:891px;
+}
+
+.contentcontainer .grid_12 {
+	width:972px;
+}
+
+
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.contentcontainer .prefix_1 {
+	padding-left:81px;
+}
+
+.contentcontainer .prefix_2 {
+	padding-left:162px;
+}
+
+.contentcontainer .prefix_3 {
+	padding-left:243px;
+}
+
+.contentcontainer .prefix_4 {
+	padding-left:324px;
+}
+
+.contentcontainer .prefix_5 {
+	padding-left:405px;
+}
+
+.contentcontainer .prefix_6 {
+	padding-left:486px;
+}
+
+.contentcontainer .prefix_7 {
+	padding-left:567px;
+}
+
+.contentcontainer .prefix_8 {
+	padding-left:648px;
+}
+
+.contentcontainer .prefix_9 {
+	padding-left:729px;
+}
+
+.contentcontainer .prefix_10 {
+	padding-left:810px;
+}
+
+.contentcontainer .prefix_11 {
+	padding-left:891px;
+}
+
+
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.contentcontainer .suffix_1 {
+	padding-right:81px;
+}
+
+.contentcontainer .suffix_2 {
+	padding-right:162px;
+}
+
+.contentcontainer .suffix_3 {
+	padding-right:243px;
+}
+
+.contentcontainer .suffix_4 {
+	padding-right:324px;
+}
+
+.contentcontainer .suffix_5 {
+	padding-right:405px;
+}
+
+.contentcontainer .suffix_6 {
+	padding-right:486px;
+}
+
+.contentcontainer .suffix_7 {
+	padding-right:567px;
+}
+
+.contentcontainer .suffix_8 {
+	padding-right:648px;
+}
+
+.contentcontainer .suffix_9 {
+	padding-right:729px;
+}
+
+.contentcontainer .suffix_10 {
+	padding-right:810px;
+}
+
+.contentcontainer .suffix_11 {
+	padding-right:891px;
+}
+
+
+
+/* Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.contentcontainer .push_1 {
+	left:81px;
+}
+
+.contentcontainer .push_2 {
+	left:162px;
+}
+
+.contentcontainer .push_3 {
+	left:243px;
+}
+
+.contentcontainer .push_4 {
+	left:324px;
+}
+
+.contentcontainer .push_5 {
+	left:405px;
+}
+
+.contentcontainer .push_6 {
+	left:486px;
+}
+
+.contentcontainer .push_7 {
+	left:567px;
+}
+
+.contentcontainer .push_8 {
+	left:648px;
+}
+
+.contentcontainer .push_9 {
+	left:729px;
+}
+
+.contentcontainer .push_10 {
+	left:810px;
+}
+
+.contentcontainer .push_11 {
+	left:891px;
+}
+
+
+
+/* Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.contentcontainer .pull_1 {
+	left:-81px;
+}
+
+.contentcontainer .pull_2 {
+	left:-162px;
+}
+
+.contentcontainer .pull_3 {
+	left:-243px;
+}
+
+.contentcontainer .pull_4 {
+	left:-324px;
+}
+
+.contentcontainer .pull_5 {
+	left:-405px;
+}
+
+.contentcontainer .pull_6 {
+	left:-486px;
+}
+
+.contentcontainer .pull_7 {
+	left:-567px;
+}
+
+.contentcontainer .pull_8 {
+	left:-648px;
+}
+
+.contentcontainer .pull_9 {
+	left:-729px;
+}
+
+.contentcontainer .pull_10 {
+	left:-810px;
+}
+
+.contentcontainer .pull_11 {
+	left:-891px;
+}
+
+
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+  zoom: 1;
+}

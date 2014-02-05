@@ -1,0 +1,52 @@
+
+.college_dashboard_maincontainer{
+    margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+    
+   
+/*    border: 1px solid #ddd;*/
+    
+    
+}
+.center
+{
+    width: 600px;
+    margin: 0 auto;
+/*    border: 1px solid #ddd;*/
+    
+      
+}
+.dashboard {
+    padding-left: 10px!important;
+    padding-right:10px!important;
+}
+.selctmenu{
+    width:180px!important;
+    text-align: left!important;
+    margin-top: 15px!important;
+}
+
+.createcourseoutlabel{
+    
+font-size: 18px!important;
+margin-top: 5px!important;
+}
+.createcourseinptlabel{
+    margin-top: 5px!important; 
+    width: 177px!important;
+}
+.unvrsityinpt{
+    margin-top: 18px!important;
+    width:177px!important;
+}
+.descrptiontxtara{
+    width:290px!important; 
+    margin-top: 18px!important;
+}
+.eligblityfeedetal{
+    font-size: 14px!important;
+}

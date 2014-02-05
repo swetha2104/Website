@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="ask_a_question.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="main">
+                    <div class="one">
+                        <h:outputText value="Ask a Question" style="font-size: 18px;
+
+                                      margin-top: 121px;color: #6666ff
+                                      "/><br/><br/>
+                        <h:outputText value="Questions Asked" style="font-size: 16px;margin-left: 1px;color: black;float: left;"/><br/><br/>
+
+                        <div class="one1">
+                            <h:graphicImage value="../resources/images/pages/askquestion.png" style="
+                                            width: 72px;float: left;
+                                            height: 58px;"/>
+                            <h:outputText value="Rajender" style="font-size: 14px;
+                                          float: left;color: chocolate;
+                                          margin-top: 3px;
+                                          margin-left: 12px;"/><br/>
+                            <h:outputText value="Q. Can I join MBA without attending MAT/CAT exam" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: -11px;
+                                          margin-left: 20px;
+                                          }
+                                          "/><h:outputText value="1 hr ago" style="float: left;
+                                          font-size: 13px;
+                                          margin-top: 0px;
+                                          margin-left: 261px;
+                                          padding-top: 4px;
+                                          padding-top: 4px;
+                                          "/>                <br/>
+                            <h:outputText value="A. yeah you can join without any problem" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: 8px;
+                                          margin-left: -288px;
+                                          "/><br/>  <h:form>
+                                <p:commandLink value="Reply" onclick="lazyload1()" id="lnkLoad1" style="font-size: 13px;
+                                               float: left;
+                                               margin-top: 6px;
+                                               text-decoration: none;
+                                               margin-left: 154px;"/><p:outputPanel id="lazypanel1" layout="block">
+                                    <h:outputText value=" part of page is lazily loaded on demand using a RemoteCommand   
+                                                  rendered " rendered="#{requestScope.shouldRender}"/>
+                                </p:outputPanel>
+                                <p:remoteCommand name="lazyload1" update="lazypanel1">
+                                    <f:setPropertyActionListener value="#{true}" target="#{requestScope.shouldRender}"/>
+                                </p:remoteCommand>
+                            </h:form>
+                            <br/>
+                            <p:commandLink value="MoreComments"  style="font-size: 13px;
+                                           margin-left: 10px;text-decoration:none;
+                                           margin-top: -8px;
+                                           float: left;
+                                           "/> <br/>
+                            <hr style="float: left;
+                                width: 700px;
+                                margin-top: 5px;
+                                color: black;
+                                "/>                            
+                        </div>
+
+                        <div class="one1">
+                            <h:graphicImage value="../resources/images/pages/askquestion.png" style="
+                                            width: 72px;float: left;
+                                            height: 58px;"/>
+                            <h:outputText value="Rajender" style="font-size: 14px;
+                                          float: left;color: chocolate;
+                                          margin-top: 3px;
+                                          margin-left: 12px;"/><br/>
+                            <h:outputText value="Q. Can I join MBA without attending MAT/CAT exam" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: -11px;
+                                          margin-left: 20px;
+                                          }
+                                          "/><h:outputText value="1 hr ago" style="float: left;
+                                          font-size: 13px;
+                                          margin-top: 0px;
+                                          margin-left: 261px;
+                                          padding-top: 4px;
+                                          padding-top: 4px;
+                                          "/>                <br/>
+                            <h:outputText value="A. yeah you can join without any problem" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: 8px;
+                                          margin-left: -288px;
+                                          "/><br/>  <h:form>
+                                <p:commandLink value="Reply" onclick="lazyload1()" id="lnkLoad1" style="font-size: 13px;
+                                               float: left;
+                                               margin-top: 6px;
+                                               text-decoration: none;
+                                               margin-left: 154px;"/><p:outputPanel id="lazypanel1" layout="block">
+                                    <h:outputText value=" part of page is lazily loaded on demand using a RemoteCommand   
+                                                  rendered " rendered="#{requestScope.shouldRender}"/>
+                                </p:outputPanel>
+                                <p:remoteCommand name="lazyload1" update="lazypanel1">
+                                    <f:setPropertyActionListener value="#{true}" target="#{requestScope.shouldRender}"/>
+                                </p:remoteCommand>
+                            </h:form>
+                            <br/>
+                            <p:commandLink value="MoreComments"  style="font-size: 13px;
+                                           margin-left: 10px;text-decoration:none;
+                                           margin-top: -8px;
+                                           float: left;
+                                           "/> <br/>
+                            <hr style="float: left;
+                                width: 700px;
+                                margin-top: 5px;
+                                color: black;
+                                "/>                            
+                        </div>
+                        <div class="one1">
+                            <h:graphicImage value="../resources/images/pages/askquestion.png" style="
+                                            width: 72px;float: left;
+                                            height: 58px;"/>
+                            <h:outputText value="Rajender" style="font-size: 14px;
+                                          float: left;color: chocolate;
+                                          margin-top: 3px;
+                                          margin-left: 12px;"/><br/>
+                            <h:outputText value="Q. Can I join MBA without attending MAT/CAT exam" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: -11px;
+                                          margin-left: 20px;
+                                          }
+                                          "/><h:outputText value="1 hr ago" style="float: left;
+                                          font-size: 13px;
+                                          margin-top: 0px;
+                                          margin-left: 261px;
+                                          padding-top: 4px;
+                                          padding-top: 4px;
+                                          "/>                <br/>
+                            <h:outputText value="A. yeah you can join without any problem" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: 8px;
+                                          margin-left: -288px;
+                                          "/><br/>  <h:form>
+                                <p:commandLink value="Reply" onclick="lazyload1()" id="lnkLoad1" style="font-size: 13px;
+                                               float: left;
+                                               margin-top: 6px;
+                                               text-decoration: none;
+                                               margin-left: 154px;"/><p:outputPanel id="lazypanel1" layout="block">
+                                    <h:outputText value=" part of page is lazily loaded on demand using a RemoteCommand   
+                                                  rendered " rendered="#{requestScope.shouldRender}"/>
+                                </p:outputPanel>
+                                <p:remoteCommand name="lazyload1" update="lazypanel1">
+                                    <f:setPropertyActionListener value="#{true}" target="#{requestScope.shouldRender}"/>
+                                </p:remoteCommand>
+                            </h:form>
+                            <br/>
+                            <p:commandLink value="MoreComments"  style="font-size: 13px;
+                                           margin-left: 10px;text-decoration:none;
+                                           margin-top: -8px;
+                                           float: left;
+                                           "/> <br/>
+                            <hr style="float: left;
+                                width: 700px;
+                                margin-top: 5px;
+                                color: black;
+                                "/>                           
+                        </div>
+                        <div class="one1">
+                            <h:graphicImage value="../resources/images/pages/askquestion.png" style="
+                                            width: 72px;float: left;
+                                            height: 58px;"/>
+                            <h:outputText value="Rajender" style="font-size: 14px;
+                                          float: left;color: chocolate;
+                                          margin-top: 3px;
+                                          margin-left: 12px;"/><br/>
+                            <h:outputText value="Q. Can I join MBA without attending MAT/CAT exam" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: -11px;
+                                          margin-left: 20px;
+                                          }
+                                          "/><h:outputText value="1 hr ago" style="float: left;
+                                          font-size: 13px;
+                                          margin-top: 0px;
+                                          margin-left: 261px;
+                                          padding-top: 4px;
+                                          padding-top: 4px;
+                                          "/>                <br/>
+                            <h:outputText value="A. yeah you can join without any problem" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: 8px;
+                                          margin-left: -288px;
+                                          "/><br/>  <h:form>
+                                <p:commandLink value="Reply" onclick="lazyload1()" id="lnkLoad1" style="font-size: 13px;
+                                               float: left;
+                                               margin-top: 6px;
+                                               text-decoration: none;
+                                               margin-left: 154px;"/><p:outputPanel id="lazypanel1" layout="block">
+                                    <h:outputText value=" part of page is lazily loaded on demand using a RemoteCommand   
+                                                  rendered " rendered="#{requestScope.shouldRender}"/>
+                                </p:outputPanel>
+                                <p:remoteCommand name="lazyload1" update="lazypanel1">
+                                    <f:setPropertyActionListener value="#{true}" target="#{requestScope.shouldRender}"/>
+                                </p:remoteCommand>
+                            </h:form>
+                            <br/>
+                            <p:commandLink value="MoreComments"  style="font-size: 13px;
+                                           margin-left: 10px;text-decoration:none;
+                                           margin-top: -8px;
+                                           float: left;
+                                           "/> <br/>
+                            <hr style="float: left;
+                                width: 700px;
+                                margin-top: 5px;
+                                color: black;
+                                "/>                          
+                        </div>
+                        <div class="one1">
+                            <h:graphicImage value="../resources/images/pages/askquestion.png" style="
+                                            width: 72px;float: left;
+                                            height: 58px;"/>
+                            <h:outputText value="Rajender" style="font-size: 14px;
+                                          float: left;color: chocolate;
+                                          margin-top: 3px;
+                                          margin-left: 12px;"/><br/>
+                            <h:outputText value="Q. Can I join MBA without attending MAT/CAT exam" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: -11px;
+                                          margin-left: 20px;
+                                          }
+                                          "/><h:outputText value="1 hr ago" style="float: left;
+                                          font-size: 13px;
+                                          margin-top: 0px;
+                                          margin-left: 261px;
+                                          padding-top: 4px;
+                                          padding-top: 4px;
+                                          "/>                <br/>
+                            <h:outputText value="A. yeah you can join without any problem" style="font-size: 13px;
+                                          float: left;
+                                          margin-top: 8px;
+                                          margin-left: -288px;
+                                          "/><br/>  <h:form>
+                                <p:commandLink value="Reply" onclick="lazyload1()" id="lnkLoad1" style="font-size: 13px;
+                                               float: left;
+                                               margin-top: 6px;
+                                               text-decoration: none;
+                                               margin-left: 154px;"/><p:outputPanel id="lazypanel1" layout="block">
+                                    <h:outputText value=" part of page is lazily loaded on demand using a RemoteCommand   
+                                                  rendered " rendered="#{requestScope.shouldRender}"/>
+                                </p:outputPanel>
+                                <p:remoteCommand name="lazyload1" update="lazypanel1">
+                                    <f:setPropertyActionListener value="#{true}" target="#{requestScope.shouldRender}"/>
+                                </p:remoteCommand>
+                            </h:form>
+                            <br/>
+                            <p:commandLink value="MoreComments"  style="font-size: 13px;
+                                           margin-left: 10px;text-decoration:none;
+                                           margin-top: -8px;
+                                           float: left;
+                                           "/> <br/>
+                            <hr style="float: left;
+                                width: 700px;
+                                margin-top: 5px;
+                                color: black;
+                                "/>                          
+                        </div>
+                    </div>
+                    
+                    <div class="two">
+                        <div class="two1">
+                            <h:outputText value="Ask a Question"  style="font-size: 18px;color: #006666;float: left;"/><br/>
+                            <p:inputTextarea id="txta" style="float: left;
+
+                                             width: 440px;
+                                             height: 54px;
+                                             font-size: 13px;
+                                             margin-top: 14px;
+                                             margin-left: -73px;"/>
+                            <p:watermark for="txta" value="Your Query"/><br/>
+                            <h:outputText value="First Name" style="font-size: 14px;
+                                          float: left;
+                                          margin-top: 13px;
+                                          margin-left: 83px;"/>
+                            <h:outputText value="Last Name" style="float: left;
+                                          margin-top: 12px;
+                                          margin-left: 122px;
+                                          font-size: 14px;"/>
+                            <p:inputText id="txt1" style="float: left;
+                                         margin-left: -245px;
+                                         margin-top: 36px;font-size: 13px;
+                                         width: 141px;
+                                         "/>
+                            <p:watermark for="txt1" value="first name"/>
+                            <p:inputText id="txt2" style="float: left;
+                                         width: 141px;
+                                         margin-top: 36px;
+                                         margin-left: -61px;font-size: 13px;
+                                         "/>  <p:watermark for="txt2" value="last name"/>
+                            <h:outputText value="Email Id" style="float: left;
+                                          margin-top: 12px;
+                                          margin-left: 85px;
+                                          font-size: 14px;"/>
+                            <h:outputText value="Contact No" style="float: left;
+                                          margin-top: 12px;
+                                          margin-left: 137px;
+                                          font-size: 14px;
+                                          }"/>
+                            <p:inputText id="txt3" style="float: left;
+                                         width: 141px;
+                                         margin-top: 36px;
+                                         margin-left: -248px;
+                                         font-size: 13px;
+
+                                         "/>  <p:watermark for="txt3" value="email id"/>
+
+                            <p:inputText id="txt4" style="float: left;
+                                         width: 141px;
+                                         font-size: 13px;
+                                         margin-top: 32px;
+                                         margin-left: -64px;
+
+                                         "><p:watermark for="txt4" value="contact no"/>
+                            </p:inputText>
+
+
+                            <p:commandButton value="Ask now" style="margin-top: 80px;
+                                             float: left;
+                                             margin-left: -339px;
+                                             width: 88px;
+                                             height: 27px;
+                                             padding-top: -8px;
+                                             font-size: 14px;
+                                             "/>
+
+                        </div>
+                        <div class="two2"></div>
+                        <h:graphicImage value="../resources/images/pages/boy.png" style="float: left;
+                                        width: 193px;
+                                        height: 304px;
+                                        margin-left: 4px;
+                                        margin-top: -304px;"/>
+                    </div>
+                    <div class="three">
+
+                        <div class="three1">
+                            <h3 style="margin-top: 2px;
+                                margin-left: 57px;
+                                ">I want to do</h3>
+                            <h:panelGrid columns="2">
+                                <p:tabView id="tv" effect="slide" style="width: 226px;
+                                           font-size: 14px;
+                                           margin-left: -5px;
+                                           margin-top: -5px;
+                                           ">
+                                    <p:tab id="pgtab" title="PG" titleStyle="background-color: crimson;"  >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="M.COM" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.TECH" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="MBA" itemValue="MBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value="#{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="UG" titleStyle="background-color: cadetblue;">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="B.COM" itemValue="B.COM"/>
+                                                    <f:selectItem itemLabel="B.TECH" itemValue="B.TECH"/>
+                                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="AFTER 10" titleStyle="background-color: darkorchid;">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="PUC" itemValue="PUC"/>
+                                                    <f:selectItem itemLabel="DIPLOMA" itemValue="DIPLOMA"/>
+                                                    <f:selectItem itemLabel="I.T.I" itemValue="I.T.I"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>
+                            <div class="three2">
+                                <p:commandLink value="Download Prospectus" style="float: left;
+                                               color: brown;
+                                               font-size: 15px;
+                                               margin-left: 38px;
+                                               margin-top:17px;"/>
+                            </div>
+                            <div class="three3">
+                                <p:panel header="TESTIMONIALS" style="height: 220px;
+                                         width: 224px;
+                                         float: left;
+                                         font-size: 12px;
+                                         margin-left: 1px;
+                                         ">
+                                    <h:panelGrid columns="1">
+                                        "I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."
+
+                                        <div style="float: left;">
+                                            <h:panelGrid columns="2">
+                                                <h:graphicImage url="../resources/images/pages/name1.jpg" height="75px" width="75px"/>
+                                                <h:panelGrid columns="1">
+                                                    <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" /> 
+                                                    <h:outputText value="-PSIT, Bangalore" style="font-style: italic" /> 
+                                                </h:panelGrid>
+                                            </h:panelGrid>
+                                        </div>   
+                                    </h:panelGrid>
+                                </p:panel>
+                            </div>
+                            <div class="three4">
+                                <h:graphicImage value="../resources/images/pages/Untitled.png" style="float: left;
+                                                width: 230px;
+                                                height: 480px;
+                                                margin-left: 1px;
+                                                }"/>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

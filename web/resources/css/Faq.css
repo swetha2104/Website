@@ -1,0 +1,59 @@
+.body{
+    background-color:grey;
+    margin: 0 auto;
+}
+.maincontainer{
+    width: 980px;
+    height: auto;
+    /*min-height: 712px;*/
+    background-color: #ffffff;
+    margin: -20px auto;
+    margin-top: 1px;
+}
+
+.top{
+    width: 980px;
+    height: 250px;
+     border: 1px solid #ddd;
+     margin: 7px 0 0 0;
+}
+.left{
+    width: 216px;
+    height: 430px;
+    //border: 1px solid #ddd;
+    //border: 1px solid #ddd; 
+    float: left;
+    margin: 7px 0 0 0;
+}
+.middle{
+    width: 477px;
+    height: 345px;
+    margin:7px 0 0 224px;
+     // border: 1px solid #ddd;
+}
+#tab1a{
+    font-size:18px;
+font-weight: bold;
+color: #0d75a0;
+text-align: center;
+}
+.right{
+    width:270px;
+    height: auto;
+     //border: 1px solid #ddd; 
+     float: right;
+     margin:-338px 0 0 0px;
+}
+.leftdown{
+    width: 216px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border: 1px solid #ddd; float: left;
+    margin: -141px 0 0 -218px;
+}
+.Eli{
+    text-decoration: none;
+    color: coral;
+    font-size: 14px;
+    font-weight: bold;
+}

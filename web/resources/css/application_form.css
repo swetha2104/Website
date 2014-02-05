@@ -1,0 +1,22 @@
+.application_form_maincontainer{
+    margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+}
+.application_form_header{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.application_form_content{
+    
+    margin: 0 auto;
+    width: 85%
+}
+.academicdt tbody{
+font-size: 12px;    
+}

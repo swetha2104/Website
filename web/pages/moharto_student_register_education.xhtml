@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="register_steps.css"/>
+         <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+         <script>
+             $(document).ready(function(){
+ $('.listview').hide();
+$('.link').click(function(){
+$('.listview').slideDown(250);
+});
+             });
+
+         </script>
+        <style>
+
+        </style>
+<!--        <script type="text/javascript" src="../resources/js/jquery-1.7.2.js"></script>-->
+
+    </h:head>
+
+    
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        
+
+        <ui:define name='main'>
+
+            <center>
+                <p:graphicImage value="../resources/images/enrol/3.png" width="800" styleClass="image1" style="margin-left: -10px;" /><br/><br/>
+                       
+                <div id="titl"><div class="pagetitle">
+                                Previous Education Detail
+                    </div></div>
+                
+                
+                <div id="ttle">
+                <div class="content6">
+                            
+                    <p:selectOneMenu value="#{cars.name}" filter="true" filterMatchMode="startsWith" id="academic" height="250" style="width: 210px;"  panelStyle="width:220px">  
+            <f:selectItem itemLabel="Select Academic" itemValue="" />  
+            <f:selectItems value="#{cars.cars}" itemLabel="items"/>  
+        </p:selectOneMenu> <br/><br/>
+                           
+<!--                            <p:selectOneMenu id="academic"  label="Universities" style="width: 210px;"  panelStyle="width:220px">  
+                                <f:selectItem itemLabel="Select Academics*" itemValue="" /> 
+                                <f:selectItem itemLabel="PG" itemValue="1" /> 
+                                <f:selectItem itemLabel="UG" itemValue="2" /> 
+                                <f:selectItems itemValue="#{selectCourseBean.selectcrz}"/>
+                                <f:selectItem itemLabel="Diploma" itemValue="3" /> 
+                                <f:selectItem itemLabel="12th" itemValue="4" />
+                                <f:selectItem itemLabel="10th" itemValue="5" /> 
+
+                            </p:selectOneMenu>  <br/><br/>-->
+
+ 
+                            
+                            
+
+                            <p:inputText id="aggregate1" required="true" size="29">
+                                <p:watermark for="aggregate1" value="Institute Name*"/>
+
+                            </p:inputText><br/><br/>
+
+
+                            <p:inputText id="aggregate" value="#{admissionBean2.aggregate}" required="true" size="29">
+                                <p:watermark for="aggregate" value=" Aggregate Percentage*"/>
+
+                            </p:inputText>
+
+                            <p:fileUpload  id="fileupload" 
+                                            auto="true" mode="simple" multiple="true" fileUploadListener="#{fileUploadController.handleFileUpload}"/>
+                           
+
+
+                        </div>
+                        <div class="content7">
+                            
+                            
+                            <p:inputText id="sleccrz" required="true" size="29">
+                                <p:watermark for="sleccrz" value="Enter your Specialization*"/>
+
+                            </p:inputText><br/><br/>
+
+<!--                            <p:selectOneMenu id="sleccrz" style="width: 210px;" label="Universities"  panelStyle="width:220px">  
+                                <f:selectItem itemLabel="Select Course*" itemValue="" /> 
+                                <f:selectItem itemLabel="B.A" itemValue="1" /> 
+                                <f:selectItem itemLabel="B.Com" itemValue="2" /> 
+                                <f:selectItem itemLabel="B.Tech" itemValue="3" /> 
+
+                            </p:selectOneMenu>  <br/><br/>-->
+
+
+
+                            <p:inputText id="aggregate2" required="true" size="29">
+                                <p:watermark for="aggregate2" value="Year of Passing*"/>
+
+                            </p:inputText><br/>
+
+                            <p:message for="final"/><br/> 
+                            <p:inputText id="final" value="#{admissionBean2.final1}" required="true" size="29" >
+                                <p:watermark for="final" value=" Final Year Percentage*"/>
+
+                            </p:inputText>
+                            
+                             
+                           
+
+                            <p:commandButton styleClass="link" id="bbtn" value="+"  />
+
+
+                        </div>
+
+
+                        <div class="txt2">
+                            <h:outputText value="Upload Documents" /><br/>
+                            
+                            
+                            
+                            <p:inputText id="docs" value="#{admissionBean2.aggregate}" required="true" size="29">
+                                <p:watermark for="docs" value="Enter Document Details"/>
+                                <p:tooltip for="docs" value="Ex- UG Marks Card,Course Completed Certificate"/>
+
+                            </p:inputText><br/><br/>   
+                        </div><br/><br/>
+                
+                          
+                
+                       <div class="content-adjust">
+                        <a href="moharto_student_register_documents.xhtml"><button type="button" id="btnprev" >Next</button></a>
+
+                        <a href="moharto_student_register_personal.xhtml"><button type="button" id="btnnext" >Previous</button></a>
+                       </div>
+                </div>
+                    </center>
+            
+            <div id="grd">
+                
+                
+                <p:dataTable styleClass="listview" value="#{educationArray.array}" id="FeeStructture1" var="fee"  editable="true"  style="width: 936px;  margin-left: -45px;margin-top: 16px;">
+                    
+                <p:column  headerText="Academic" style="width: auto;font-size: 13px;margin-left:10px;" >
+                            
+                    <h:outputText value="#{fee.specliazation}" style="color: black;font-size: 11px;"/>
+                          
+                    </p:column>
+                
+                        <p:column  headerText="Specialization" style="width: auto;font-size: 13px;" >
+                            
+                                <h:outputText value="#{fee.course}" style="color: black;font-size: 11px;"/>
+                            
+                        </p:column>
+                        
+                        <p:column headerText="Institute Name " style="width:auto;font-size: 13px;">
+                            
+                                <h:outputText value="#{fee.institute}" style="width: 100px;color: black;font-size: 11px;"/>
+                            
+                        </p:column>
+                
+                       <p:column headerText="Year of Passing " style="width:100px;font-size: 13px;">
+                            
+                                <h:outputText value="#{fee.year}" style="width: 100px;color: black;font-size: 11px;"/>
+                            
+                        </p:column>
+                
+                      <p:column headerText="Aggregate Percentage " style="width:auto;font-size: 13px;">
+                            
+                          <center> <h:outputText value="#{fee.aggregate}" style="width: 100px;color: black;font-size: 11px;"/></center>
+                            
+                        </p:column>
+                      <p:column headerText="Final Year Percentage " style="width:auto;font-size: 13px;">
+                            
+                          <center> <h:outputText value="#{fee.per}" style="width: 100px;color: black;font-size: 11px;"/></center>
+                            
+                        </p:column>
+                       <p:column headerText="Files Linked " style="width:90px;;font-size: 13px;">
+                            
+                           <center>  <h:outputText value="#{fee.file1}" style="width: 100px;color: black;font-size: 11px;"/></center>
+                            
+                        </p:column>
+                    
+                     <p:column style="width:6%">  
+                      <p:rowEditor />  
+                   </p:column>  
+                
+                    </p:dataTable><br/><br/>
+                
+            </div>
+
+
+
+            
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+

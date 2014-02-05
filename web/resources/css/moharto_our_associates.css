@@ -1,0 +1,73 @@
+.our_associates_maincontainer{
+
+    margin: 0 auto;
+    width: 980px;
+
+
+
+}
+
+.our_associates_leftcontainer{
+
+     float: left;
+
+    width: 68%;
+
+}
+
+.our_associates_rightcontainer{
+    
+    margin-left: 24px;
+    float: left;
+
+    width: 29%;
+    //border: 1px solid #ddd;
+}
+
+.right-border
+{
+    width:230px;
+    height:305px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    
+}
+
+#reachust1{
+    width: 206px;
+    margin-top: 0px;
+    height: 17px;
+    margin-left: 7px;
+}
+
+#reachustext1
+{
+    width: 206px;margin-top: 7px; height: 17px;margin-left: 7px;
+}
+
+#reachustext2
+{
+    width: 206px;margin-top: 7px; height: 17px;margin-left: 7px;
+}
+
+#reachustext3
+{
+    width: 206px;margin-top: 7px; height: 17px;margin-left: 7px;
+}
+
+#reachustext4
+{
+    width: 206px;margin-top: 7px; height: 17px;margin-left: 7px;
+}
+
+#reachustext5
+{
+    width: 206px;margin-top: 7px; height: 17px;margin-left: 7px;
+}
+.btn{
+    width: 65px;
+    height: 29px;
+    margin-top: 25px;
+    float: right;
+    margin-right: 8px;
+}

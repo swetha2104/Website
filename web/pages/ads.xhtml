@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="advertise-in-moharto.css"/>
+
+        <script type="text/javascript">
+            function start() {
+                PF('startButton1').disable();
+
+                window['progress'] = setInterval(function() {
+                    var pbClient = PF('pbClient'),
+                            oldValue = pbClient.getValue(),
+                            newValue = oldValue + 10;
+
+                    pbClient.setValue(pbClient.getValue() + 10);
+
+                    if (newValue === 100) {
+                        clearInterval(window['progress']);
+                    }
+
+
+                }, 1000);
+            }
+
+            function cancel() {
+                clearInterval(window['progress']);
+                PF('pbClient').setValue(0);
+                PF('startButton1').enable();
+            }
+        </script> 
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/twocolumntemplate.xhtml">
+
+        <!--include code to appear in left column -->
+
+        <ui:define name='leftcolumn'>
+            <div class="adimages">
+                <div class="pagetitle">
+                    Advertise in Moharto
+                </div>
+                <div class="para">
+                    Please select the ad of your interest shown below so that our "Price Calculator" on the right side can guide you further.
+                </div>
+                <h:panelGrid columns="1" style="margin-top: 25px;">
+                    <h:graphicImage value="../resources/images/pages/bbm.png" style="width: 230px;
+                                    height: 418px;
+                                    "/>
+                    <h:panelGrid columns="2" style="margin-left: 47px;">
+                        <p:selectBooleanCheckbox />
+                        <h:outputText value="(230px * 418px)"/>
+                    </h:panelGrid>
+
+
+                </h:panelGrid>
+                <div class="clear"/>
+                <h:panelGrid columns="1" style="float: right;margin-top: -455px;">
+                    <h:graphicImage value="../resources/images/pages/bbm1.jpg" width="230" height="78" />
+                    <h:panelGrid columns="2" style="margin-left: 47px;">
+                        <p:selectBooleanCheckbox />
+                        <h:outputText value="(230px * 78px)"/>
+                    </h:panelGrid>
+
+                    <h:graphicImage value="../resources/images/pages/capture.png"  width="230" height="178" />
+                    <h:panelGrid columns="2" style="margin-left: 47px;">
+                        <p:selectBooleanCheckbox />
+                        <h:outputText value="(230px * 178px)"/>
+                    </h:panelGrid>
+                </h:panelGrid>
+                <h:panelGrid columns="1" style="margin-top: 14px;">
+                    <h:graphicImage value="../resources/images/home/Gradmen.png" width="468" height="84" />
+                    <h:panelGrid columns="2" style="margin-left: 179px;">
+                        <p:selectBooleanCheckbox />
+                        <h:outputText value="(468px * 84px)"/>
+                    </h:panelGrid>
+
+
+                </h:panelGrid>
+            </div>
+
+        </ui:define>
+
+        <!--include code to appear in right column -->
+        <ui:define name='rightcolumn'>
+            <div class="display-adtype">
+                <div class="pagetitle">
+                    Ads Price Calculator
+                </div>
+                <div  class="ads-price-content" >
+                    <div class="para">
+                        <h:panelGrid columns="2" >
+                            Choose Display Type:
+                            <h:selectOneRadio id="options" >  
+                                <f:selectItem itemLabel="Permanent" itemValue="1" />  
+                                <f:selectItem itemLabel="Search Based" itemValue="2" />  
+                            </h:selectOneRadio> 
+
+                            Ad Type:
+                            <h:selectOneRadio id="options" >  
+                                <f:selectItem itemLabel="PPC" itemValue="1" />  
+                                <f:selectItem itemLabel="Impression" itemValue="2" />  
+                            </h:selectOneRadio> 
+                        </h:panelGrid>
+                    </div>
+                </div>
+                <p:dataTable var="ad" value="#{adsBean.as}" styleClass="ad-pricing-table" >  
+                    <p:column headerText="Selected Ads">  
+                        <h:outputText value="#{ad.adsize}" />  
+                    </p:column>  
+
+                    <p:column headerText="From Date">  
+                        <center>
+                            <p:calendar id="calender" styleClass="cal" size="15" >
+
+                            </p:calendar>
+                        </center>
+                    </p:column>  
+
+                    <p:column headerText="Duration">  
+                        <center>
+                            <p:inputText id="duration" value="" styleClass="dur" size="15">
+                                <p:watermark for="duration" value="Enter Duration" />
+                            </p:inputText>
+                        </center>
+                    </p:column>  
+                </p:dataTable> 
+                <center>
+                    <p:commandButton   value="Request for Price" style="
+                                       margin-top: 14px;" onclick="
+                                               $(this).next('.show_stream').slideDown(300);"/>
+
+                    <div class="show_stream">
+                        <div class="paratitle">
+                            Kindly provide basic information about yourself.
+                        </div>
+                        <center>
+                            <h:panelGrid columns="1">
+                                <h:inputText id="name"/>
+                                <p:watermark value="Name" for="name"/>
+                                <h:inputText id="mobile"/>
+                                <p:watermark value="Mobile" for="mobile"/>
+                                <h:inputText id="colleges" />
+                                <p:watermark value="College/Institute Name" for="colleges"/>
+                                <h:inputText id="email"/>
+                                <p:watermark value="Email id" for="email"/>
+                                <p:commandButton value="Submit"/>
+                            </h:panelGrid>
+                        </center>
+                    </div>
+                </center>
+                <center>
+                    <p:progressBar value="60" labelTemplate="{value}%" displayOnly="true" style="width: 220px;margin-left: 5px;
+                                   margin-top: 12px;"/>
+                </center>
+                <br/>
+            </div>
+        </ui:define>
+
+    </ui:composition>
+</html>

@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <script>
+
+
+            $(document).ready(function() {
+                $('.listview3').hide();
+                $('.vedio').click(function() {
+                    $('.listview3').slideToggle(250);
+                    $('.listview1').slideUp();
+                    $(".available-seats").slideUp(500);
+                });
+            });
+            $(document).ready(function() {
+                $('.listview1').hide();
+                $('.short').click(function() {
+                    $('.listview3').slideUp(250);
+                    $('.listview1').slideToggle(250);
+                    $(".available-seats").slideUp(500);
+                });
+            });
+            $(document).ready(function() {
+                $('.listview12').hide();
+                $('.vedio1').click(function() {
+                    $('.listview12').slideToggle(250);
+                });
+            });
+            $(document).ready(function() {
+                $('.listview11').hide();
+                $('.short1').click(function() {
+                    $('.listview11').slideToggle(250);
+                });
+            });
+            $(document).ready(function() {
+                $('.seats1').hide();
+                $('.seat1').click(function() {
+                    $('.seats1').slideToggle(250);
+                });
+            });
+
+
+        </script>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="colleges_moharto.css"/>
+        <h:outputStylesheet library="css" name="colleges_under_moharto.css"/>
+        <h:outputStylesheet library="css" name="colleges_under_moharto1.css"/>
+        <style>
+
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+
+            .ui-datatable * {
+                border : 0px !important;
+            }
+            .ui-datatable .ui-widget-content {
+                border: 1px solid white;
+                border-right: 1px solid lightgray !important;
+            }
+
+
+
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                height: 10px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 10px;
+                background-color: transparent;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+            .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+                padding: 0px;
+
+            }
+            .ui-datatable.borderless .ui-datatable-data tr, .ui-datatable.borderless .ui-datatable-data-empty tr{
+                border-style: none; 
+            }
+            ul 
+            {
+                list-style-image:url('../resources/images/partner/dp_arrow01.gif');
+
+            }
+        </style>
+
+        <script type="text/javascript" src="../resources/js/jquery.lightbox.min.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.canvasSlideshow.js"></script>
+    </h:head>
+
+    <ui:composition template="/template/threecolumntemplate.xhtml">
+
+        <ui:define name='leftcolumn'>
+            <div style="border: 1px solid lightgray; width: 230px; height: 123px;">
+                <p:dataTable id="citylistTable" var="cityobj" value="#{agentsBean.agents1}" widgetVar="citylisttable"   
+                             emptyMessage="No Data found" style=" font-size: 12px;width: 100%; " scrollable="true" scrollHeight="80" >
+                    <f:facet name="header">  
+                        <p:outputPanel>  
+                            <h:outputText value="City" />  <br/>
+                            <p:inputText id="globalFilter" onkeyup="citylisttable.filter()" style="font-size: 12px; width: 120px;height: 20px;" />  
+                        </p:outputPanel>  
+
+                    </f:facet> 
+
+                    <p:column id="colorColumn" filterBy="#{cityobj.city}" > 
+                        <h:selectBooleanCheckbox id="sbc" label=""/>
+                        <h:outputText value="#{cityobj.city}" style="font-size: 12px;" />
+
+                    </p:column>
+
+
+                </p:dataTable>
+            </div><br/>
+            <div style="border: 1px solid lightgray; width: 230px; height: 123px;">
+                <p:dataTable id="dataTable1" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable2"   
+                             emptyMessage="No Data found" style=" font-size: 12px;
+                             width: 100%; " scrollable="true" scrollHeight="100" >
+                    <f:facet name="header">  
+                        <p:outputPanel>  
+                            <h:outputText value="Univesity" />  <br/>
+                            <p:inputText id="globalFilter" onkeyup="carsTable2.filter()" style="font-size: 12px; width: 120px;height: 20px;" />  
+                        </p:outputPanel>  
+
+                    </f:facet> 
+
+                    <p:column id="colorColumn" filterBy="#{car.name}"  > 
+                        <h:selectBooleanCheckbox id="sbc1" label=""/>
+                        <h:outputText value="#{car.name}" style="font-size: 12px;" />
+
+                    </p:column>
+                </p:dataTable>
+            </div><br/>
+            <p:inputText id="txt1" style="width: 220px;">
+                <p:watermark for="txt1" value="College Lookup"/>
+            </p:inputText>
+
+            <h:graphicImage value="../resources/images/pages/capture.png" height="110" width="228" style="border: 1px solid;margin-top: 5px;"/>
+            <h:graphicImage value="../resources/images/pages/ielts.png"  width="230" height="264"/>
+
+        </ui:define>
+
+        <ui:define name='main'>
+            <div>
+                <div class="pagetitle" style="text-align: left;">
+                    Colleges For MBA
+                </div>
+            </div>
+            <div style="height: 216px;
+                 margin-top: 29px;
+                 padding-left: 4px;
+                 border: 1px solid lightgray;
+                 margin-left: 10px;
+                 margin-right: 9px">
+                <div class="clg name" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText class="pagetitle" value="Brindavan College, Banglore" style="margin-left: 1px;"/>
+                </div> 
+                <div class="rating" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <p:rating value="#{ratingController.rating4}" readonly="true" />
+                    <h:outputText value="Affiliated to VTU UNiversity | Year of Establishment:160" style="margin-left: 22px;border-right: 1px black;"/>
+                    
+                </div>
+                <div class="content" style="width: 515px; height: 122px;margin-top: 12px;">
+                    <div class="logo" style="width: 495px; height: 101px;margin-top: 2px;">
+                        <p:graphicImage value="../resources/images/pages/Brindavan.png" width="100" height="100"/>
+                    </div>
+                    <div class="short" style="width: 104px;height: 51px;margin-top: -93px;margin-left:259px;">
+                        <p:graphicImage value="../resources/images/pages/shortprofile.png" width="25" height="25" />
+                        <div style="width: 37px;height: 29px;margin-left: 30px;
+                             margin-top: -22px;">
+                            <h:outputText value="Short profile" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img2"  style="width: 56px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: -4px;margin-left: 269px;">
+                        <p:graphicImage id="bus" value="../resources/images/pages/transport.png" style="margin-top: -4px;
+                                        margin-left: 4px;"/>
+                        <p:tooltip for="bus" value="Transport facility"/>
+                    </div>
+                    <div class="vedio" style="width: 99px;height: 51px;margin-top: -95px;margin-left: 338px;">
+                        <p:graphicImage  value="../resources/images/pages/videos.png" width="25" height="25"/>
+                        <div style="width: 37px;height: 29px;margin-left: 29px;
+                             margin-top: -22px;">
+                            <h:outputText value="College vedios" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img4" style="width: 53px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 0px;margin-left: 343px;">
+                        <p:graphicImage id="job" value="../resources/images/pages/job_1.png" style="margin-top: -4px;"/>
+                        <p:tooltip for="job" value="Placements"/>
+                    </div>
+                    <div class="gallery" style="width: 99px;height: 51px;margin-top:-93px;margin-left: 419px;">
+                        <p:graphicImage  value="../resources/images/pages/gallery.png" width="25" height="25"/>
+
+                        <div  style="width: 37px;height: 29px;margin-left: 30px;
+                              margin-top: -22px;">
+                            <h:outputText value="Photo gallery" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img6" style="width: 71px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top:-2px;margin-left: 412px;">
+                        <p:graphicImage id="hostel" value="../resources/images/pages/hostel facilities.png" />
+                        <p:tooltip for="hostel" value="Hostel for girls and boys"/>
+                    </div>
+                </div>
+                <div class="seats" style="width: 515px; height: 20px;margin-top: -6px;">
+
+                    <h:outputText class="seat1" value="Check Seats Availablitiy |" style="border-right: 1px black;font-size: 15px;
+                                  font-weight: bold;" />
+                    <h:outputText value="Admissions Closing on:15 feb 2014" />
+                </div>
+                <div class="fee" style="width: 515px; height: 20px;margin-top: 2px;">
+
+                    <a href="moharto_student_register_basic.xhtml"><button type="button" style="float: right;margin-right: 26px;margin-top: -4px;background-color: gray;" >Enroll Now</button></a>
+                </div>
+            </div>
+
+            <!--safi code starts here-->  
+            <div class="available-seats" id="canvas_container" style="position:relative; margin:auto; width:800px;height:250px;">
+                <canvas id="slideshow" width="500" height="250">
+                    <ul>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                    </ul>
+                    <ul>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                    </ul>
+                    <ul>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                    </ul>
+                    <ul>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                    </ul>
+                    <ul>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                        <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                    </ul>
+                </canvas>
+                <script type="text/javascript">
+                    $('#slideshow').canvasSlideshow({num_elem: 2});
+                    $('.available-seats').hide();
+                    $('.gallery img').on('click', function() {
+                        $('.listview1,.listview3').slideUp();
+                        $(".available-seats").slideToggle(500);
+                    });
+                </script>
+            </div>
+
+            <!--safi code ends here-->  
+            <div class="listview3" style="width: 486px;
+                 height: 309px;
+                 padding-left: 14px;
+                 margin-top: 16px;
+                 background-color: rgb(240, 240, 240);
+                 display: block;
+                 margin-left: 12px;">
+                <div style=" width: 520px; height: 178px;border-radius: 4px;">
+
+                    <div class="pagetitle">
+                        Video Tour
+                    </div>
+
+                    <p:media value="http://www.youtube.com/v/KZnUr8lcqjo" width="450;" height="250" player="flash"  style="margin-left: 10px;
+                             margin-top: 10px;margin-bottom: 6px;border-radius: 10px;"/>
+
+                </div>
+            </div>
+
+            <div class="listview1" style="width: 486px;
+                 height: 309px;
+                 padding-left: 14px;
+                 margin-top: 16px;
+                 background-color: rgb(240, 240, 240);
+                 display: block;
+                 margin-left: 12px;">
+                <div class="pagetitle" >Short Profile</div>
+                <div style="clear:both"></div>
+                <div class="para">Brindavan College is a premier educational institution of higher 
+                    learning in the garden city of India, the Silicon Valley and the knowledge capital of India.
+                    The college is located in a calm, serene and eco-friendly environment.The college is recognized by Government, 
+                    approved by All India Council for Technical Education (AICTE), New Delhi  </div>
+                <div class="para" style="margin-top: 10px;"> With more than a decade of excellence in professional education and training. 
+                    Brindavan college is a leading college in Bengaluru. Over the years the Brindavan college has established  exceptional standards of academic achievements and it is one of the regions top educational institution. </div>
+                <ul style="margin-left: -10px;margin-top: 10px;font-size: 13px;">
+                    <li >The biggest in Asia having "five star" accredation by NAAC.</li>
+                    <li>1400 Students from 46 overseas countries.</li>
+                    <li>Wifi Campus.</li>
+                    <li>Free Soft Skill Training.</li>
+                    <li>Free Laptop.</li>
+                </ul>
+            </div>
+            
+<!--Seats Available*************************************************-->
+            <div class="seats1" style=" height: 753px;
+background-color: rgb(240, 240, 240);
+padding-left: 16px;
+width: 488px;
+display: block;
+margin-left: 10px;
+border: 1px solid lightgray;
+margin-top: 7px;">
+               
+                <div class="content2">
+                    <div style="float:left; padding-left: 7px;"><h:outputText value="Courses Name" style="font-weight: bold;font-size: 14px;" /></div>
+                        <div style="float:left;padding-left: 201px;"><h:outputText value="Seats Available" style="font-weight: bold;font-size: 14px;"/></div>
+                        <div style="float:left;padding-left: 22px;"><h:outputText value="Actions" style="font-weight: bold;font-size: 14px;"/></div>
+
+                    </div>
+                <div class="clear"/>
+                <div class="college1">
+
+                    <div class="college1_details1">
+                        <h:outputText value="Master of Business Administration(MBA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+
+
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="25"/>
+                    </div>
+                    <div class="actions1" >
+                       
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+                        </div>
+                </div>
+
+                <div class="clear"/>
+
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Master of Technology(M.Tech)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="22"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+
+                <div class="clear"/>
+
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Master of Technology(M.Tech)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>                       
+
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="8"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+
+                <div class="clear"/>
+
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Bachleor of Buisness Management(BBM)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="15"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+
+                <div class="clear"/>
+
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Bachleor of Computer Application(BCA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="55"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+                <div class="clear"/>
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Bachleor of Engineering(B.E)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="13"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+                <div class="clear"/>
+                <div class="college1">
+
+
+                    <div class="college1_details1" >
+                        <h:outputText value="Master of Computer Application(MCA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+
+                        <h:outputText value=" Group: 4,75,000"/><br/>
+                        <h:outputText value="Enroll Fee: 10,000"/><br/>
+                        <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                    </div>
+                    <div class="seate_avalable">
+                        <h:outputText value="22"/>
+                    </div>
+                    <div class="actions1">
+
+                        <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                        <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                        <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>
+
+                    </div>
+                </div>
+            </div>
+                 <!--Seats Available ends*************************************************-->
+
+
+            <div style="height: 225px;
+                 margin-top: 18px;
+                 padding-left: 4px;
+                 border: 1px solid lightgray;
+                 margin-left: 10px;
+                 margin-right: 9px">
+                <div class="clg name" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText class="pagetitle" value="Presidency College, Banglore" style="margin-left: 1px;"/>
+                </div> 
+                <div class="rating" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <p:rating value="#{ratingController.rating4}" readonly="true" />
+                    <h:outputText value="Affiliated to VTU UNiversity | Year of Establishment:160" style="margin-left: 22px;border-right: 1px black;"/>
+                   
+                </div>
+                
+                <div class="content" style="width: 515px; height: 122px;margin-top: 14px;">
+                    <div class="logo" style="width: 490px; height: 100px;margin-top: 2px;">
+                        <p:graphicImage value="../resources/images/pages/Presidency.png" width="100" height="100"/>
+                    </div>
+                    <div class="short1" style="width: 104px;height: 51px;margin-top: -100px;margin-left: 265px;">
+                        <p:graphicImage value="../resources/images/pages/shortprofile_shader.png" width="25" height=""/>
+                        <div style="width: 37px;height: 29px;margin-left: 32px;
+                             margin-top: -19px;">
+                            <h:outputText value="Short profile" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img2"  style="width: 56px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 1px;margin-left: 271px;">
+                        <p:graphicImage id="bus1" value="../resources/images/pages/transport_shader.png" style="margin-top: -4px;
+                                        margin-left: 4px;"/>
+                        <p:tooltip for="bus1" value="Transport facility"/>
+                    </div>
+                    <div class="vedio1" style="width: 99px;height: 51px;margin-top: -95px;margin-left: 338px;">
+                        <p:graphicImage  value="../resources/images/pages/videos_shader.png" width="25" height="25"/>
+                        <div style="width: 37px;height: 29px;margin-left: 29px;
+                             margin-top: -19px;">
+                            <h:outputText value="College vedios" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img4" style="width: 53px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 0px;margin-left: 350px;">
+                        <p:graphicImage id="job1" value="../resources/images/pages/job_shader.png" style="margin-top: -4px;"/>
+                        <p:tooltip for="job1" value="Placements"/>
+                    </div>
+                    <div class="gallery1" style="width: 99px;height: 51px;margin-top:-94px;margin-left: 417px;">
+                        <p:graphicImage styleClass="link" value="../resources/images/pages/gallery_shader.png"  width="25" height=""/>
+
+                        <div style="width: 37px;height: 29px;margin-left: 31px;
+                             margin-top: -19px;">
+                            <h:outputText value="Photo gallery" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img6" style="width: 71px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top:0px;margin-left: 415px;">
+                        <p:graphicImage id="hoste2" value="../resources/images/pages/hostel facilities_shader.png" />
+                        <p:tooltip for="hoste2" value="Hostel for girls and boys"/>
+                    </div>
+                </div>
+                <div class="seats" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText value="Check Seats Available:25 |" style="border-right: 1px black;font-size: 15px;
+                                  font-weight: bold;" />
+                    <h:outputText value="Admissions Closing on:15 feb 2014" style="margin-left: 0px;"/>
+                </div>
+                <div class="fee" style="width: 515px; height: 20px;margin-top: 2px;">
+
+                    <a href="moharto_student_register_basic.xhtml"><button type="button" style="float: right;margin-right: 26px;margin-top: -4px;background-color: gray;" >Enroll Now</button></a>
+                </div>
+            </div>
+
+            <!--safi code starts here-->  
+            <!--            <div class="available-seats" id="canvas_container" style="position:relative; margin:auto; width:800px;height:250px; display: none;">
+                            <canvas id="slideshow" width="500" height="250">
+                                <ul>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                                </ul>
+                                <ul>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                                </ul>
+                                <ul>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                                </ul>
+                                <ul>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                                </ul>
+                                <ul>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>
+                                    <li><img src="../resources/images/images/image1.jpg" alt="description image 1" style="display:none;" /></li>      
+                                </ul>
+                            </canvas>
+                            <script type="text/javascript">
+                              $('#slideshow').canvasSlideshow({num_elem: 2});
+                              $('.available-seats').hide();
+                                $('.gallery img').on('click', function() {
+                                $('.listview1,.listview3').slideUp();
+                                    $(".available-seats").slideToggle(500);
+                                });
+                            </script>
+                        </div>-->
+
+            <!--safi code ends here-->  
+
+
+
+                 <div style="height: 225px;
+                 margin-top: 18px;
+                 padding-left: 4px;
+                 border: 1px solid lightgray;
+                 margin-left: 10px;
+                 margin-right: 9px">
+                <div class="clg name" style="width: 515px; height: 20px;margin-top: 2px;">
+                   <h:outputText class="pagetitle" value="AIMS College, Banglore" style="margin-left: 1px;"/>
+                </div> 
+                <div class="rating" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <p:rating value="#{ratingController.rating4}" readonly="true" />
+                    <h:outputText value="Affiliated to VTU UNiversity | Year of Establishment:160" style="margin-left: 22px;border-right: 1px black;"/>
+                   
+                </div>
+                
+                <div class="content" style="width: 515px; height: 122px;margin-top: 14px;">
+                    <div class="logo" style="width: 490px; height: 100px;margin-top: 2px;">
+                       <p:graphicImage value="../resources/images/pages/Aims.png" width="100" height="100"/>
+                    </div>
+                    <div class="short1" style="width: 104px;height: 51px;margin-top: -100px;margin-left: 265px;">
+                        <p:graphicImage value="../resources/images/pages/shortprofile_shader.png" width="25" height=""/>
+                        <div style="width: 37px;height: 29px;margin-left: 32px;
+                             margin-top: -19px;">
+                            <h:outputText value="Short profile" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img2"  style="width: 56px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 1px;margin-left: 271px;">
+                        <p:graphicImage id="bus3" value="../resources/images/pages/transport_shader.png" style="margin-top: -4px;
+                                        margin-left: 4px;"/>
+                        <p:tooltip for="bus3" value="Transport facility"/>
+                    </div>
+                    <div class="vedio1" style="width: 99px;height: 51px;margin-top: -95px;margin-left: 338px;">
+                        <p:graphicImage  value="../resources/images/pages/videos_shader.png" width="25" height="25"/>
+                        <div style="width: 37px;height: 29px;margin-left: 29px;
+                             margin-top: -19px;">
+                            <h:outputText value="College vedios" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img4" style="width: 53px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 0px;margin-left: 350px;">
+                        <p:graphicImage id="job3" value="../resources/images/pages/job_shader.png" style="margin-top: -4px;"/>
+                        <p:tooltip for="job3" value="Placements"/>
+                    </div>
+                    <div class="gallery1" style="width: 99px;height: 51px;margin-top:-94px;margin-left: 417px;">
+                        <p:graphicImage styleClass="link" value="../resources/images/pages/gallery_shader.png"  width="25" height=""/>
+
+                        <div style="width: 37px;height: 29px;margin-left: 31px;
+                             margin-top: -19px;">
+                            <h:outputText value="Photo gallery" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img6" style="width: 71px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top:0px;margin-left: 415px;">
+                        <p:graphicImage id="hoste3" value="../resources/images/pages/hostel facilities_shader.png" />
+                        <p:tooltip for="hoste3" value="Hostel for girls and boys"/>
+                    </div>
+                </div>
+                <div class="seats" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText value="Check Seats Available:25 |" style="border-right: 1px black;font-size: 15px;
+                                  font-weight: bold;" />
+                    <h:outputText value="Admissions Closing on:15 feb 2014" style="margin-left: 0px;"/>
+                </div>
+                <div class="fee" style="width: 515px; height: 20px;margin-top: 2px;">
+
+                    <a href="moharto_student_register_basic.xhtml"><button type="button" style="float: right;margin-right: 26px;margin-top: -4px;background-color: gray;" >Enroll Now</button></a>
+                </div>
+            </div>
+                <div style="height: 225px;
+                 margin-top: 18px;
+                 padding-left: 4px;
+                 border: 1px solid lightgray;
+                 margin-left: 10px;
+                 margin-right: 9px;
+                 margin-bottom: 10px;">
+                <div class="clg name" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText class="pagetitle" value="Garden City College, Banglore" style="margin-left: 1px;"/>
+                </div> 
+                <div class="rating" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <p:rating value="#{ratingController.rating4}" readonly="true" />
+                    <h:outputText value="Affiliated to VTU UNiversity | Year of Establishment:160" style="margin-left: 22px;border-right: 1px black;"/>
+                   
+                </div>
+                
+                <div class="content" style="width: 515px; height: 122px;margin-top: 14px;">
+                    <div class="logo" style="width: 490px; height: 100px;margin-top: 2px;">
+                        <p:graphicImage value="../resources/images/pages/GCC.png"  width="100" height="100"/>
+                    </div>
+                    <div class="short1" style="width: 104px;height: 51px;margin-top: -100px;margin-left: 265px;">
+                        <p:graphicImage value="../resources/images/pages/shortprofile_shader.png" width="25" height=""/>
+                        <div style="width: 37px;height: 29px;margin-left: 32px;
+                             margin-top: -19px;">
+                            <h:outputText value="Short profile" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img2"  style="width: 56px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 1px;margin-left: 271px;">
+                        <p:graphicImage id="bus4" value="../resources/images/pages/transport_shader.png" style="margin-top: -4px;
+                                        margin-left: 4px;"/>
+                        <p:tooltip for="bus4" value="Transport facility"/>
+                    </div>
+                    <div class="vedio1" style="width: 99px;height: 51px;margin-top: -95px;margin-left: 338px;">
+                        <p:graphicImage  value="../resources/images/pages/videos_shader.png" width="25" height="25"/>
+                        <div style="width: 37px;height: 29px;margin-left: 29px;
+                             margin-top: -19px;">
+                            <h:outputText value="College vedios" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img4" style="width: 53px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top: 0px;margin-left: 350px;">
+                        <p:graphicImage id="job4" value="../resources/images/pages/job_shader.png" style="margin-top: -4px;"/>
+                        <p:tooltip for="job4" value="Placements"/>
+                    </div>
+                    <div class="gallery1" style="width: 99px;height: 51px;margin-top:-94px;margin-left: 417px;">
+                        <p:graphicImage styleClass="link" value="../resources/images/pages/gallery_shader.png"  width="25" height=""/>
+
+                        <div style="width: 37px;height: 29px;margin-left: 31px;
+                             margin-top: -19px;">
+                            <h:outputText value="Photo gallery" style="padding-top: 10px;"/>
+                        </div>
+                    </div>
+                    <div class="img6" style="width: 71px;border-radius: 8px;height: 42px;border: 1px solid lightgrey;margin-top:0px;margin-left: 415px;">
+                        <p:graphicImage id="hoste4" value="../resources/images/pages/hostel facilities_shader.png" />
+                        <p:tooltip for="hoste4" value="Hostel for girls and boys"/>
+                    </div>
+                </div>
+                <div class="seats" style="width: 515px; height: 20px;margin-top: 2px;">
+                    <h:outputText value="Check Seats Available:25 |" style="border-right: 1px black;font-size: 15px;
+                                  font-weight: bold;" />
+                    <h:outputText value="Admissions Closing on:15 feb 2014" style="margin-left: 0px;"/>
+                </div>
+                <div class="fee" style="width: 515px; height: 20px;margin-top: 2px;">
+
+                    <a href="moharto_student_register_basic.xhtml"><button type="button" style="float: right;margin-right: 26px;margin-top: -4px;background-color: gray;" >Enroll Now</button></a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </ui:define>
+        <ui:define name='rightcolumn'>
+            <ui:insert name="/blocks/iwanttodo.xhtml" /> 
+
+            <p:dataTable var="clg" value="#{collegesList.college}" scrollable="true" scrollHeight="200" styleClass="dtclg">
+                <p:column headerText="FEATURED COLLEGES">
+                    <h:outputLink id="fade" value="#" style="font-size: 13px;text-decoration: none;">  
+                        <h:outputText value="#{clg.collegename}" />  
+                    </h:outputLink>  
+                    <p:tooltip for="fade" value="#{clg.collegename}" showEffect="fade" hideEffect="fade" />  
+                </p:column>
+            </p:dataTable>
+
+            <h:graphicImage value="../resources/images/pages/ad4.png" height="290" width="230"/>
+
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+
+//                    $('#slideshow').canvasSlideshow({num_elem: 2});
+//                    $('.available-seats').hide();
+//                    $('.gallery img').on('click', function() {
+//                    $('.listview1,.listview3').slideUp();
+//                        $(".available-seats").slideToggle(500);
+//                    });
+                });
+
+            </script>
+
+        </ui:define>
+
+    </ui:composition>
+</html>

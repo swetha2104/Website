@@ -1,0 +1,130 @@
+
+.right-panel
+{
+    width: 233px;
+    height: 510px;
+    border-left: 1px solid black;
+    float: right;
+    margin-top: 3px;
+    margin-right: -10px;
+
+}
+
+.table
+{
+    font-size: 13px;  
+
+}
+.clear
+{
+    clear: both;
+}
+
+.links
+{
+    font-size: 13px;
+
+
+
+}
+.gold-links
+{
+    float: left;
+    margin-top: -5px;
+    font-size: 13px;
+}
+.silver-links
+{
+    font-size: 13px;
+    float: left;
+    margin-top: -8px;
+    margin-left: 25px;
+
+}
+
+.links-sub
+{
+    font-size: 13px;
+    font-weight: bold;
+    float: left;
+    margin-top: -5px;
+}
+.label-sizes
+{
+    float: left;
+    margin-top: -115px;
+
+
+}
+
+.label-type
+{
+
+    float: left;
+    margin-top: -32px;
+}
+.course-label
+{
+
+    float: left;
+    margin-top: -24px;
+}
+.dialog-link
+{
+    float:left;
+    margin-top: -2px;
+}
+.leads-label
+{
+    padding-right: 16px;
+    float: left;
+    margin-top: -16px;
+}
+.lists
+{
+    margin-top: 2px;
+    margin-left: -24px;
+
+}
+
+.top-links-line
+{
+    margin-top: 3px;
+    margin-left: -1px;
+    border: 1px solid #ddd;
+    width: 104px
+}
+.middle-links-line
+{
+    margin-top: -6px;
+    border: 1px solid #ddd;
+    width: 104px
+}
+.bottom-links-line
+{
+    border: 1px solid #ddd;
+    width: 104px;
+    margin-top: 13px;
+    margin-left: 22px;
+
+}
+.price-label
+{
+
+    float:left;
+    padding-right: 14px;
+    margin-left: 6px;
+}
+#click-link
+{
+    text-decoration: none;
+    margin-left: -188px;
+    color: #49a4c8
+
+}
+.benefits{
+    float: left;
+    margin-top: 11px;
+    margin-right: 19px;
+
+}

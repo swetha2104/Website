@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="dashboard_profile.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="moharto_dashboard_main">
+
+
+                    <p:menubar autoDisplay="false">
+
+                        <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                        <p:submenu label="My College" styleClass="dashboard" >
+                            <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                        </p:submenu>                                   
+                        <p:submenu label="Admissions"  styleClass="dashboard">
+                            <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                            <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                            <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                        </p:submenu>
+                        <p:submenu label="Ads" styleClass="dashboard">
+                            <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                            <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                        </p:submenu>
+
+                        <p:submenu label="Messages"  styleClass="dashboard">
+                            <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                            <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                        </p:submenu>
+
+                    </p:menubar>
+                    <center>
+                        <h:outputText value="Profile Details" style="float: left;
+                                      font-size: 14px;
+                                      margin-left: 362px;
+                                      margin-top: 11px;"/>
+                        <h:panelGrid columns="3" style="float: left;
+                                     margin-top: 3px;
+                                     margin-left: 273px;" cellspacing="13px;" cellpadding="5px;">
+                            <h:outputText value="College Name" class="txt1"/>
+                            <h:outputText value=":"/>
+
+                            <p:inplace id="a1" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.cname}"  
+                                             required="true" label="text1"/>  
+                            </p:inplace>  
+
+                            <h:outputText value="Address" class="txt1"/>
+                            <h:outputText value=":"/>
+
+                            <p:inplace id="a2" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.address}"  
+                                             required="true" label="text2"/>  
+                            </p:inplace> 
+                            <h:outputText value="City" class="txt1"/>
+                            <h:outputText value=":"/>
+                            <p:inplace id="a3" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.city}"  
+                                             required="true" label="text3"/>  
+                            </p:inplace> 
+                            <h:outputText value="Contact Person" class="txt1"/>
+                            <h:outputText value=":"/>
+
+                            <p:inplace id="a4" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.cperson}"  
+                                             required="true" label="text4"/>  
+                            </p:inplace> 
+                            <h:outputText value="Mobile No" class="txt1"/>
+                            <h:outputText value=":"/>
+
+                            <p:inplace id="a5" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.mno}"  
+                                             required="true" label="text5"/>  
+                            </p:inplace> 
+                            <h:outputText value="Phone No" class="txt1"/>
+                            <h:outputText value=":"/>
+
+                            <p:inplace id="a6" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.phno}"  
+                                             required="true" label="text6"/>  
+                            </p:inplace> 
+                            <h:outputText value="Email" class="txt1"/>
+                            <h:outputText value=":"/>
+
+
+                            <p:inplace id="a7" editor="true">  
+                                <p:inputText value="#{dashboard_Profile_Bean.email}"  
+                                             required="true" label="text7"/>  
+                            </p:inplace> 
+
+                        </h:panelGrid>
+
+                    </center>
+                    <br/><br/><br/>
+
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="register_steps.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <style>
+
+        </style>
+    </h:head>
+
+
+    <ui:composition template="/template/twocolumntemplate.xhtml">
+
+        <ui:define name='leftcolumn'>
+            <p:graphicImage value="../resources/images/enrol/5.png" width="800" styleClass="image1" style="margin-left: 85px;" />
+
+            <div class="align">
+                <div class="labels" style="margin-top: 26px;margin-left: 159px;">
+
+
+                    <div class="labelss">
+                        <p:outputLabel value="Enrollment Fee:"/> <p:spacer width="50px"/> <p:outputLabel value="Rs. 10000 "/>
+                    </div>
+                </div><br/><br/><br/>
+                <div class="labelsss">
+
+                    <h:outputText id="payment" value="Select Payment Type :"/></div>
+
+                <div class="radios">
+                    <p:selectOneRadio id="options2" value="#{admissionBean3.options}">  
+                        <f:selectItem itemLabel="Debit Card" itemValue="1" />  
+                        <f:selectItem itemLabel="Credit Card" itemValue="2" /></p:selectOneRadio><br/>
+
+                    <p:selectOneRadio id="options1" >  
+                        <f:selectItem itemLabel="NetBanking" itemValue="1" />  
+                        <f:selectItem itemLabel="Paypal" itemValue="2" /></p:selectOneRadio><br/>
+
+
+<!--                   <p:selectOneRadio id="options2" value="#{admissionBean3.options}">  
+<f:selectItem itemLabel="Cash" itemValue="5" />  
+<f:selectItem itemLabel="DD" itemValue="6" />
+ <f:selectItem itemLabel="Cheque" itemValue="7" />
+</p:selectOneRadio><br/>-->
+                </div>
+                <div class="textt">
+                    <p:inputText id="credit1" value="#{admissionBean3.card}" required="true" >
+                        <p:watermark for="credit1" value="Card No"/>
+
+                    </p:inputText ><br/><br/>
+                    <p:message for="credit1" />
+
+                    <!--                        <p:calendar id="exp1" styleClass="cal" size="27">
+                                                <p:watermark for="exp1" value="Expiry Date" /> 
+                                            </p:calendar><br/><br/>-->
+
+                    <p:inputText id="credit2" value="#{admissionBean3.card}" required="true" >
+                        <p:watermark for="credit2" value="Date as MM/YY"/>
+
+                    </p:inputText ><br/><br/>
+
+                    <p:inputText id="cvv1" value="#{admissionBean3.cvv}" required="true" >
+                        <p:watermark for="cvv1" value="CVV"/>
+                    </p:inputText>
+                    <p:message for="cvv1"/>
+                </div>
+
+                <a href="moharto_student_register_confirm.xhtml"><button type="button" class="btnn" style="width: 118px;
+
+
+
+
+
+
+
+
+
+                                                                         ">Make Payment</button></a><br/><br/>
+                <br/>         <br/>       <br/>                                         
+
+            </div>
+
+
+
+        </ui:define>
+
+
+
+        <ui:define name='rightcolumn'>
+
+
+            <div  class="line1" >
+
+            </div>
+
+
+            <div id="rht">
+                <h:panelGrid columns="3" style="font-weight: bold;" cellpadding="10">
+
+                    <h:outputLabel  value="Your Choosen Category is"/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="NRI"/>
+                    
+                    <h:outputLabel  value="Selected Course"/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="MBA"/>
+
+                    <h:outputLabel  value="Specialization"/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="Finance"/>
+
+                    <h:outputLabel  value="College"/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="Brindavan college of Engineering"/>
+
+                    <h:outputLabel  value="Course Fee "/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="Rs. 80000"/>
+
+                    <h:outputLabel  value="Enrollment Fee "/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="Rs. 10000"/>
+                    
+                    <h:outputLabel  value="Balanced payable "/>
+                    <h:outputLabel  value=":"/>
+                    <h:outputLabel  value="Rs. 70000"/>
+
+
+                </h:panelGrid>
+                <!--                <label>Specialization </label>
+                                <span  style="margin-left: 98px;">:</span>
+                                <label style="margin-left: 50px;">1000</label>-->
+                <!--                <h:outputLabel id="lab" value="Your Choosen Category is:  NRI"/><br/><br/> 
+                                <h:outputLabel id="lab" value="Selected Seat:  MBA"/><br/><br/>
+                                <h:outputLabel id="lab" value="Specialization:  Finance"/><br/><br/> 
+                                <h:outputLabel id="lab" value="College : Brindavan college of Engineering,"/><br/><br/> 
+                                
+                                <h:outputLabel id="lab" value="Course Fee : 80,000"/><br/><br/> 
+                                <h:outputLabel id="lab" value="Enrollment Fee : 10,000"/><br/><br/> 
+                                <h:outputLabel id="lab" value="Balanced payable: 70,000"/><br/><br/> 
+                -->
+
+            </div>
+
+
+
+
+
+            <!--            <div class="settings">
+                        
+                          You have choosen MBA,Finance in Brindavana college of Engineering,Bangalore  
+                            
+                        </div>-->
+            <!--            <div class="table">
+                            <p:dataTable value="#{registerBasicBean.agents}" id="FeeStructture1" var="fee"   style="width: 470px;  margin-left: -21px;margin-top: 16px;">
+                                    
+                                 <p:column  headerText="" style="width: 60px;font-size: 13px;margin-left:10px;" >
+                                        
+                                            <h:outputText value="#{fee.place}" style="color: black;font-size: 11px;"/>
+                                <p:selectOneRadio id="options1" value="#{admissionBean3.options}">  
+                                    <f:selectItem itemLabel="" itemValue="1" />  
+                                    
+                                </p:selectOneRadio><br/>
+                                      
+                                </p:column>
+                            
+                               <p:column  headerText="Streams" style="width: auto;font-size: 13px;" >
+                                          
+                                       <h:outputText value="#{fee.place}" style="color: black;font-size: 13px;"/>
+                                            <h:outputText value="Marketing" style="color: black;font-size: 11px;"/>
+                                            <h:outputText value="Hr" style="color: black;font-size: 11px;"/>
+                                            <h:outputText value="" style="color: black;font-size: 11px;"/>
+                                        
+                                    </p:column>
+                            
+                                 <p:column  headerText="Category" style="width: auto;font-size: 13px;text-align: left;" >
+                                        
+                                            <h:outputText value="#{fee.category}" style="color: black;font-size: 11px;"/>
+                                        
+                                    </p:column>
+                            
+                                    <p:column  headerText="Enrollment Fee" style="width: auto;font-size: 13px;" >
+                                        
+                                            <h:outputText value="" style="color: black;font-size: 11px;"/>
+                                        
+                                    </p:column>
+                                    
+                                    <p:column headerText="Yearly Fee" style="width:auto;font-size: 13px;">
+                                        
+                                            <h:outputText value="#{fee.cost}" style="width: 100px;color: black;font-size: 11px;"/>
+                                        
+                                    </p:column>
+                                </p:dataTable>
+                        </div><br/>-->
+
+            <!--            <h:outputLabel id="labelss" value="For your choosen category,the Annual fee is : 550,000/-"/><br/><br/>
+                        
+                        <h:outputLabel id="labelsss" value="Online Enrollment Fee : 10,000/-"/><br/><br/>
+                        <div class="set"> <div class="para">
+                         Balance to be paid to the College when you visit them with Originals based on your Admission Offer Letter.
+                            </div></div><br/>
+                        <h:outputLabel id="lab" value="Note : once the Enrollment Fee is paid,you would get the Admission Offer Letter. "/><br/><br/>-->
+
+
+        </ui:define>
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

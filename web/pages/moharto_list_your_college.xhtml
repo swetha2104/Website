@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="log_1.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+
+        <ui:define name='main'>
+            <center>
+                <div class="colg">
+                 
+                    <div class="pagetitle_header_form">List Your College</div>
+                    
+                    <div class="colg1">
+
+                        <p:inputText id="address" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;margin-top: 0px;" /><br/><br/>
+                        <p:watermark for="address" value="College Name*"/>
+
+                        <p:inputTextarea id="address1" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;" /><br/><br/>
+                        <p:watermark for="address1" value="Address *"/>
+
+
+                        <p:inputText id="phone1" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                        <p:watermark for="phone1" value="Enter City*"/>
+
+
+                        <p:inputText id="phone2" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                        <p:watermark for="phone2" value="Contact Person *"/>
+
+                        <p:inputText id="phone3" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                        <p:watermark for="phone3" value="Mobile No. *"/>
+
+                        <p:inputText id="phone4" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                        <p:watermark for="phone4" value="Phone No. *"/>
+
+                        <p:inputText id="email1" required="true" size="207"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/>
+                        <p:watermark for="email1" value="Email*"/>
+                        <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-left:-194px;
+                                                 margin-top: 25px;">
+                        </h:selectBooleanCheckbox> 
+                        <div class="para1" > I agree to the <span style="color:  #0d75a0;;">Terms of service</span> and <span style="color:  #0d75a0;;">Privacy Policy</span></div>
+                        <br></br>
+
+                        <p:commandButton id="btn3" value="Submit"  actionListener="#{personBean.savePerson}" style=" box-shadow: 2px 2px 3px #666666;"  /> 
+                        <p:commandButton id="btn4" value="Clear"  actionListener="#{personBean.savePerson}" style=" box-shadow: 2px 2px 3px #666666; "  /> 
+                        <br></br>
+
+                    </div>
+                    <br/>
+                    <br/>
+
+                </div>   
+                <div class="clear"/>
+            </center>
+        </ui:define>
+    </ui:composition>
+</html>
+
+
+
+

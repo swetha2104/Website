@@ -1,0 +1,66 @@
+.educationloan_maincontainer{
+    width: 980px;
+
+    margin: 0 auto;
+
+
+}
+.educationloan_leftcontainer{
+
+    width: 69%;
+
+    float: left;
+
+
+}
+
+.educationloan_rightcontainer{
+
+    width: 29%;
+    float: left;
+
+}
+
+.regborder
+{
+    border:1px solid #ddd;
+    border-radius: 4px;
+    width:230px;
+    height:373px;
+    margin-bottom: 10px
+}
+.btn{
+    width: 65px;
+    height: 29px;
+    margin-top: 6px;
+    float: right;
+    margin-right:7px;
+}
+
+#fname{
+    width: 206px;margin-top: 0px;height: 17px;margin-left: 7px;
+}
+#lname{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#mob{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#email{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#father-occup{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#annual-income{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#category{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#aggregate{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}
+#address{
+    width: 206px;margin-top: 7px;height: 17px;margin-left: 7px;
+}

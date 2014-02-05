@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="moharto_reply.css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template/commonTemplate.xhtml">
+
+            <ui:define name='pageContent'>
+                <f:view>
+                    <div class="reply_maincontainer">
+               
+                        <div class="reply_content">
+
+                            <div class="reply_regularreply">
+                                <div class="reply_regularreply_header">
+                                    <h:outputLabel value="Regular reply" style="font-weight: bold;font-size: 15px;text-align: left;color: #248FB2;"/>
+                                </div>
+                                <br/>
+                                <h:form id="rrfmid">
+                                    <p:inputTextarea id="rrmsg" value="" rows="5" cols="40" style="margin-top: 74px;">
+                                        <p:watermark value="Message" for="rrmsg"/>
+                                    </p:inputTextarea>
+                                    <br/>
+                                    <p:commandButton value="Reply" style="float: right;"/>
+                                </h:form>
+                            </div>
+                            <div style="width: 5px;height: 200px;border-right: 3px solid #ddd;float: left;">
+                                
+                            </div>
+                            <div class="reply_customreply">
+                                <div class="reply_customreply_header">
+                                    <h:outputLabel value="Custom reply" style="font-weight: bold;font-size: 15px;text-align: left;color: #248FB2;"/>
+                                </div>
+                                <br/>
+                                <h:form id="crfmid">
+                                    <p:outputLabel value="To" />
+                                    <p:inputText value=""  style="margin-left: 5px;"/><br/>
+                                    <h:panelGrid columns="2">
+                                     <p:outputLabel value="Message Type" />
+                                     <p:selectOneMenu>
+                                         <f:selectItem itemLabel="Feedback" itemValue="Feedback" />
+                                         <f:selectItem itemLabel="Enquiry" itemValue="Enquiry" />
+                                         <f:selectItem itemLabel="Suggestion" itemValue="Suggestion" />
+                                     </p:selectOneMenu>
+                                    </h:panelGrid>
+                                   <br/>
+                                     <p:inputTextarea id="crmsg" value="" rows="5" cols="40">
+                                        <p:watermark value="Message" for="crmsg"/>
+                                    </p:inputTextarea><br/>
+                                    <p:commandButton value="Reply" style="float: right;"/>
+                                    
+                               
+                                </h:form>
+                            </div>
+                            
+                        
+                    </div>
+                </f:view>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+</html>

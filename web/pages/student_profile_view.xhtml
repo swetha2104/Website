@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="dashboard.css"/>
+        <style type="text/css">
+            a:hover { 
+                color:#OOF;
+                text-decoration: underline;
+            }
+        </style>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <!--MAIN CONTAINER STARTS-->
+            <div class="maincontainer" style="font-size: 15px;width: 980px;margin: 0px auto; fon"> 
+
+
+                <!--BIG DIV STARTS-->
+                <div class="big_div" >
+                    <!--STUDENT FROFILE LEFT STARTS-->
+                    <h:form>
+                        <p:menubar autoDisplay="false" style="font-size: 13px;margin-top: 10px;">
+
+                            <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" style="padding-left: 10px;padding-right:10px;"/>
+                            <p:submenu label="My College"  style="padding-left: 10px;padding-right:10px;" >
+                                <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Microsite"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Add Course" url="moharto_college_dashboard_add_course.xhtml"/>
+                            </p:submenu>
+                            <p:submenu label="Admissions"  style="padding-left: 10px;padding-right:10px;">
+                                <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                            </p:submenu>
+                            <p:submenu label="Ads"  style="padding-left: 10px;padding-right:10px;">
+                                <p:menuitem icon="ui-icon-docunent" value="Post Ad" url="moharto_college_dashboard_ad.xhtml"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Ad Transactions" />
+                            </p:submenu>
+
+                            <p:submenu label="Messages"  style="padding-left: 10px;padding-right:10px;">
+                                <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                            </p:submenu>
+
+                        </p:menubar>
+                    </h:form>
+                    <br/>
+                    <div class="student_profile_left" style="float:left;width: 450px;margin-top: 9px;margin-left: 20px; ">
+
+                        <div class="student_prifile_image" style="width: 50px ">
+
+                        </div>
+
+                        <h4>Personal Details</h4>
+                        <h:panelGrid columns="2" cellpadding="3" cellspacing="10" style="font-size: 12px;">
+                            <p:outputLabel value="First Name"></p:outputLabel>
+
+                            <p:outputLabel id="firstname" value="Ashwin"  >
+                                <!--<p:watermark for="firstname" value="Alex"/>-->
+                            </p:outputLabel> 
+
+                            <p:outputLabel value="Last Name"></p:outputLabel>
+
+                            <p:outputLabel id="lastname" value="Kumar"  >
+                                <!--<p:watermark for="lastname" value="John"/>-->
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Father Name"></p:outputLabel>
+
+                            <p:outputLabel id="fathername" value="Jagdeesh" >
+                                <!--<p:watermark for="fathername" value="Simpson"/>-->
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Father Occupation"></p:outputLabel>
+
+                            <p:outputLabel id="focc" value="Business" >
+                                <!--<p:watermark for="fathername" value="Simpson"/>-->
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Date of birth"></p:outputLabel>
+
+
+                            <p:outputLabel value="01-12-1991"></p:outputLabel>
+
+                            <p:outputLabel value="Nationality"></p:outputLabel>
+
+                            <p:outputLabel value="Indian"></p:outputLabel>
+
+                            <p:outputLabel value="Current Location"></p:outputLabel>
+
+                            <p:outputLabel value="Bangalore"></p:outputLabel>
+
+
+                            <p:outputLabel value="Gender"></p:outputLabel>
+
+                            <p:outputLabel value="Male"></p:outputLabel>
+
+
+                            <p:outputLabel value="Category"></p:outputLabel>
+
+                            <p:outputLabel value="OBC"></p:outputLabel>
+
+                            <p:outputLabel value="Address Line 1"></p:outputLabel>                          
+                            <p:outputLabel id="address" value="#123,RT nagar"  >
+                                <!--<p:watermark for="address" value="Address Line 1"/>-->
+                            </p:outputLabel>
+
+                            <p:outputLabel value="City"></p:outputLabel>
+
+                            <p:outputLabel id="city" value="Bangalore"  >
+                                <!--<p:watermark for="city" value="City"/>-->
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Country"></p:outputLabel>
+
+                            <p:outputLabel id="country" value="India"  >
+                                <!--<p:watermark for="country" value="Country"/>-->
+                            </p:outputLabel>
+
+
+                            <p:outputLabel value="Pin code"></p:outputLabel>
+
+                            <p:outputLabel id="pin" value="525856"  >
+                                <!--<p:watermark for="pin" value="Pin code"/>-->
+                            </p:outputLabel>
+
+
+                            <p:outputLabel value="Mobile"></p:outputLabel>
+
+                            <p:outputLabel id="mobile" value="9999999999" >
+                                <!--<p:watermark for="mobile" value="Mobile"/>-->
+                            </p:outputLabel>
+
+
+                            <p:outputLabel value="Email"></p:outputLabel>
+
+                            <p:outputLabel id="email" value="ashwin_221@gmail.com"  >
+                                <!--<p:watermark for="email" value="Email"/>-->
+                            </p:outputLabel>
+
+
+                        </h:panelGrid>
+                    </div>
+                    <!--STUDENT FROFILE LEFT ENDS-->
+
+
+                    <!--          STUDNET PROFILE RIGHT STARTS  -->
+                    <div class="student_profile_right" style="float:left;margin-top: 9px;margin-left: -58px;">
+                        <!--STUDENT EDUCATIONAL LIST1 STARTS-->
+                        <h4>Education Details</h4>
+                        <h:panelGrid columns="2" cellpadding="3" cellspacing="10" style="font-size: 12px;">
+
+
+                            <p:outputLabel value="Institute Name"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_inst1" value="Mamatha High School" >
+                                <!--<p:watermark for="firstname" value="Alex"/>-->
+                            </p:outputLabel> 
+
+
+                            <p:outputLabel value="Acadamics"></p:outputLabel>
+
+                            <p:outputLabel value="10th Class"></p:outputLabel>
+
+
+                            <p:outputLabel value="Aggrigate Percentage"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_agrgate1" value="74%" >
+
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Year of passing"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_passyear1" value="2012" >
+
+                            </p:outputLabel>
+
+                            <p:outputLabel value="Uploaded file"></p:outputLabel>
+
+                            <p:commandLink value="10th certificate" onclick="PF('dlg2').show();"/>
+
+                        </h:panelGrid>
+                        <!--STUDENT EDUCATIONAL LIST1 ENDS-->
+                        <!--STUDENT EDUCATIONAL LIST2 STARTS-->
+                        <h:panelGrid columns="2" cellpadding="3" cellspacing="10"  style="font-size: 12px;" >
+                            <p:outputLabel value="Institute Name"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_inst2" value="Indiranagar PU College"  >
+                            </p:outputLabel> 
+
+                            <p:outputLabel value="Acadamics"></p:outputLabel>
+
+                            <p:outputLabel value="PUC"></p:outputLabel>
+
+                            <p:outputLabel value="Course"></p:outputLabel>
+
+                            <p:outputLabel value="Science"></p:outputLabel>
+
+
+                            <p:outputLabel value="Aggrigate Percentage"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_agrgate2" value="70%" >
+                                <p:watermark for="lastname" value="John"/>
+                            </p:outputLabel>
+                            <p:outputLabel value="Year of passing"></p:outputLabel>
+
+                            <p:outputLabel id="student_profile_edu_passyear2" value="2014"  >
+
+                            </p:outputLabel>
+
+                        </h:panelGrid>  
+
+                        <h:form id="dfm">
+                            <div>
+                                <div style="margin-left: 12px;width: 150px;float: left;font-size: 12px;">
+                                    <p:outputLabel value="Uploaded file"></p:outputLabel>
+                                </div>
+
+                                <div style="float: left;font-size: 14px;margin-left: 0px;">
+                                    <!--
+                                              <div>
+                                                  <p:commandLink value="Certificate1" onclick="PF('dlg1').show();" />
+                                              </div> 
+                                              <div style="margin-top: 5px;">
+                                                  <p:commandLink value="Certificate2" onclick="PF('dlg2').show();" />
+                                              </div>
+                                    --> 
+                                    <div style="margin-top: 0px;font-size: 12px;margin-left: -5px;">
+                                        <p:commandLink value="PUC Certificate" onclick="PF('dlg3').show();" />
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+
+                        <p:dialog id="basicDialog1" widgetVar="dlg1" closable="true" >  
+                            <h:graphicImage id="img1" value="../resources/images/pages/certificate.jpg" width="400" height="500"/><br/>
+                        </p:dialog> 
+                        <p:dialog id="basicDialog2" widgetVar="dlg2" closable="true" >  
+                            <h:graphicImage id="img2" value="../resources/images/pages/SSC.png" width="600" height="400"/><br/>
+                        </p:dialog> 
+                        <p:dialog id="basicDialog3" widgetVar="dlg3" closable="true" >  
+                            <h:graphicImage id="img3" value="../resources/images/pages/PUC.jpg" width="434" height="600"/><br/>
+                        </p:dialog> 
+                        <!--STUDENT EDUCATIONAL LIST2 ENDS-->
+                    </div>
+                    <div class="clear" style="clear: both;"></div>
+
+                    <!--STUDNET PROFILE RIGHT ENDS-->
+                    <div class="student_profile_right" style="float: right;margin-top: -544px;margin-right: 60px;">
+                        <h:graphicImage value="../resources/images/partner/passport.jpg" width="100" height="100"/><br/>
+                    </div>
+                </div>
+                <div class="clear" style="clear: both;"></div>
+                <div style="margin-left: 253px;">
+                    <a href="#"><button type="button" class="btn" style="width: 65px;
+                                        height: 29px;margin-right: 10px;
+                                        margin-bottom: 10px;margin-top: 10px;">Verify</button></a>
+
+                    <a href="#"><button type="button" class="btn" style="width: 65px;
+                                        height: 29px;margin-right: 10px;
+                                        margin-bottom: 10px;margin-top: 10px;">Confirm</button></a>   
+
+                    <a href="#"><button type="button" class="btn" style="width: 65px;
+                                        height: 29px;margin-right: 10px;
+                                        margin-top: 10px; margin-bottom: 10px;">Reject</button></a>    
+                </div>
+                <!--BIG DIV ENDS-->
+
+                <div class="clear" style="clear: both;">
+
+                </div>
+
+            </div>
+            <!--MAIN CONTAINER ENDS-->
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,50 @@
+
+.maincontainer{
+    width: 980px;
+    height: auto;
+    /*    border: 1px solid;*/
+    margin: 0 auto;
+    /*background-color:white;*/
+    /*min-height: 773px;*/
+
+}
+
+.ui-carousel .ui-carousel-header{
+    background-color:dodgerblue;
+    font-size: small;
+}
+
+.rank_holder{
+    margin-top: 10px;
+}
+
+.awards{
+    margin-top: 10px;
+}
+
+.sports{
+    margin-top: 10px;
+}
+
+.fest{
+    margin-top: 10px;
+}
+
+.rightContainer{
+    float: left;
+    width: 230px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.left_container{
+    width: 700px;    float: left;margin-bottom: 8px;
+}
+
+#tabsCarousel{
+    height:auto; width:735px; font-size:  small;
+}
+#tabsCarousel2{
+    margin-top: -1px;width:736px;
+}
+

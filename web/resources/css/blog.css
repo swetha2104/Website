@@ -1,0 +1,56 @@
+.blog_maincontainer{
+    
+    margin: 0 auto;
+    width: 980px;
+    min-height: 900px;
+}
+.blog_maincontainer a:hover{
+    text-decoration: underline;
+    
+}
+.blog_left_container{
+    width: 730px;
+    min-height: 900px;
+    float: left;
+    
+}
+
+.blog_right_container{
+    width: 230px;
+    min-height: 900px;
+    float: right;
+}
+
+.blog_header{
+    float: left;
+    margin-top: 20px;
+}
+
+.blog_content{
+    margin-top: 40px;
+    min-height: 900px;
+}
+.blog_content_header{
+    padding: 15px;
+}
+.blog_content_content{
+    padding: 15px;
+    padding-top: 0px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.blog_moharto_heading{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.commandlink-ManyPaths{font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Rereading{ font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Perks-of-Joining{font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Educating{font-weight: bold;font-size: 12px;color: #FF6200;}
+.right-graphicImage1{}
+.right-graphicImage2{margin-top: 10px;}
+.right-graphicImage3{margin-top: 10px; }
+.right-graphicImage4{margin-top: 10px; }
+.commandlink-Rereading-out{font-weight: bold;}

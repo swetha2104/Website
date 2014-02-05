@@ -1,0 +1,64 @@
+.blog_maincontainer{
+    
+    margin: 0 auto;
+    width: 980px;
+    min-height: 900px;
+  //  border : 1px solid #ddd;
+}
+.blog_left_container{
+    width: 730px;
+    min-height: 900px;
+ //   border : 1px solid #ddd;
+    float: left;
+}
+.blog_right_container{
+    width: 230px;
+    min-height: 900px;
+  //  border : 1px solid #ddd;
+    float: right;
+}
+
+.blog_content{
+    margin-top: 30px;
+    min-height: 900px;
+   // border : 1px solid #ddd;
+}
+.blog_content_header{
+    padding: 15px;
+}
+.blog_content_content{
+    padding: 15px;
+    padding-top: 0px;
+    font-size: 13px;
+    text-align: left;
+}
+
+
+.blog_comments{
+    padding: 15px;
+   
+}
+
+.blog_comments_header{
+    
+    
+}
+.blog_postcomments{
+    
+}
+
+.out-bold{font-weight: bold;}
+.a-color{color: #0099ff;}
+.blog-comment-out{font-weight: bold;font-size: 14px;color: #1784A7;}
+
+.commandlink-ManyPaths{font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Rereading{ font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Perks-of-Joining{font-weight: bold;font-size: 12px;color: #FF6200;}
+.commandlink-Educating{font-weight: bold;font-size: 12px;color: #FF6200;}
+
+.right-graphicImage2{margin-top: 10px;}
+.right-graphicImage3{margin-top: 10px; }
+.right-graphicImage4{margin-top: 10px; }
+
+.blog-post-inputtext{width: 250px;height: 14px;}
+#inputtext{width: 250px;height: 14px;}

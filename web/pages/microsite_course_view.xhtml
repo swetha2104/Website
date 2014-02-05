@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <!--<h:outputStylesheet library="css" name="testimonials.css"/>-->
+        <h:outputStylesheet library="css" name="course_view.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate_microsite.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="maincontainer">
+
+                <h:form>
+
+                    <div class="heading">
+                        <h3 style="margin-left: 244px;margin-top: 2px;"> Master of Business Adminstration: (MBA)</h3>
+                    </div>
+<!--                    <div class="p1">
+                        <p:graphicImage value="../resources/images/pages/colimg.jpg"  width="470px" height="250px"/>
+
+                    </div>-->
+                    <div class="p3">
+                        <p:dataTable value="#{managedBead1.agents}" id="FeeStructture" var="fee" style="float: left;height: 50px;margin-top: 5px;width: 230px;margin-left: -21px;">
+                            <p:column   style="width: 160px;" filterBy="fee" >
+
+                                   <center>
+                                       <p:commandLink value="#{fee.special}"  action="microsite_course_view_finance.xhtml" style="  text-decoration: none;font-size: 13px;"/>
+                                   </center>
+                            </p:column>
+
+                        </p:dataTable>
+<!--                        <h:graphicImage value="../resources/images/home/Hurry Up for MBA ADMISSION.png" width="230px" height="178px" style="margin-top: 193px;
+margin-left: -20px;"/>-->
+                    </div>
+                    <div class="p2">
+                        <h:outputText value="Course Details" class="heads" style="margin-top: -27px;"/>
+                        <p style="margin-top: -16px;
+line-height: 20px;
+font-size: 13px;
+text-align: left;
+margin-left: 16px;">
+                            The MBA course is approved by AICTE, Govt. of India and is run under the 
+                            curriculum of Visvesvaraya Technological University, The course is carefully
+                            designed and updated by the university keeping in view the changing needs of
+                            manufacturing and service industry. Upon successful completion of the course, the
+                            degree is awarded by Visvesvaraya Technological University.
+                            Young managers are required at different levels in the areas of Finance, Human
+                            Resources, Marketing, Information Technology and so on. The curriculum puts
+                            significant emphasis on the ability of the student to have an integrated view of the
+                            management and apply them to the real life situations. It lays emphasis on taking
+                            decisions and developing focussed education combined with practical exposure to
+                            create value to the students coming out of academics. It aims at developing
+                            students into effective managers with good communication skills and leadership
+                            capabilities. The attributes that are ingrained in them are knowledge, skills, values
+                            and attitudes.
+
+                        </p>
+               
+
+                    
+                              <h:outputText value="Duration" class="heads" style="margin-top: -2px;"/>
+                        <p style="font-size: 13px;
+margin-top: 38px;
+margin-left: 17px;">2 years consisting of 4 semesters.</p>
+
+                        
+                          <h:outputText value="Eligibility" class="heads" style="margin-top: 4px;margin-left: 3px;"/>
+                        <p style="font-size: 13px;text-align: left;margin-top: 43px;margin-left: 18px;">
+                            Candidates who have passed Bachelor Degree examination of Bengaluru
+                            University with not less than 50% of marks in aggregate in all the three years of
+                            Degree examination or any other University equivalent thereto with 50% marks.
+                            However in case of candidates from Karnataka belonging to SC/ST and Cat-I
+                            the aggregate percentage of marks in the qualifying examination shall not be less
+                            than 45% of marks.
+                            At the time of admission students have to produce the ranks obtained in any one
+                            of the National Level Test/State Level Test / PGCET/ K-MAT score Certificate.
+                        </p>
+<!--                        <a href="moharto_student_register_basic.xhtml"><button type="button" class="btn" style="width: 90px;
+                                                                          height: 29px;float: right;">Enroll Now</button></a>
+                        -->
+                            <br/><br/>
+                    </div>
+
+                </h:form>
+
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>

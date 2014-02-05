@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="style1.css"/>
+        <h:outputStylesheet library="css" name="toppernews.css"/>
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+       
+
+        <ui:define name='main'>
+            <div class="pagetitle">
+              News Updates
+            </div> 
+            
+                    <br/>
+                    
+                    <div class="filter_by_date">
+
+                        <h:panelGrid columns="5" cellpadding="5"> 
+                            <h:outputText value="Date from" style="font-weight: bold;"/> 
+                            <p:calendar showOn="button" />
+                            <h:outputText value="To" style="font-weight: bold;"/> 
+                            <p:calendar showOn="button" />
+                            <p:commandButton value="submit" />
+                        </h:panelGrid>
+                    </div>
+                    <br/>
+                    <h:form id="tn1">
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="A short history of English language" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 18, 2013 02:49 pm" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="English language" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <a href="moharto_topper_news_readmore.xhtml" style="color: blue;float: right;"> >>Read More</a>
+
+
+                                <br/>
+                                <br/>
+                        </div>
+
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="CBSE to make students aware of armed forces!" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 18, 2013 02:46 pm" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="CBSE" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <h:commandLink value=">>Read More"  style="color: blue;float: right;"/>
+
+        
+                                <br/>
+                                <br/>
+                        </div>
+
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="Things that lost importance due to smart phones" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 18, 2013 10:13 am" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="Smart Phones" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <h:commandLink value=">>Read More"  style="color: blue;float: right;"/>
+
+            
+                                <br/>
+                                <br/>
+                        </div>
+
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="Some important facts about Earth" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 18, 2013 10:09 am" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="The Earth" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <h:commandLink value=">>Read More"  style="color: blue;float: right;"/>
+
+
+                                <br/>
+                                <br/>
+                        </div>
+
+
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="Some ‘Cheesy’ facts!" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 13, 2013 06:58 pm" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="Facts about cheese" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <h:commandLink value=">>Read More"  style="color: blue;float: right;"/>
+
+
+                                <br/>
+                                <br/>
+                        </div>
+
+
+
+                        <div class="topper_news_header_title" >    
+                            <h:commandLink value="Why are hobbies important in a student’s life?" style="text-decoration: none;color: #3a3a3a;font: normal 18px Arial, Helvetica, sans-serif;"/>
+                        </div>
+                        <div class="topper_news_content">   
+                            <h:outputText value="Posted On: September 12, 2013 06:05 pm" style="color: #666666"/> <br/>
+                            <br/>
+                            <h:outputText value="Hobbies" style="font-size: 12px;"/> 
+                            <br/>
+                            <br/>
+
+                            <h:commandLink value=">>Read More"  style="color: blue;float: right;"/>
+
+
+                                <br/>
+                                <br/>
+                        </div>
+
+                    </h:form>
+
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+           <h:graphicImage url="../resources/images/pages/ad4.png" width="230px"/>
+                    <h:graphicImage url="../resources/images/pages/ielts.png" width="230px" style="margin-top: 15px;"/>
+                    <h:graphicImage url="../resources/images/pages/ad5.png" width="230px" height="165px" style="margin-top: 15px;"/>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+

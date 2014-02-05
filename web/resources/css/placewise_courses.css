@@ -1,0 +1,61 @@
+
+.clear
+{
+    clear: both;
+}
+
+.top-cities-container
+{
+    width: auto;
+    height: auto;
+    
+}
+.top-cities
+{
+    float: left;
+ width: 86px;
+height: 125px;
+/*border: 1px solid red;*/
+
+margin-top: 10px;
+   
+}
+.top-cities-list
+{
+    list-style-type: none;
+    margin-left: -34px;
+    margin-top: 3px;
+    
+}
+.top-cities-sublist
+{
+    margin-top: 9px;
+    
+}
+
+
+.sub-cities
+{
+    float: left;
+width: 89px;
+height: 274px;
+/*border: 1px solid red;*/
+margin-top: 4px;
+
+   
+}
+.ptxt
+{
+     font-size: 14px;color: black;text-decoration: none;
+}
+
+.tabview ui-tabs ui-tabs-top {
+     padding: 0px;
+}
+.tab1 {
+    width: 80px;
+}
+.tab2 {
+    width: 80px;
+}
+

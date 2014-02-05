@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="moharto_contactus.css"/>
+         <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <style>
+
+        </style>
+    </h:head>
+
+    
+    <ui:composition template="/template/twocolumntemplate.xhtml">
+
+        <div class="pagetitle">
+            Contact Us
+        </div>
+        <ui:define name='leftcolumn'>
+            
+            <div class="contact-information" >
+            <div  class="paratitle">
+             CONTACT INFORMATION
+             </div><br/><br/><br/>
+                                
+            
+                                    <div style="width: 25%;float: left;padding-left: 15px;">
+                                       <h:panelGrid columns="2"> 
+                                            <h:graphicImage value="../resources/images/pages/address.png" height="16" width="20" />
+                                            <h:outputLabel value="Address" style="font-weight: bold;" />
+                                       </h:panelGrid>
+                                        
+                                    
+                                        <h:panelGrid columns="2" style="padding-top: 80px;">
+                                            <h:graphicImage value="../resources/images/pages/message.png" height="16" width="20" />
+                                            <h:outputLabel value="E-mail" style="font-weight: bold;" />
+                                        </h:panelGrid>
+                                    
+                           
+                                        <h:panelGrid columns="2" style="padding-top: 11px;">
+                                            <h:graphicImage value="../resources/images/pages/phone.png" height="16" width="20" />
+                                            <h:outputLabel value="Phone" style="font-weight: bold;" />
+                                        </h:panelGrid>    
+                                    
+                           
+                        
+                                         <h:panelGrid columns="2" style="padding-top: 28px;">
+                                            <h:graphicImage value="../resources/images/pages/mouse.png" height="16" width="20" />
+                                            <h:outputLabel value="Website" style="font-weight: bold;" />
+                                        </h:panelGrid>    
+                                       
+                                    </div>
+                                        
+                                    <div style="float: left">
+                                        <h:panelGrid columns="1" style="margin-left: 30px;">
+                                            <h:outputText  value="#P-3, 4th Floor "/>
+                                            <h:outputText  value="Gold Signature"/>
+                                            <h:outputText  value="No.95 Mosque Road"/>
+                                            <h:outputText  value="Frazer Town"/>
+                                            <h:outputText  value="Bangalore-560 005"/>
+                                        </h:panelGrid>
+                                        <br/>
+                                        <h:panelGrid columns="1" style="margin-left: 30px;">
+                                            <h:outputText  value="shahwaz@moharto.com"/>
+                                        </h:panelGrid>
+                                        
+                                         <br/>
+                                      
+                                        <h:panelGrid columns="1" style="margin-left: 30px;">
+                                            <h:outputText  value="Mobile: +91 9611586660"/>
+                                            <h:outputText  value="Office:  080 41480099"/>
+                                        </h:panelGrid>
+                                         
+                                          <br/>
+                                    
+                                        <h:panelGrid columns="1" style="margin-left: 30px;">
+                                            <h:outputText  value="www.moharto.com"/>
+                                        </h:panelGrid>
+                                    </div>   
+
+                                    <br/>
+
+                                    <div style="margin-left: 20px;">
+                                        
+<!--                                        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+                                        <p:gmap center="12.993518,77.610512" zoom="15" type="HYBRID" style="width:455px;height:299px;border: 1px solid steelblue; " />  -->
+                                    </div>    
+                                    
+            </div>
+           
+            
+        </ui:define>
+
+        
+
+        <ui:define name='rightcolumn'>
+            
+            <div class="getintouch">
+                           <div class="contactus_contactinformation_content">
+                                <div  class="paratitle">
+                                   GET IN TOUCH
+                                </div>
+                                <br/><br/>
+                                <div  class="contactus_getintouch_content">
+                                    <div class="para">
+                                  We are here to answer any question you may have about our moharto experiences. Reach out to us and we will respond as soon as we can.  
+                                    </div>
+                                  <br/>
+                                  <br/>
+                                  <h:form>
+                                  <h:outputLabel  value="Name" for="name" style="font-size: 14px;"/><br/>
+                                  <p:inputText  value="" style="width: 326px;" /><br/><br/>
+                                  
+                                  <h:outputLabel  value="Email" for="email" style="font-size: 14px;"/><br/>
+                                  <p:inputText  value="" style="width: 326px;" /><br/><br/>
+                                  
+                                  <h:outputLabel value="Subject" for="subject" style="font-size: 14px;"/><br/>
+                                  <p:inputText  value="" style="width: 326px;" /><br/><br/>
+                                  
+                                  <h:outputLabel  value="Message" for="message" style="font-size: 14px;"/><br/>
+                                  <p:inputTextarea  value="" style="width: 326px;height: 190px;"/><br/><br/>
+                                  
+                                  <p:commandButton value="SUBMIT" style="margin-left: 261px;" />
+                                  </h:form>
+                                </div>
+                                </div>
+            </div><br/><br/>
+            
+        </ui:define>
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

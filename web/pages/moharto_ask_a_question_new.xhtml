@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head> 
+        <style>
+
+            .select{
+                width: 100px;
+            } 
+            .reportsAnalysisDropdown{
+                width: 138px!important;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 12px;
+                padding-top: 5px;
+                //color: #0099ff;
+            }
+
+        </style>
+        <title>
+            <ui:insert name="pageTitle">
+                Moharto
+            </ui:insert>
+        </title>
+
+         <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="ask_a_question_new.css"/>
+
+
+    </h:head>
+    <ui:composition template="/template/rightcolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+ <h:form>
+        <div class="first1">
+                <div class="welcome">
+                <h:outputText value="Welcome,guest" style="margin-top: 10px;"/>
+                </div>
+                 <div class="welcome3">
+                <h:commandLink value="Sign In" style="text-decoration: none;color: dodgerblue;"/></div>
+            </div>
+            <div class="second1">
+                <p:inputText id="question" size="45" style="margin-top: 8px;margin-left: 31px;height: 24px;">
+                    <p:watermark for="question" value="Ask your question" />
+                </p:inputText><br/>
+                <p:commandButton value="Submit" style="margin-top: 11px;margin-left: 265px;height: 28px;"/>
+                <p:graphicImage value="../resources/images/pages/questionmark.png" style="margin-left: 293px;margin-top: -30px;margin-bottom: -14px;"/>
+            </div>
+            <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Can i join MBA without attending MAT/CAT exam?" action="QuesAns" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="2 hours ago" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to study diploma. how much will be the cost?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="25-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                       <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="How can i take admission through lateral entery?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="23-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                       <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Can i study diploma civil engineering through distance?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="20-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                   <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="how much rank i need to join diploma?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="14-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                  <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="what is the last year closing rank?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="10-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Send me the fee course?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="7-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="can i get direct admission?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="6-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="2-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+             </h:form>
+             </ui:define>
+        <ui:define name='rightcolumn'>
+               <h:form>
+  <div class="second3">
+
+ <p:panel header="TESTIMONIALS" >
+                                    <h:panelGrid columns="1">
+                                        "I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."
+
+                                       
+                                            <h:panelGrid columns="2">
+                                                <h:graphicImage url="../resources/images/pages/name1.jpg" height="75px" width="75px"/>
+                                                <h:panelGrid columns="1">
+                                                    <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" /> 
+                                                    <h:outputText value="-PSIT, Bangalore" style="font-style: italic" /> 
+                                                </h:panelGrid>
+                                            </h:panelGrid>
+                                         
+                                    </h:panelGrid>
+                                </p:panel>
+                     </div>
+                 <div class="second4"> 
+                     <h:graphicImage value="../resources/images/pages/Untitled.png" style="margin-top: 22px;"/></div>
+        </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

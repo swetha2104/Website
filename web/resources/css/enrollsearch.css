@@ -1,0 +1,147 @@
+/* 
+    Document   : enrollsearch
+    Created on : Jan 8, 2014, 11:28:48 AM
+    Author     : Acer
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.fillrequirment{
+    float: left;
+    margin-left: 253px;
+    font-size: 13px;
+    margin-top: 13px;
+    margin-right: -78px;
+}
+
+.selectmenu {
+    width: 155px!important;
+    font-size: 11px;
+}
+.paymentbtn{
+    width: 142px;
+    height: 27px;
+    float: left;
+    margin-right: 426px;
+    margin-left: 259px;
+    margin-top: 10px;
+}
+.processprice{
+    float: left!important;
+    width: 61px!important;
+    font-weight: normal!important;
+    height: 12px!important;
+}
+.panelgrid{
+    float: left!important;
+    margin-top: 44px!important;
+    margin-left: -200px!important;
+}
+
+.enrolltext{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #8f8f8f;
+    font-family: serif;
+    text-justify: left;
+}
+
+.enrolltext1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #8f8f8f;
+    font-family: serif;
+    text-justify: left;
+}
+.searchbtn{
+   
+    height:60px;
+    width:80px;
+    
+    margin-left: 4px;
+margin-top: 10px;
+}
+.slct{
+    width:440px!important;
+
+    margin-right: 30px!important;
+float: left;
+
+margin-left: 390px;
+margin-top: -49px;
+
+}
+.comdiv{
+    margin-right:30px; 
+}
+
+.coursechoice input{
+    height: 52px;
+    box-shadow: none;
+    font-style: italic;
+    font-family: sans-serif!important ;
+    padding-left: 58px;
+      color: #8f8f8f;
+}
+.slct label{
+    box-shadow: none;
+    font-style: italic;
+    font-family: sans-serif ;
+   font-weight: 600px!important;
+    color: #8f8f8f;
+    font-size: 15px;
+}
+
+.slct .ui-selectonemenu-label {
+    height: 30px!important;
+    text-align: center;
+    padding-top: 26px;
+
+}
+
+.slct .ui-selectonemenu-trigger .ui-icon{
+    margin-top: 16px!important;
+
+
+}
+
+.slct .ui-selectonemenu-trigger{
+    background: none!important;
+    border: 0px!important;
+}
+.enrollmain{
+    width:975px;
+    height: 300px;
+}
+
+.ui-selectonemenu-trigger ui-state-default ui-corner-right{
+
+}
+.ui-selectonemenu-label ui-inputfield ui-corner-all{
+    width: 335px;
+}
+
+.slct label.ui-selectonemenu-label{
+    width: 435px!important;
+}
+.inlabel{
+    float:left;
+    margin-left: -270px;
+font-size: 17px!important;
+margin-top: 18px;
+font-style: italic;
+}
+.coursechoice{
+    float: left;height:50px;margin-right: 315px;
+}
+.wholeenroll{
+    height:280px;
+  width: 975px;
+
+}

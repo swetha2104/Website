@@ -1,0 +1,57 @@
+.body{
+    background-color:grey;
+    margin: 0 auto;
+}
+.maincontainer{
+   margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+/*  
+    border: 1px solid black;*/
+    
+}
+.one{
+    width: 736px;
+    height: auto;
+/*        border: 1px solid red;*/
+        float: left;
+    
+}
+.two
+{
+     width: 238px;
+    height: auto;
+/*        border: 1px solid blue;*/
+        float: right;
+        margin-top: 3px;
+    
+}
+.ques
+{
+   font-size: 13px;
+margin-left: 17px;
+    
+}
+.ans
+{
+   font-size: 13px;
+margin-left: 35px;
+margin-right: 13px;
+text-align: left;
+    
+    
+}
+.lin
+{
+     border: 1px solid black;
+    width: 224px;
+
+    
+}
+.clear
+{
+    clear: both;
+}

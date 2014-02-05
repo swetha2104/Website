@@ -1,0 +1,96 @@
+.main
+{
+ margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 20px;
+}
+.one
+{ 
+/*   border: 1px solid #ff3333;*/
+width: 732px;
+height: 900px;
+float: left;
+}
+.one1
+{
+  float: left;
+/*border: 1px solid aqua;*/
+height: 470px;
+width: 730px;
+
+
+}
+.one2
+{
+   float: left;
+/*border: 1px solid green;*/
+height: 451px;
+width: 737px;
+
+}
+.two
+{
+    margin-top: -900px;
+margin-left: 738px;
+width: 237px;
+height: auto;
+/*border: 1px solid black;*/
+float: left;
+
+}
+.two1
+{
+
+float: left;
+width: 230px;
+height: 226px;
+/*border: 1px solid #ff3333;*/
+margin-left: 4px;
+margin-top: 3px;
+}
+.two2
+{
+    
+    
+    
+    
+    float: left;
+/*    border: 1px solid red;*/
+    width: 230px;
+height: 264px;
+margin-left: 4px;
+}
+.three
+{
+    border: 1px solid red;
+    height: 470px;
+width: 730px;
+}
+.ui-button-text-only .ui-button-text {
+padding: .3em 1em;
+padding-top: 0px;
+padding-left: 2px;
+padding-right: 5px;
+padding-bottom: 2px;
+}
+.two3
+{
+    
+  float: left;
+/*border: 1px solid red;*/
+width: 230px;
+height: 418px;
+margin-left: 4px;
+margin-top: -64px;
+}
+.ui-datatable-scrollable-body {
+height: 123px;
+}
+h1 {
+font-size: 1.6em;
+font-weight: normal;
+margin-top: -75px;
+margin-left: -60px;
+}

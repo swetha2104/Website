@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mangium.Moharto_Student_Register_Basic_Bean" table="tbl_student_basicdetails">
+        <id name="Student_Id" type="java.lang.Integer">
+            <column name="student_id_pk"/>
+            <generator class="increment">
+                
+            </generator> 
+        </id>
+        <property name="First_Name" type="java.lang.String">
+            <column name="stu_first_name" length="60">
+                
+            </column>
+        </property>
+        <property name="Last_Name" type="java.lang.String">
+            <column name="stu_last_name" length="60">
+                
+            </column>
+        </property>
+        <property name="Email" type="java.lang.String">
+            <column name="stu_email" length="100">
+                
+            </column>
+        </property>
+        
+        <property name="Password" type="java.lang.String">
+            <column name="stu_password" length="20"/>
+        </property>
+        
+        <property name="Mobile_No" type="java.lang.String">
+            <column name="stu_mobileno" length="20"/>
+        </property>
+        
+        <property name="Current_City" type="java.lang.String">
+            <column name="stu_current_city" length="100"/>
+        </property>
+        
+        <property name="Education_Prefence" type="java.lang.String">
+            <column name="stu_edu_preferences" length="200"/>
+        </property>
+        
+        <property name="College_of_Interest" type="java.lang.String">
+            <column name="stu_college_of_interest" length="500"/>
+        </property>
+        
+        <property name="Place_of_Interest" type="java.lang.String">
+            <column name="stu_place_of_interest" length="200"/>
+        </property>
+        
+        <property name="Join" type="java.lang.String">
+            <column name="stu_when_want_study" length="100"/>
+        </property>
+        
+        <!--        <property name="Status" type="java.lang.Boolean">
+            <column name="stu_agree_status"/>
+        </property>-->
+<!--        <set name="Moharto_Student_Register_Personal_Bean" table="tbl_student_personal_details" 
+             inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="student_id_pk" not-null="true" />
+            </key>
+            <one-to-many class="com.mangium.Moharto_Student_Register_Personal_Bean" />
+        </set>-->
+    </class>
+</hibernate-mapping>

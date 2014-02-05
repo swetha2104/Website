@@ -1,0 +1,185 @@
+.mainContainer{
+    margin: 0px auto;
+    width: 980px;
+    height: auto;
+    margin-top: 8px;
+}
+
+.left_column{
+    width: 200px;
+    float: left;
+}
+
+.right_column{
+    width: 230px;
+    float: left;
+    margin-left: 7px;
+
+}
+
+.center_column{
+    width: 505px;;
+    border: 1px solid #ddd;
+    float: left;
+    margin-left: 7px;
+}
+
+.dt1{
+    /*border: 1px solid lightgrey;*/
+    /*float: left;*/
+    /*margin: -1px 1px -43px 0px;*/
+    background: white;
+
+    /*height: 140px;*/
+    width: 200px;
+    font-size: 13px;
+}
+
+.dt2{
+    /*border: 1px solid lightgrey;*/
+    /*float: left;*/
+
+
+    background: white;
+
+    margin-top: 
+        8px;
+    width: 200px;
+    font-size: 12px;
+
+
+}
+
+.dt3{
+    border: 1px solid lightgrey;
+    /*float: left;*/
+
+    /*margin: 54px 1px -43px 0px;*/
+    /*background: lightgrey;*/
+
+    /*height: 126px;*/
+    width: 230px;
+    font-size: 12px;
+    margin-top: 8px;
+
+
+}
+
+.head{
+    font-weight: bold;font-size: 14px;margin-left: 10px;float: left;
+}
+.head1{
+    font-weight: bold;font-size: 14px;float:left; margin-left: 240px;
+}
+.head2{
+   font-weight: bold;font-size: 14px;float: right;
+}
+
+.dt5{
+    border: 1px solid lightgrey;
+    /*float: left;*/
+    margin-top: 8px;
+    /*margin: 54px 1px -43px 0px;*/
+    /*background: lightgrey;*/
+
+    height: 65px;;
+    width: 230px;
+    font-size: 12px;
+}
+
+.content2{
+    border: 1px solid lightgray;
+    float: left;
+    width: 484px;  
+    background: rgb(105, 163, 218);
+    color: white;
+    /*text-align: center;*/
+    padding: 10px;
+} 
+
+.college1{
+    /*border: 1px solid #ddd;*/
+    width: 509px;
+    font-size: 13px;
+}
+
+.college1_details1{
+    width: 270px;
+    float: left;
+    line-height: 18px;
+    padding: 6px;
+}
+
+.logo1{
+    float: left;
+}
+
+.seate_avalable{
+    float: left;
+    padding: 6px;
+    font-size: 14px;
+    color: saddlebrown;
+    font-weight: 700;
+    width: 15px;
+    padding-left: 57px;
+}
+
+.actions1{
+    float: right;
+    /*margin-left: 47px;*/
+    margin-top: 1px;
+    line-height: 25px;
+    width: 88px;
+}
+
+.actions1 a{
+    font-size: 13px;
+    color: rgb(173, 21, 76);
+    text-align: justify;
+    /*font-weight: 700;*/
+    text-decoration: underline;
+
+}
+
+.actions1 a:hover{
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+.tab1 ul{
+    line-height: 22px;
+}
+
+/*.ad{
+    margin-left: -55px;
+    margin-top: -8px;
+}*/
+#btn{
+    
+   width: 88px;
+height: 23px;
+/*margin-left: -24px;*/
+font-size: 10px;
+background-color: gray;
+}
+.tb1{
+    border: 1px solid lightgray; width: 230px;height:144px; 
+}
+.clg{
+    font-size: 15px;color: #49a4c8;
+}
+.type{
+    font-size: 14px;
+}
+.btn{
+    height: 29px;margin-left: -1px;width: 80px;height: 23px;font-size: 10px;background-color: gray;
+}
+.btn1{
+    height: 29px;margin-left: -1px;width: 80px;height: 23px;font-size: 10px;margin-top: 5px;background-color: gray;
+}
+.leftimg{
+    float: left;margin-top: 10px;
+}

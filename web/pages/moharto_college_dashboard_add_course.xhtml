@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="create_course.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+
+        <ui:define name='main'>
+            <f:view>
+                <div class="college_dashboard_maincontainer">
+                    <div class="college_dashboard_menu">
+                        <h:form>
+                            <p:menubar autoDisplay="false">
+
+                                <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                                <p:submenu label="My College" styleClass="dashboard" >
+                                    <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                    <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                                </p:submenu>                                   
+                                <p:submenu label="Admissions"  styleClass="dashboard">
+                                    <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                    <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                    <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                </p:submenu>
+                                <p:submenu label="Ads" styleClass="dashboard">
+                                    <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                                    <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                </p:submenu>
+
+                                <p:submenu label="Messages"  styleClass="dashboard">
+                                    <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                    <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                </p:submenu>
+
+                            </p:menubar>
+                            <br/>
+
+
+                            <div class="center">
+                                <br/><center><p:outputLabel value="Create Course" styleClass="createcourseoutlabel" /> </center><br/>
+                                <center> <p:inputText id="cn" value="#{myBean.cname}" styleClass="createcourseinptlabel"/></center>
+                                <p:watermark for="cn" value="Course Name" /><br/>
+
+                                <center><p:selectOneMenu id="ctype" value="#{myBean.cname}"  styleClass="selctmenu" effect="fold" >
+                                        <f:selectItem itemValue="pg" itemLabel="Full Time"/>
+                                        <f:selectItem itemValue="ug" itemLabel="Part Time"/>
+                                    </p:selectOneMenu></center><br/>
+                                <center><p:selectOneMenu id="clevel" value="#{myBean.cname}" styleClass="selctmenu" effect="fold" >
+                                        <f:selectItem itemValue="pg" itemLabel="PG"/>
+                                        <f:selectItem itemValue="ug" itemLabel="UG"/>
+                                        <f:selectItem itemValue="diploma" itemLabel="Diploma"/>
+                                    </p:selectOneMenu></center><br/>
+                                <center><p:inputText id="un" value="#{myBean.cname}" styleClass="unvrsityinpt"/></center>
+                                <p:watermark for="un" value="University Name" /><br/>
+                                <center><p:inputTextarea id="desc" styleClass="descrptiontxtara"/></center>
+                                <p:watermark for="desc" value="Description" /><br/><br/>
+
+                                <p:outputLabel value="Eligibility and Fee Details" styleClass="eligblityfeedetal" /> <br/><br/>
+
+
+                                <p:dataTable id="sa" var="eb"  editable="true" value="#{eligibiltyBean.eb}"> 
+
+
+                                    <p:column headerText="Category">  
+                                        <h:outputText value="#{eb.category}" />  
+
+                                    </p:column> 
+                                    <p:column headerText="Required Percentage">  
+                                        <h:outputText value="#{eb.percent}" />  
+
+                                    </p:column> 
+                                    <p:column headerText="Fee">  
+                                        <h:outputText value="#{eb.fee}" />  
+
+                                    </p:column >  
+                                    <p:column headerText="Eligibility Exam Name">  
+                                        <h:outputText value="#{eb.eliexamname}" />  
+
+                                    </p:column>
+                                    <p:column headerText="Eligibility Rank">  
+                                        <h:outputText value="#{eb.elirank}" />  
+
+                                    </p:column>
+                                    <p:column headerText="Seats Available">  
+                                        <h:outputText value="#{eb.seatsavail}" />  
+
+                                    </p:column>
+
+                                    <p:column headerText="Edit">  
+                                        <p:rowEditor />
+
+                                    </p:column>
+
+                                </p:dataTable> <br/> 
+
+                                <center><p:commandButton value="CREATE"/></center>
+                            </div>
+
+
+
+
+
+                        </h:form>
+                    </div>
+                </div>
+            </f:view>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+

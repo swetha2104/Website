@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head> 
+        <style>
+
+            .select{
+                width: 100px;
+            } 
+            .reportsAnalysisDropdown{
+                width: 138px!important;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 12px;
+                padding-top: 5px;
+                //color: #0099ff;
+            }
+
+        </style>
+        <title>
+            <ui:insert name="pageTitle">
+                Moharto
+            </ui:insert>
+        </title>
+ <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="style_header.css"/>
+        <h:outputStylesheet library="css" name="style2.css"/>
+        <h:outputStylesheet library="css" name="pagetype.css"/>
+          <h:outputStylesheet library="css" name="Faqitem.css"/>
+        
+
+
+    </h:head>
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+             <div class="pagetitle">
+                            Frequently Asked Questions
+                        </div>
+                      
+                   
+                       <p class="para">Q. Are minimum grade-point averages, class ranks or test scores required for
+                        admission?</p>
+                      <p class="para">No. We consider all of these measures, but only within the context of each applicant’s
+                        school and situation. These criteria, while
+                        important, do not by themselves provide a complete picture of each student’s academic
+                        accomplishment or potential. We evaluate all aspects of a student’s academic
+                        preparation. Learn more about our admission requirements.</p>
+                        <p class="para">
+                            Q. Can students begin studies at Visveswaraiah University during the third semester?
+                        </p>
+                        <p class="para">
+                            No. Freshmen are not admitted for the third semester directly  but are admitted at per vtu  terms and conditions .
+                        </p>
+                    <h:outputText value="Q." style="  font-size: 13px;
+                    
+                                  margin-left: 17px;"/>
+                    <div class="clear"/>
+                    <p class="para" style="float: left;
+font-size: 13px;
+margin-left: 36px;
+margin-top: -16px;" >
+                         Does Engineering colleges consider applicants who have done his p.u.c correspondence  without going to college?
+                        </p>      
+                        <p class="para">
+                            Yes. We receive and consider applications from correspondence students every year who have taken p.u.c exam without going to college.
+                 
+                        </p>
+                        <p class="para">
+                            Q. May high school juniors apply?
+                        </p>
+                        
+                    <p class="para" style="margin-right: 18px;">
+                            While we will consider applications from students who choose to leave high school early,
+                        they must be competitive with students who have completed rigorous, comprehensive
+                        course work through senior year. This option tends to be most realistic for students who
+                        have exhausted their high school’s academic offerings.
+                        </p>
+                          <h:outputText value="Q." style="  font-size: 13px;
+                                        margin-left: 17px;"/><div class="clear"/> <p style="float: left;
+font-size: 13px;
+margin-left: 36px;
+margin-top: -16px;margin-right: 18px;">
+                            May I apply for regular decision to Princeton if I have already been admitted to
+                        another college or university under a binding early decision plan?
+                        </p>
+                        <p class="para">
+                            No. When you apply to another college or university under a binding early decision plan,
+                        , you have made a commitment to attend that college if admitted. We honor that
+                        commitment and do not consider applicants under those circumstances.
+                            
+                        </p>
+                          <p class="para">
+                              Q. What is an autonomous institute?
+                          </p>
+                          <p class="para">
+                              Autonomous institutes are designated few institutes which 
+                              has been allotted complete autonomy for running the institutes like designing syllabus, conducting the examinations. 
+                          </p>
+              <p class="para">
+                  Q. How to claim seats under management quota?</p>
+                              <p class="para">
+                          Well you sure can apply for one at any un-aided non-minority engineering college directly (no management quota in Government or Govt. aided Engg. Colleges). 
+                          There are 20% seats available with such college management.
+                              </p>
+        </ui:define>
+        <ui:define name='rightcolumn'>
+           <center>
+                            <div class="lin">
+                    <h:outputText value="FAQ" style="font-size: 18px;
+color: #49a4c8;
+
+
+margin-top: 5px;
+"/><div class="clear"/>
+                    <p:separator id="separator" style="color: black;height: 1px;"/> 
+                    <h:panelGrid columns="1" style="font-size: 14px;
+margin-left: 38px;
+margin-top: -3px;">
+                        <p:commandLink value="Eligibility" style="margin-left: 32px;color:rgb(141, 46, 46);"/>
+                           <p:separator id="separator" style="color: black;
+width: 225px;
+margin-left: -41px;
+margin-top: 3px;"/>
+                           <p:commandLink value="Application Process" style="float: left;
+                                          margin-top: -3px;" onmouseover="this.style.color='brown'" onmouseout="this.style.color='#000'"/>
+                                <p:separator id="separator" style="margin-left: -41px;
+margin-top: 3px;"/>
+                                <p:commandLink value="International Students" style="float: left;
+margin-top: -3px;"  onmouseover="this.style.color='brown'" onmouseout="this.style.color='#000'"/>
+                              <p:separator id="separator" style="color: black;
+margin-left: -40px;
+margin-top: 3px;"/>
+                              <p:commandLink value="Registration Process" style="float: left;
+margin-top: -3px;"  onmouseover="this.style.color='brown'" onmouseout="this.style.color='#000'"/>
+                    </h:panelGrid>
+                 </div>
+                       </center>
+                    <h:graphicImage value="../resources/images/pages/Hurry Up.png" style="width:230px;height: 150px;margin-top: 10px;"/>
+                     <h:graphicImage value="../resources/images/pages/capture.png" style="width: 230px;
+height: 150px;
+margin-top: 3px;"/>
+                      <h:graphicImage value="../resources/images/pages/bbm1.jpg" style="width:230px;height: 133px;margin-top: 3px;"/> 
+        </ui:define>
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

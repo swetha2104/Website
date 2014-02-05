@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+        <!--<link rel="stylesheet" href="EnrolmentHistory.css" type="text/css"/>-->
+        <h:outputStylesheet library="css" name="EnrolmentHistory.css"/>
+        <h:outputStylesheet library="css" name="college_dashboard.css"/>
+
+    </h:head>
+
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <h:body>
+
+                    <div class="mainContainer" style="width: 980px;height:auto;margin: 0px auto;margin-top: 10px;">
+                        <p:menubar autoDisplay="false">
+
+                            <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                            <p:submenu label="My College" styleClass="dashboard" >
+                                <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                            </p:submenu>                                   
+                            <p:submenu label="Admissions"  styleClass="dashboard">
+                                <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                            </p:submenu>
+                            <p:submenu label="Ads" styleClass="dashboard">
+                                <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                                <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                            </p:submenu>
+
+                            <p:submenu label="Messages"  styleClass="dashboard">
+                                <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                            </p:submenu>
+
+                        </p:menubar>
+                        <br/>
+
+                        <h2 style="text-align: center;">Enrollment History</h2>
+                        <p:dataTable var="car" value="#{enrolmentHistory.lst}" style="margin-bottom: 15px;">
+
+                            <p:column headerText="Name">  
+                                <h:outputText value="#{car.name}" />  
+                            </p:column>  
+                            <p:column headerText="Applied Course" filterBy="#{car.appliedcourse}" filterMatchMode="contains" >  
+                                <h:outputText value="#{car.appliedcourse}" />  
+                            </p:column>  
+                            <p:column headerText="Applied Stream">  
+                                <h:outputText value="#{car.appliedstream}" />  
+                            </p:column>  
+                            <p:column headerText="Hostel Preference" filterBy="#{car.hostel}" filterMatchMode="contains">  
+                                <h:outputText value="#{car.hostel}" />  
+                            </p:column>  
+                            <p:column headerText="Transaction Date" sortBy="#{car.txdate}">  
+                                <h:outputText value="#{car.txdate}" />  
+                            </p:column>  
+                            <p:column headerText="Transaction Time" sortBy="#{car.txtime}">  
+                                <h:outputText value="#{car.txtime}" />  
+                            </p:column>  
+                            <p:column headerText="Source">  
+                                <h:outputText value="#{car.source}" />  
+                            </p:column>  
+                            <p:column headerText="Transaction Amount">  
+                                <h:outputText value="#{car.txamnt}" />  
+                            </p:column>  
+                            <p:column headerText="Transaction Status" filterBy="#{car.status}" filterMatchMode="contains">  
+                                <h:outputText value="#{car.status}" />  
+                            </p:column>  
+                            <p:column headerText="Action">  
+                                <a href="student_profile_view_verfied.xhtml"><h:graphicImage value="../resources/images/pages/images.jpeg" width="25" height="25"/></a>  
+                            </p:column>
+
+
+
+
+                        </p:dataTable>
+                    </div>
+                </h:body>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

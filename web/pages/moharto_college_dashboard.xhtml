@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="college_dashboard_new.css"/>
+        <style>
+
+        </style>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template/commonTemplate.xhtml">
+
+            <ui:define name='pageContent'>
+                <f:view>
+                    <div class="college_dashboard_maincontainer">
+                        <div class="college_dashboard_menu">
+                            <h:form>
+                                <p:menubar autoDisplay="false">
+
+                                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                                    <p:submenu label="My College" styleClass="dashboard" >
+                                        <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                                    </p:submenu>                                   
+                                    <p:submenu label="Admissions"  styleClass="dashboard">
+                                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Ads" styleClass="dashboard">
+                                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                    </p:submenu>
+
+                                    <p:submenu label="Messages"  styleClass="dashboard">
+                                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                    </p:submenu>
+
+                                </p:menubar>  
+
+                                <div class="fieldsetmargin">    <p:fieldset  legend=" Analytics" styleClass="fs1">
+                                        <!--                                    RECTANGLE B0X STARTS -->
+                                        <div class="r1" style="">
+                                            <div id="lb1" class="rectanglebox">
+
+                                                <div class="rectangle_lab_1"> <center><div class="numericvaluelabel"><p:outputLabel value="9880" /> </div></center></div>
+                                                <div class="rectnagle_lab_2"> <center>  <a href ="#" ><div class="linkcolors"> Total Visitors</div></a></center></div>
+                                            </div>
+                                        </div>
+                                        <!--RECTANGLE BOX ENDS--> 
+                                        <div class="r4" >
+
+                                            <div id="lb1" class="rectanglebox">
+
+                                                <div class="rectangle_lab_1"> <center><div class="numericvaluelabel"><p:outputLabel value="1500" /> </div></center></div>
+                                                <div class="rectnagle_lab_2"> <center>   <a href="#" ><div class="linkcolors">Microsite Visitors</div></a> </center></div>
+
+                                            </div>
+                                        </div>
+                                        <div class="r2" style="">
+                                            <div id="lb1" class="rectanglebox">
+
+                                                <div class="rectangle_lab_1"> <center><div class="numericvaluelabel"><p:outputLabel value="5000" /> </div></center></div>
+                                                <div class="rectnagle_lab_2"> <center><a href ="#" > <div class="linkcolors">Ad impression</div></a>  </center></div>
+
+                                            </div>
+                                        </div>
+                                        <div class="r3" style="">
+                                            <div id="lb1" class="rectanglebox">
+
+                                                <div class="rectangle_lab_1"> <center><div class="numericvaluelabel"><p:outputLabel value="950" /></div> </center></div>
+                                                <div class="rectnagle_lab_2"> <center>  <a href="#"><div class="linkcolors">Total Clicks</div></a></center></div>
+                                            </div>
+                                        </div>   
+
+
+
+
+
+
+
+                                    </p:fieldset>  </div>
+
+
+
+
+                                <div class="fieldsetmargin"  >  <p:fieldset legend="Admissions"  styleClass="fs1">
+                                        <div class="c1"><div  class="triangletext"> <center><div class="numericvaluelabel"><p:outputLabel value="20" /></div> </center></div>
+                                            <div  > <center> 
+
+                                                    <a href="VerificationHistory.xhtml" ><div class="linkcolors">New Applications</div></a>
+                                                </center></div></div>
+                                        <div class="c2">
+                                            <div  class="triangletext"> <center><div class="numericvaluelabel"><p:outputLabel value="08" /> </div></center></div>
+                                            <div   >
+                                                <center>  
+
+                                                    <a href="VerificationHistory.xhtml"><div class="linkcolors">Pending Applications</div></a>
+                                                </center></div>
+                                        </div>
+                                        <div class="c3">
+                                            <div  class="triangletext"> <center><div class="numericvaluelabel"><p:outputLabel value="55" /> </div></center></div>
+                                            <div   > 
+                                                <center>  
+
+                                                    <a href="EnrollmentHistory.xhtml" ><div class="linkcolors">Seats Filled</div></a>
+                                                </center></div>
+                                        </div>
+                                        <div class="c4">
+                                            <div  class="triangletext"> <center><div class="numericvaluelabel"><p:outputLabel value="35" /></div> </center></div>
+                                            <div  > <center> 
+
+                                                    <a href="EnrollmentHistory.xhtml" ><div class="linkcolors">Seats Available</div></a>
+                                                </center></div>
+                                        </div>
+                                        <a href="moharto_dashboard_availableseats.xhtml"><button type="button"  style="margin-top: 127px;float: right;"
+                                                                                                 >Update Seats</button></a>
+                                    </p:fieldset></div>
+
+
+
+
+                                <div class="fieldsetmargin"> <p:fieldset legend="Forum"  styleClass="fs1">
+                                        <p:dataTable id="dtle" var="tt" value="#{dashboard.lst}">
+                                            <p:column headerText="From" >
+                                                <h:outputText value="#{tt.name}"/>
+                                            </p:column>
+
+                                            <p:column headerText="Date" >
+                                                <h:outputText value="#{tt.time}"/>
+                                            </p:column>
+                                            <p:column headerText="Description" >
+                                                <h:outputText value="#{tt.description}"/>
+                                            </p:column>
+                                            <p:column headerText="Actions"  colspan="5" width="20" >
+                                                <center> <a href="#"><button type="button" class="btnstyle" >View</button></a>
+                                                    <a href="#"><button type="button" class="btnstyle" >Delete</button></a>
+                                                </center>
+                                            </p:column>
+                                        </p:dataTable> 
+
+                                        <!--                                        <a href="college_dashboard_messages" ><div class="viewmorebtn">View More</div></a>-->
+                                    </p:fieldset></div>
+
+
+
+                            </h:form>
+                        </div>
+                    </div>
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

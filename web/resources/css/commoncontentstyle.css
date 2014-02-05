@@ -1,0 +1,130 @@
+.para{
+    text-align: left;
+    font-size: 13px;
+    margin-left: 13px;
+    padding-right: 20px;
+} 
+
+.pagetitle{
+    font-weight: 700;float: left;font-size: 16px;color: #49a4c8;margin-top: 7px;
+    width: 100%;margin-left: 10px;margin-bottom: 5px;
+}
+
+.paratitle{
+    font-size: 15px;color: #49a4c8;float: left; margin-top: 10px;margin-left: 10px;width: 100%;
+}
+.iwanttodo{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 230px;
+    height: 202px;
+}
+.blocktitle{
+
+    font-weight: 500;font-size: 16px;color: #49a4c8;margin-top: 7px;
+    width: 100%;margin-bottom: 5px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+
+/* iwant to do  and search css*/
+
+.ui-datatable-scrollable-body {
+    height: 123px;
+}
+.tabview ui-tabs ui-tabs-top {
+    padding: 0px;
+}
+.tab1 {
+    width: 80px;
+}
+.tab2 {
+    width: 80px;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+.ui-tabs .ui-tabs-nav {
+    border-color: white;
+}
+
+//
+
+.ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    background-color: transparent;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+
+//Customer Support
+
+.social {
+    width: 172px;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    background: #ccc;
+}
+.social .contentBox {
+    width: 119px;
+    height: 162px;
+    position: fixed;
+    top: 28%;
+    right: 0;
+    background: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    border-right: none;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 12px 0 12px 15px;
+    display: none;
+    z-index: 9;
+    float: left;
+}
+.social .contentBox .closeBtn {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    cursor: pointer;
+    display: none;
+}.social .contentBox h6 {
+    font-size: 15px;
+    color: #49a4c8;
+    font-weight: bold;
+}.social .contentBox ul {
+    margin: 20px 0 0;
+    list-style: none;
+    padding: 0;
+}
+.social .supportBtn {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 28%;
+    width: 44px;
+    height: 160px;
+    background: url(../resources/images/enrol/customerSupportBtn.png) -44px 0 no-repeat;
+    text-decoration: none;
+}

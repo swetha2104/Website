@@ -1,0 +1,23 @@
+.moharto_dashboard_main
+{
+      margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+    
+    min-height: 600px;
+/*    border: 1px solid #ddd;*/
+    
+}
+.clear
+{
+    clear: both;
+}
+.txt1
+{
+ float: left;
+font-size: 13px;
+
+}

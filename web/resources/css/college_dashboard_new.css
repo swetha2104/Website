@@ -1,0 +1,195 @@
+
+.college_dashboard_maincontainer{
+    margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    /*margin-bottom: 14px;*/
+
+    /*min-height: 900px;*/
+
+
+
+}
+
+.fs1 legend
+{
+    background: none!important;
+    border: none!important;
+    margin-top: 15px;
+}
+.r1{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_5_1.png"); }
+.r2{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_2_2.png"); }
+.r3{height: 144px; width: 166px; float: left; margin-left: 10px; margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_3_3.png");}
+.r4{height: 144px; width: 166px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4_2.png");}
+
+.c1{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_1_1.png");}
+.c2{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_2_1.png");}
+.c3{height: 144px; width: 166px;  float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_3_1.png");}
+.c4{height: 144px; width: 166px; float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_4_1.png");}
+
+.t1{height: 144px; width: 144px;  float:left; margin-left: 40px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_1.png");}
+.t2{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_2.png");}
+.t3{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_3.png");}
+.t4{height: 144px; width: 144px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4.png");}
+
+.rectanglebox{
+    padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);
+}
+.linkcolors
+{
+    color: white;
+}
+.triangletext{
+    padding-top: 50px;
+}
+.numericvaluelabel{
+    font-size: 38pt; font-weight: bold;color: white;
+}
+.updatebutton{
+    float: right;margin-top: 125px;
+}
+.fieldsetmargin{
+    margin-top: 15px;
+}
+.viewmorebtn{
+    float: right;padding: 9px;font-weight: 700;
+}
+.btnstyle{
+    width: 50px;
+
+    height: 29px;
+}
+.dashboard {
+    padding-left: 10px!important;
+    padding-right:10px!important;
+}
+
+.advertisemoharto{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -5px;                                                          
+    margin-left: 249px;
+    color: #00aeef;
+}
+.fillrequirment{
+    float: left;
+    margin-left: 253px;
+    font-size: 13px;
+    margin-top: 13px;
+    margin-right: -78px;
+}
+
+.selectmenu {
+    width: 155px!important;
+    font-size: 11px;
+}
+.paymentbtn{
+    width: 142px;
+    height: 27px;
+    float: left;
+    margin-right: 426px;
+    margin-left: 259px;
+    margin-top: 10px;
+}
+.processprice{
+    float: left!important;
+    width: 61px!important;
+    font-weight: normal!important;
+    height: 12px!important;
+}
+.panelgrid{
+    float: left!important;
+    margin-top: 44px!important;
+    margin-left: -200px!important;
+}
+
+.enrolltext{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #8f8f8f;
+}
+.searchbtn{
+   
+    height:60px;
+    width:80px;
+    
+    margin-left: 0px;
+margin-top: 10px;
+}
+.slct{
+    width:440px!important;
+
+    margin-right: 30px!important;
+float: left;
+
+margin-left: 390px;
+margin-top: -49px;
+
+}
+.comdiv{
+    margin-right:30px; 
+}
+
+.coursechoice input{
+    height: 52px;
+    box-shadow: none;
+    font-style: italic;
+    font-family: sans-serif!important ;
+    padding-left: 58px;
+      color: #8f8f8f;
+}
+.slct label{
+    box-shadow: none;
+    font-style: italic;
+    font-family: sans-serif ;
+   font-weight: 600px!important;
+    color: #8f8f8f;
+    font-size: 15px;
+}
+
+.ui-selectonemenu .ui-selectonemenu-label {
+    height: 30px!important;
+    text-align: center;
+    padding-top: 26px;
+
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
+    margin-top: 16px!important;
+
+
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger{
+    background: none!important;
+    border: 0px!important;
+}
+.enrollmain{
+    width:975px;
+    height: 300px;
+}
+
+.ui-selectonemenu-trigger ui-state-default ui-corner-right{
+
+}
+.ui-selectonemenu-label ui-inputfield ui-corner-all{
+    width: 335px;
+}
+
+.ui-selectonemenu label.ui-selectonemenu-label{
+    width: 435px!important;
+}
+.inlabel{
+    float:left;
+    margin-left: -270px;
+font-size: 17px!important;
+margin-top: 18px;
+font-style: italic;
+}
+.coursechoice{
+    float: left;height:50px;margin-right: 315px;
+}

@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="home.css"/>
+
+        <script type="text/javascript" src="../resources/js/image-slideshow-5.js"></script>
+
+        <style>
+            #DHTMLgoodies_panel_one,#DHTMLgoodies_arrows,#DHTMLgoodies_thumbs{ /* Width of divs for thumbnails */
+                width:320px;
+                margin-left:30px;
+            }
+            #DHTMLgoodies_panel_one{  
+                float:left; 
+            }
+            #DHTMLgoodies_thumbs{
+                overflow:hidden; /* Don't change this */
+                height:258px; /* Height of thumbnail div */
+                position:relative; /* Never change this */
+                float:left;
+            }
+            .strip_of_thumbnails{ /* A vertical strip of thumbnails */
+                width:100px; /* Width of strip */
+                padding:5px; /* "Air" inside filmstrip div */
+                position:absolute;
+            }
+            .strip_of_thumbnails div{
+                width:90px;
+                height:70px;
+                padding:2px;
+                text-align:center;
+
+            }
+            .strip_of_thumbnails img{
+                border: 2px solid #dadada;
+                height:60px;
+            }
+            .leftArrow{
+                float:left;
+            }
+            .rightArrow{
+                float:right;
+            }
+            #thumb_inner{
+                position:relative; /* Never change this */
+                width:1000px;
+            }
+        </style>
+
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="mainContainer_home">
+                <div class="add_top">
+                    <div class="ad_home_left">
+                        <h:graphicImage value="../resources/images/home/Capture.png"  width="230" height="178" style=""/>
+
+                    </div>
+                    <div class="ad_home_middile">
+                        <h:graphicImage value="../resources/images/home/RETRO BANNER.png"  width="460" height="84" style=""/>
+
+                        <h:graphicImage value="../resources/images/home/Indian School of Business.png"  width="460" height="84" style=" margin-top: 7px;"/>
+
+                    </div>
+                    <div class="ad_home_right">
+                        <h:graphicImage value="../resources/images/home/Hurry Up for MBA ADMISSION.png" style=""/>
+
+                    </div>
+                </div>
+                <div class="clear"/>
+                <hr class="hr_hme_new"/>
+                <div class="content_middle">
+                    <div class="video_dem">
+                        <p:media value="http://www.youtube.com/v/KZnUr8lcqjo" width="213" height="150" player="flash"  style="margin-left: 10px;
+                                 margin-top: 10px;margin-bottom: 6px;"/>
+                        <h:outputLabel value="About Moharto" class="head"/>
+                        <div class="hr"></div>
+                        <p class="abt_moharto_text">
+                            Moharto intends to bring all colleges onto a common platform for ONLINE ADMISSIONS, so that Course seekers can enrole themselves online with college of their choice.
+                        </p>
+
+                    </div>
+                    <div class="checkseats">
+                        <div class="search">
+                            <h:form>
+                                <h:panelGrid columns="2" >
+                                    <h:inputText value="#{myBean.username}" id="search" styleClass="searchit" style="width: 180px;
+                                                 height: 25px;"/>
+                                    <h:commandButton value="GO" action="#" style="width: 42px;
+                                                     height: 33px;color: white;
+                                                     background: rgba(141, 46, 137, 0.59);font-weight: bold;"/>
+                                </h:panelGrid>
+                                <p:watermark for="search" value="Search by Course, Location "/>
+                            </h:form>   
+                        </div>
+
+                        <div class="clear"/>
+
+                        <div class="avalable_seats">
+                            <h2 style="padding-top: 22px;font-size: 16px;margin-left: 17px;color: #49a4c8;">Check Seats Availability</h2>
+                            <!--<p:panel header="AVAILABLE SEATS FOR ONLINE ADDMISSION" style="text-align: center;width: 275px;height: 187px;">-->
+                            <!--<h:panelGrisd columns="2">-->
+                            <p:tabView id="tv" style="padding-left: 6px;padding-right: 0px;border: 0px;width: 225px;" styleClass="abc" effect="scale" >
+                                <p:tab id="pgtab" title="PG" titleStyleClass="tab_bgi" >
+                                    <h:form>
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel for="" value="Select Course " />
+                                            <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                            </p:selectOneMenu>
+
+                                            <h:outputLabel for="city" value="Select City" />
+                                            <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid>
+
+
+                                        <!--                                <p:commandButton value="GO" style="margin-left: 18px;
+                                                                                         margin-top: 19px;"  action="moharto_available_seats_new"/>-->
+                                        <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 18px;
+                                                                                            margin-top: 19px;">View</button></a>
+                                        <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                                    </h:form>
+                                </p:tab>
+                                <p:tab id="ugtab" title="UG" >
+                                    <h:form>
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel for="" value="Select Course " />
+                                            <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                            </p:selectOneMenu>
+
+                                            <h:outputLabel for="city" value="Select City" />
+                                            <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid> 
+                                        <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 18px;
+                                                                                            margin-top: 19px;">View</button></a>
+                                        <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                                    </h:form>
+                                </p:tab>
+                                <p:tab id="aftr10tab" title="AFTER 10th">
+                                    <h:form>
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel for="" value="Select Course" />
+                                            <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                                <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                                <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                                <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                            </p:selectOneMenu>
+
+                                            <h:outputLabel for="city" value="Select City" />
+                                            <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                        </h:panelGrid>
+                                        <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 18px;
+                                                                                            margin-top: 19px;">View</button></a>
+                                        <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                                    </h:form>
+                                </p:tab>
+                            </p:tabView>
+                            <!--</h:panelGrid>-->
+                            <!--</p:panel>-->
+                        </div>
+                    </div>
+                    <div class="partner">
+
+                        <!-- Start of slideshow markup -->
+                        <div id="DHTMLgoodies_panel_one">
+                            <div id="DHTMLgoodies_thumbs">
+                                <h2 style="color: #49a4c8;">Partner Colleges</h2>
+                                <div id="thumb_inner">
+                                    <!-- This is where you put your small thumbnails -->
+
+                                    <!-- This is the div for one vertical strip of images -->
+                                    <div class="strip_of_thumbnails">
+                                        <div><a id="firstThumbnailLink" href="#" onclick="showPreview('images/image1_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/adarsha.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image2_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Pes.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image3_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Gopalancollege.png"/></a></div>
+                                    </div> 
+                                    <!-- End div for the first vertical strip of thumbnails-->
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image4_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/acharya.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image5_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/banglorecollege.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image6_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/brindavancollege.png"/></a></div>
+
+                                    </div> 
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image7_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/isb.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image8_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/alvas.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image9_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/aiimspeenya.png"/></a></div>
+                                    </div>
+                                    <div class="strip_of_thumbnails">
+                                        <div><a id="firstThumbnailLink" href="#" onclick="showPreview('images/image1_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/adarsha.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image2_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Pes.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image3_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Gopalancollege.png"/></a></div>
+                                    </div> 
+                                    <!-- End div for the first vertical strip of thumbnails-->
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image4_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/acharya.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image5_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/banglorecollege.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image6_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/brindavancollege.png"/></a></div>
+
+                                    </div> 
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image7_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/isb.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image8_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/alvas.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image9_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/aiimspeenya.png"/></a></div>
+                                    </div>
+                                    <div class="strip_of_thumbnails">
+                                        <div><a id="firstThumbnailLink" href="#" onclick="showPreview('images/image1_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/adarsha.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image2_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Pes.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image3_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/Gopalancollege.png"/></a></div>
+                                    </div> 
+                                    <!-- End div for the first vertical strip of thumbnails-->
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image4_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/acharya.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image5_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/banglorecollege.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image6_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/brindavancollege.png"/></a></div>
+
+                                    </div> 
+                                    <div class="strip_of_thumbnails">
+                                        <div><a href="#" onclick="showPreview('images/image7_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/isb.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image8_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/alvas.png"/></a></div>
+                                        <div><a href="#" onclick="showPreview('images/image9_big.jpg', this);
+                                                return false;"><img src="../resources/images/partner/aiimspeenya.png"/></a></div>
+                                    </div>  
+
+                                    <!-- End where you put your small thumbnails -->
+                                </div>
+
+                            </div>
+                            <!-- Arrow images - You can change the "src", but not the "id" -->
+                            <div id="DHTMLgoodies_arrows">
+                                <img id="DHTMLgoodies_leftArrow" class="leftArrow" src="../resources/images/partner/arrow_left.gif"/>
+                                <img id="DHTMLgoodies_rightArrow" class="rightArrow" src="../resources/images/partner/arrow_right.gif"/>
+                            </div>
+                        </div>
+                        <!-- Large image div -->
+                        <div id="DHTMLgoodies_largeImage">
+                            <!-- Table is used to get both vertical and horizontal center alignment -->
+                            <table>
+                                <tr>
+
+                                    <!-- The intial shown image -->
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- End of slideshow markup -->
+
+                        <div class="clear"></div>
+
+
+                        <script type="text/javascript">
+                            initGalleryScript(); // Initialize script
+                        </script>
+                    </div>
+
+                </div>
+                <div class="clear"/>
+                <hr class="hr_hme_new"/>
+                
+                <div class="content_bottom">
+                    <div class="testimonial">
+                        <div class="testimonial1">
+                            <h3 style="margin-top: 13px;
+                                font-size: 15px;
+                                text-align: center;color: #49a4c8;">TESTIMONIALS</h3>
+                            <!--<p:panel header="TESTIMONIALS" style="" styleClass="panel" >-->
+                            <h:panelGrid columns="1">
+                                <p style="padding: 3px;margin-top: -9px;
+                                   margin-bottom: 17px;">I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."</p>
+
+                                <div style="float: left;">
+                                    <h:panelGrid columns="2" style="margin-top: -13px;">
+                                        <h:graphicImage url="../resources/images/home/male.gif" height="75px" width="75px"/>
+                                        <h:panelGrid columns="1">
+                                            <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" /> 
+                                            <h:outputText value="-PSIT, Bangalore" style="font-style: italic" /> 
+                                        </h:panelGrid>
+                                    </h:panelGrid>
+                                </div>   
+                            </h:panelGrid>
+                            <a href="moharto_testimonials.xhtml" style="float: right;
+                               margin-top: -15px;
+                               margin-right: 5px;
+                               color: #49a4c8;font-weight: bold;">View More</a>
+
+
+                        </div>
+
+                        <br/>
+
+
+                        <h:graphicImage value="../resources/images/home/Gradmen.png" width="230" height="78" style="margin-top: 13px;" />
+                        <h:graphicImage value="../resources/images/home/Crash course.png" style="margin-top: 8px;" width="230" height="78" />
+                        <!--<h:graphicImage value="../resources/images/home/Teachers.png"  width="230" height="78" style="margin-top: 7px;"/>-->
+
+
+                    </div>
+
+                    <div class="fee_range">
+                        <div class="fee_range1">
+                            <h:panelGrid columns="2" style="width: 456px;
+                                         height: 222px;font-family: Arial,sans-serif; padding: 4px;
+                                         font-size: 1.1em;" cellspacing="0" cellpadding="0" >
+
+                                <h:outputText value="Course Name" style="font-weight: bold; font-size: 14px;" />
+                                <h:outputText value="Fee Range per year"  style="font-weight: bold; font-size: 14px;"/>
+                                <h:outputText  value="Master of Business Administration"  />
+                                <h:outputText  value="50000 to 150000/-" />
+                                <h:outputText  value="Computer Science Engineering" />
+                                <h:outputText  value="75000 to 100000/-" />
+                                <h:outputText  value="Bachelor of Hotel Management" />
+                                <h:outputText  value="500000 to 1150000/-" />
+                                <h:outputText  value="Diploma in Animation"/>
+                                <h:outputText  value="45000 to 250000/-" />
+                                <h:outputText  value="Master of Technology" />
+                                <h:outputText  value="60000 to 250000/-" />
+                                <h:outputText  value="Staff Nurse"/>
+                                <h:outputText  value="55000 to 165000/-"/>
+                                <h:outputText  value="Bachelor of Computer Applications"/>
+                                <h:outputText  value="50000 to 100000/-" />
+                                <h:outputText  value="Bachelor of Business Administration" />
+                                <h:outputText  value="50000 to 250000/-" />
+                                <h:outputText  value="Bachelor in Commerce"/>
+                                <h:outputText  value="35000 to 1350000/-" />
+                            </h:panelGrid>
+                            <h:form><h:commandLink value="View More" style="margin-top: -4px;text-decoration: none;color: #49a4c8; font-weight: bold; margin-left: -12px;float: right"/></h:form>
+                        </div>
+                        <h:graphicImage value="../resources/images/home/Indian School of Business.png"  width="470" height="78" style="margin-top: 11px;"/>
+                        <div class="announcement" style="color: black;margin-top: 5px;">
+                            <h2 style="color: rgb(185, 53, 122);">Hurry Up!!</h2>
+
+                            <p style="font-size: 15px;
+                               padding: 6px;
+                               margin-top: -19px;"> "Due to immense success in teaching, Moharto has launched Online admission" </p>
+
+                            <h:outputLabel value="Contact: 98451 98451" style="float: right;
+                                           font-weight: bold;
+                                           color: green;
+                                           font-size: 15px;
+                                           margin-top: -22px;
+                                           margin-right: 6px;"/>
+                        </div>
+
+                        <!--                        <h:graphicImage value="../resources/images/home/RETRO BANNER.png"  width="470" height="78" style="margin-top: 11px;"/>-->
+                    </div>
+                    <div class="reg_form">
+                        <div class="joinmoharto">
+                            <p>Join Moharto for the best information on taking admission online as per your preference</p>
+                        </div>
+
+
+                        <h:form>
+                            <div style="margin-top: 8px;
+                                 margin-left: 8px;
+                                 margin-bottom: 8px;">
+                                <span style="font-size: 11px">Already registered with Moharto ?</span>&nbsp; 
+                                <h:commandLink value="Login" style="text-decoration: none;color: darkgreen;font-weight: bold;"/>
+                                <div style="background-image: url('../resources/images/headfoot/facebook.png');"></div>
+
+                                <!--                                <h:graphicImage  value="../resources/images/pages/FacebookNew.png" style="margin-top: 8px;
+                                                                                 margin-left: 22px;
+                                                                                 "/>-->
+
+                            </div>
+
+                            <p:inputText id="fname" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/><br/>
+                            <p:watermark for="fname" value="First Name *" />
+
+                            <p:inputText id="lname" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/><br/>
+                            <p:watermark for="lname" value="Last Name *" /> 
+
+                            <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/><br/>
+                            <p:watermark for="email" value="Email *" /> 
+
+                            <p:inputText id="pw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/><br/>
+                            <p:watermark for="pw" value="Password *" />
+
+                            <p:inputText id="cpw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/><br/>
+                            <p:watermark for="cpw" value="Confirm Password *" /> 
+
+                            <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/>
+                            <p:watermark for="mn" value="Mobile No. *" /> 
+
+                            <p:inputText id="city" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/>
+                            <p:watermark for="city" value="Current City *" /> 
+
+                            <p:inputText id="edu" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                         height: 14px;margin-left: 7px;"/>
+                            <p:watermark for="edu" value="Education Preference *" /> 
+
+
+                            <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-left: 10px;margin-top: 16px;">
+                            </h:selectBooleanCheckbox> 
+                            <p style="margin-left: 27px;
+                               padding: 0px;
+                               margin-top: -18px;text-align: left;">I agree to the <span style="color: #4251A2;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-style: italic;">Privacy Policy</span></p>
+
+                            <h:commandButton value="JOIN" action="#" style="margin-top: -3px;margin-left: 10px;margin-bottom: 9px;"/>
+                        </h:form>
+                    </div>
+                    <div class="clear"/>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>

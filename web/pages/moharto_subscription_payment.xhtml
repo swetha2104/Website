@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="css_advertise_2.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div  class="maincontainer">
+                <h:form>
+                    <div class="my">
+                        <center>
+
+                            <!--                        <p:graphicImage value="../resources/images/pages/step5.png" width="800" styleClass="image1" />-->
+
+                            <div class="mains">
+                                <br/>
+                                <h:outputText value="You have chosen Platinum Package for subscription" style="font-size: 14px;
+                                              margin-left: 27px;"/>
+
+                                <div class="clear"></div>
+
+                                <h:panelGrid columns="3" style="margin-top: 10px;
+                                             margin-left: 89px;">
+                                    <h:outputText value="Fee charge details" style="font-size: 13px;
+                                                  float: left;"/>                                                      <h:outputText value=": " style="float: left;
+                                                  font-size: 13px;
+                                                  "/><h:panelGrid columns="2" width="50px;">
+
+                                        <h:outputText value="Rs" style="txts"/>
+                                        <p:inputText value="50000" style="
+
+                                                     float: left;
+                                                     width: 61px;font-weight: normal;height: 12px;
+                                                     "/></h:panelGrid>
+
+                                    <h:outputText value="Select Payment Type" style="float: left;
+                                                  font-size: 13px;
+                                                  "/>
+                                    <h:outputText value=": " style="float: left;
+                                                  font-size: 13px;
+                                                  "/>  <h:panelGrid columns="2" style="
+
+                                                  float: left;">  
+
+
+                                        <p:selectOneRadio id="options2" value="#{admissionBean3.options}">  
+                                            <f:selectItem itemLabel="Debit Card" itemValue="1" />  
+                                            <f:selectItem itemLabel="Credit Card" itemValue="2" />
+                                            <f:selectItem itemLabel="NetBanking" itemValue="3" />  
+                                            <f:selectItem itemLabel="Paypal" itemValue="4" />  
+
+                                        </p:selectOneRadio>
+                                    </h:panelGrid> 
+
+                                </h:panelGrid>
+                            </div>
+                            <br/>
+                            <h:panelGrid columns="1" style="margin-top: -62px;
+                                         margin-left: -45px;" cellspacing="5px;">
+                                <p:inputText id="credit" value="#{admissionBean3.card}" required="true" style="font-size: 10px;
+                                             width: 122px;
+                                             height: 16px;">
+                                    <p:watermark for="credit" value="Card No"/>
+
+                                </p:inputText >
+                                <p:message for="credit"/>
+
+                                <p:calendar id="exp" style="font-size: 10px;
+                                            width: 147px;
+                                            height: 16px;">
+                                    <p:watermark for="exp" value="Expiry Date"/> 
+                                </p:calendar>
+                                <p:message for="exp"/>
+                                <p:inputText id="cvv" value="#{admissionBean3.cvv}" required="true" style="font-size: 10px;
+                                             width: 122px;
+                                             height: 16px;">
+                                    <p:watermark for="cvv" value="CVV"/>
+                                </p:inputText>
+                                <p:message for="cvv"/>
+                            </h:panelGrid>
+                            <h:panelGrid columns="4" style="margin-left: -38px;
+                                         margin-top: -8px;">
+                                <p:selectBooleanCheckbox />
+                                <h:outputText value="I agree to "/> <a href="#" style="color: skyblue;">Terms</a> and <a href="#" style="color: skyblue;">Conditions</a>
+                            </h:panelGrid>
+                            <br/>
+                            <a href="#"><button type="button" class="btn" style="width: 110px;
+                                                height: 27px;
+                                                float: right;
+                                                margin-right: 327px;">Make Payment</button></a>
+                            <br/>         <br/>                                          
+
+
+                        </center>
+                    </div>
+                    <div class="second">
+
+                        <h:graphicImage value="/resources/images/pages/Hurry Up.png" style="width: 230px;
+                                        height: 178px;
+                                        "/>
+                        <h:graphicImage value="/resources/images/pages/boy.png" style="width: 230px;
+                                        height: 178px;margin-top: -1px;
+                                        "/> 
+
+
+                    </div>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+

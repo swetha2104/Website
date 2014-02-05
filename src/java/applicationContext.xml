@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://192.168.1.148:3306/moharto" />
+        <property name="user" value="root" />
+        <property name="password" value="admin" />
+        <property name="maxPoolSize" value="2" />
+        <property name="maxStatements" value="0" />
+        <property name="minPoolSize" value="1" />
+    </bean>
+    
+    <bean id="mysessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>  
+          
+        <property name="mappingResources">  
+            <list>  
+                <value>userreg.xml</value>
+                
+            </list>  
+        </property> 
+        
+           
+          
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
+            </props>  
+        </property>  
+    </bean>  
+    
+    <bean id="regDAO" class="com.mangium.RegDAO">  
+        <property name="sessionFactory" ref="mysessionFactory"></property>  
+    </bean>  
+   
+</beans>

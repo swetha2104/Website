@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        
+        <style>
+            .abc ul{
+                font-size: 12px;
+                width: 218px;
+                padding: 0px!important;
+                background: white!important;
+            }
+
+            .abc ui-tabs ui-tabs-top ui-tabs-nav{
+                padding: 0px;
+            }
+            .ui-tbs-panels{
+                border: 1px solid black;
+            }
+
+            ui-tabs ui-widget ui-widget-content ui-corner-all ui-hidden-container ui-tabs-top abc{
+                padding-left: 1px;
+                padding-right: 0px;
+                border: 1px solid;
+                width: 207px;
+                margin-left: 11px;
+                border-top-color: white;
+
+            }
+            .ui-tabs .ui-tabs-nav {
+                border-color: white;
+            }
+            .ui-tabs.ui-tabs-top > .ui-tabs-nav {
+
+                margin-left: -3px;
+                margin-top: -2px
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form id="iwant2doform">
+                <div class="iwanttodo">
+
+                    <div class="blocktitle">
+                        <center>
+                            I Want To Do
+                        </center>
+                    </div>
+
+
+                    <p:tabView id="tv" style=" padding-left: 1px;
+                               padding-right: 0px;
+                               border: 1px solid lightgray;
+                               width: 210px;
+                               margin-top: -3px;
+                               height: 156px;
+                               margin-left: 11px;
+                               border-top-color: white;
+                               " styleClass="abc" effect="slide" >
+                        <div style="border: 1px solid lightgray; width: 2px"></div>
+
+                        <p:tab id="aftr10tab" title="After 10th">
+
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course" />
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}"  style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                        <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                        <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                        <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                    </p:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                        
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid>
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 10px;float: right;">Go</button></a>
+
+                            </h:form>
+                        </p:tab>
+
+
+                        <p:tab id="ugtab" title="After 12th" >
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course " />
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                    </p:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid> 
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 10px;float: right;">Go</button></a>
+
+                            </h:form>
+                        </p:tab>
+
+                        <p:tab id="pgtab" title="PG" titleStyleClass="tab_bgi" >
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course " />
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                    </p:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        
+                                        <f:selectItem itemLabel="Select" itemValue="22"/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid>
+
+
+
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 10px;float: right;">Go</button></a>
+
+                            </h:form>
+                        </p:tab>
+
+                    </p:tabView>
+                </div>
+
+            </h:form>
+        </f:view>
+    </h:body>
+</html>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="css_dashboard_reply.css"/>
+
+        <style>
+            .inputTextarea textArea{width: 613px; height: 63px;}
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+        <ui:define name='main'>
+            <h:form id="form">
+                <p:menubar autoDisplay="false">
+
+                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                    <p:submenu label="My College" styleClass="dashboard" >
+                        <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                        <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                    </p:submenu>                                   
+                    <p:submenu label="Admissions"  styleClass="dashboard">
+                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                    </p:submenu>
+                    <p:submenu label="Ads" styleClass="dashboard">
+                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                    </p:submenu>
+
+                    <p:submenu label="Messages"  styleClass="dashboard">
+                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                    </p:submenu>
+
+                </p:menubar>
+                <br/>
+
+                <div class="left">
+                    <div class="ques1">
+                        <a href="#" class="question" >How can i get Admission in this college? What process do you have? Do have any sat exam or entrance exam
+                            to enter this college?.</a><br />
+
+                        <div class="question1-outlabel"><h:outputLabel style="" value="Dec 15, 2013 9:25 PM"/></div>
+                        <div> <h:outputLabel style="font-size: 12px;float: right;
+                                             margin-right: -223px;
+                                             margin-top: 10px;" value="by Mr.Rahul Roy"/></div>
+                    </div>
+                    <div class="ans1">
+
+                        <h:graphicImage value="../resources/images/home/male.gif" width="70" height="70" class="answer"></h:graphicImage>
+                        <div class="ans_desc">
+                            <div class="answer">
+                                <a href="#">Rajan Kumar</a><br/><br/>
+                                <h:outputLabel value="Dec 15, 2013 8:07 PM"/>
+                                <div class="para">
+                                    It is very easy process to get the admission here. 
+                                    But you should have minimum percentage of 60%. You must have finished all the academics with atleast 50%. 
+                                    There should not be any gaps in academics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ans1">
+
+                        <h:graphicImage value="../resources/images/home/male.gif" width="70" height="70" class="answer"></h:graphicImage>
+                        <div class="ans_desc">
+                            <div class="answer">
+                                <a href="#">Santosh hegde</a><br/><br/>
+                                <h:outputLabel value="Dec 9, 2013 4:07 PM"/>
+                                <div class="para"> 
+                                    It is very easy process to get the admission here.
+                                    But you should have minimum percentage of 60%. You must have finished all the academics with atleast 50%.
+                                    There should not be any gaps in academics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ans1">
+
+                        <h:graphicImage value="../resources/images/home/male.gif" width="70" height="70" class="answer"></h:graphicImage>
+                        <div class="ans_desc">
+                            <div class="answer">
+                                <a href="#">Amit Verma</a><br/><br/>
+                                <h:outputLabel value="Dec 12, 2013 12:07 PM"/>
+                                <div class="para"> 
+                                    It is very easy process to get the admission here.
+                                    But you should have minimum percentage of 60%.
+                                    You must have finished all the academics with atleast 50%. There should not be any gaps in academics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ans1">
+                        <h:graphicImage value="../resources/images/home/male.gif" width="70" height="70" class="answer"></h:graphicImage>
+                        <div class="ans_desc">
+                            <div class="answer">
+                                <a href="#">Rakesh Sinha</a><br/><br/>
+                                <h:outputLabel value="Dec 16, 2013 3:29 PM"/>
+                                <div class="para"> 
+                                    It is very easy process to get the admission here.
+                                    But you should have minimum percentage of 60%. You must have finished all the academics with atleast 50%. There should not be any gaps in academics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ans1">
+                        <h:graphicImage value="../resources/images/home/male.gif" width="70" height="70" class="answer"></h:graphicImage>
+                        <div class="ans_desc">
+                            <div class="answer">
+                                <a href="#">Monu singh</a><br/><br/>
+                                <h:outputLabel value="Dec 21, 2013 5:10 PM"/>
+
+                                <div class="para"> 
+                                    It is very easy process to get the admission here.
+                                    But you should have minimum percentage of 60%. 
+                                    You must have finished all the academics with atleast 50%. There should not be any gaps in academics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="clear: both;"></div>
+                    <div class="inputTextarea"><p:inputTextarea id="ta" rows="3" cols="87" style="                                                              "/></div>
+                    <p:watermark for="ta" value="Enter your Comments"/><br/>
+                    <div class="btn">
+                        <p:commandButton   value="Submit" />
+                        <br/>
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+
+
+    </ui:composition>
+</html>

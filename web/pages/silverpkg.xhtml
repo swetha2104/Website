@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="css_gold.css"/>
+
+        <style>
+            .show_stream{
+                display: none;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="pagetitle">Silver Package Details</div>
+            <br/>              <br/>
+            <h:panelGrid columns="3" cellpadding="4px" class="table">
+                <h:outputText value="Duration"/>
+                <h:outputText value=":"/>
+                <h:outputText value="1 year."/>
+
+                <h:outputText value="Benefits"/>
+                <h:outputText value=":"/>
+                <h:outputText value="[2:11:47 PM] Syed Taher Zama: Top Listing in Searches,navigation,Promotion of college Ad in Course and Location based search and navigation." class="benefits"/>
+
+                <h:outputText value="Total No of Ads"/>
+                <h:outputText value=":"/>
+                <h:outputText value="3."/>
+
+                <h:outputText value="Ad type" class="label-sizes"/>
+                <h:outputText value=":" class="label-sizes" />
+                <h:panelGrid columns="2" style="margin-left: -5px;
+                             margin-top: 89px;">
+
+                    <h:graphicImage value="../resources/images/pages/Hurry Up.png" width="213" height="130" style="margin-top: -86px;"/>
+
+                    <h:graphicImage value="../resources/images/pages/bbm1.jpg" width="230" height="78" style="float: left;margin-top: -82px;"/>
+                </h:panelGrid>
+
+                <h:outputText value="Promotion" class="label-type"/>
+                <h:outputText value=":" class="label-type"/>
+
+                <h:panelGrid style="margin-top: -5px;">
+                    <ol class="lists">
+                        <li>Home Page Ad - Rotation wise.</li>
+                        <li>Moharto Recommended Colleges - Circular Listing.</li>
+                        <li>Ads Based on Search or Navigation.</li>
+                    </ol>
+                </h:panelGrid>
+
+                <h:outputText value="Course Leads Priority" class="leads-label" />
+                <h:outputText value=":" class="course-label"/>
+                <h:outputText value="That,is info about students will sent to you after six days,who register with Moharto without Online Enrollment." class="course-label"/>
+
+
+
+
+            </h:panelGrid>
+            <h:outputText value="Package Price" class="price-label" />
+            <h:outputText value=":" class="dialog-link" style="margin-left: 34px;"/>
+            <h:outputText value="To request our quote." style="font-size: 13px;margin-left: 75px;"/> 
+            <p:commandLink   value="Click Here" id="click-link"   onclick="
+                    $(this).next('.show_stream').slideDown(300);"/>
+
+            <div class="show_stream">
+                <div class="paratitle" style="margin-left: 144px;"> Kindly provide basic information about yourself</div>
+                <h:panelGrid columns="1" style="margin-left: 141px;">
+
+                    <h:inputText id="name"/>
+                    <p:watermark value="Name" for="name"/>
+                    <h:inputText id="mobile"/>
+                    <p:watermark value="Mobile" for="mobile"/>
+                    <h:inputText id="colleges" />
+                    <p:watermark value="College Name" for="colleges"/>
+                    <h:inputText id="email"/>
+                    <p:watermark value="Email id" for="email"/>
+                    <p:commandButton value="Submit"/>
+                </h:panelGrid>
+
+            </div>
+
+
+
+            <br/><br/>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="right-panel">
+                <center>
+                    <div class="paratitle" style="margin-left: -26px;" >
+                        Subscription Packages
+                    </div>
+
+
+                    <h:panelGrid columns="1" style="font-size: 18px;margin-left: -83px;">
+
+
+                        <a  href="subs.xhtml" class="links">Platinum Package</a><br/>
+                         <hr class="top-links-line"/>  
+
+                      <a href="goldpkg.xhtml" class="gold-links"> Gold Package</a><br/>
+                  <hr class="middle-links-line"/>  
+                    </h:panelGrid>
+                    <a href="silverpkg.xhtml" class="silver-links">Silver Package</a>
+                     <hr  class="bottom-links-line"/> 
+
+                </center>
+            </div>    
+
+
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

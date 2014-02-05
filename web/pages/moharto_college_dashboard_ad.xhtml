@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+ <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="college_dashboard.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+   
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+      
+
+        <ui:define name='main'>
+
+             <f:view>
+                    <div class="college_dashboard_maincontainer">
+                        <div class="college_dashboard_menu">
+                            <h:form>
+                                <p:menubar autoDisplay="false">
+
+                                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"  />
+                                    <p:submenu label="My College" styleClass="dashboard" >
+                                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Microsite"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Add Course" url="moharto_college_dashboard_add_course.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Admissions"  styleClass="dashboard" >
+                                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Ads" styleClass="dashboard">
+                                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" url="moharto_college_dashboard_ad.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                    </p:submenu>
+
+                                    <p:submenu label="Messages"  styleClass="dashboard">
+                                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                    </p:submenu>
+
+                                </p:menubar>
+                                <br/>
+
+
+                                <div class="college_dashboard_maincontainer">
+                                    <div class="college_dashboard_menu">
+                                        <h:form>
+
+                                            <br/>
+
+                                            <div class="first">
+
+                                                <br/>
+                                                <h:outputText value="Advertise in Moharto" styleClass="advertisemoharto" /> <br/>
+
+
+                                                <h:outputText value="Please Fill The Requirements" styleClass="fillrequirment"/> 
+
+                                                <h:panelGrid columns="3" styleClass="panelgrid"  cellpadding="10px">
+                                                    <h:outputText value="Name" class="txts" />
+                                                    <h:outputText value=":" style="txts"/>
+                                                    <p:inputText/>
+                                                    <h:outputText value="Email" class="txts"/>
+                                                    <h:outputText value=":" style="txts"/>
+                                                    <p:inputText/>
+                                                    <h:outputText value="MobileNo" class="txts" />
+                                                    <h:outputText value=":" style="txts"/>
+                                                    <p:inputText/>
+                                                    <h:outputText value="Types of Ad " class="txts" />
+                                                    <h:outputText value=":" style="txts"/>
+
+                                                    <p:selectOneMenu  id="menu" styleClass="selectmenu"> 
+                                                        <f:selectItem itemLabel="select ad type" itemValue="3" />  
+                                                        <f:selectItem itemLabel="Home Page" itemValue="1" />  
+                                                        <f:selectItem itemLabel="Search Based Ad" itemValue="2" />  
+
+                                                        </p:selectOneMenu>
+                                                    <h:outputText value="Period of time" class="txts"/>
+                                                    <h:outputText value=":" style="txts"/>
+                                                    <p:selectOneMenu styleClass="selectmenu">  
+                                                        <f:selectItem itemLabel="select time period" itemValue="1" /> 
+                                                        <f:selectItem itemLabel="1 month" itemValue="1" />  
+                                                        <f:selectItem itemLabel="2 month" itemValue="2" />  
+                                                        <f:selectItem itemLabel="3 month" itemValue="2" />  
+                                                        <f:selectItem itemLabel="6 month" itemValue="2" />  
+                                                        <f:selectItem itemLabel="1 year" itemValue="2" />  
+                                                    </p:selectOneMenu>  
+                                                    <h:outputText value="Ad Processing price"  class="txts"/>
+
+                                                    <h:outputText value=":" style="txts"/>
+
+                                                    <h:panelGrid columns="2" width="50px;">
+                                                        <h:outputText value="Rs" style="txts"/>
+                                                        <p:inputText value="50000" styleClass="processprice"/>
+                                                    </h:panelGrid>
+                                                </h:panelGrid>
+                                                <a href="moharto_advertise_payment.xhtml"><button type="button" class="paymentbtn" >Proceed to Payment</button></a>
+                                            </div>
+                                        </h:form>
+                                    </div></div>
+                            </h:form>
+                        </div>
+                    </div>
+                </f:view>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

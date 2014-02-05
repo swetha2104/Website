@@ -1,0 +1,65 @@
+.advertise-in-moharto{
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.adsize-text{
+    margin-left: 47px;
+}
+
+.ad-horizontal-center{
+    margin-left: 179px;
+}
+.ads-price-content{
+    font-size: 13px;text-align: left;
+}
+ad-pricing-table{
+    margin-top: 6px;margin-left: 6px;
+}
+
+.cal input{
+   height: 10px;
+  
+}
+
+.dur{
+   height: 10px;
+}
+
+/* from css_ads*/
+
+.adimages{
+
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #ddd;
+
+}
+
+.display-adtype{
+    height: 682px;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.clear
+{
+    clear: both;
+}
+
+/* div display style */
+
+.show_stream{
+    display: none;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+
+/*  */

@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="register_steps.css"/>
+
+        <style>
+             .tabView1{
+                size: 168px;
+                width: 806px;
+                margin-left: 272px;
+            }
+            .cal1{
+                width: 204px;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 12px;}
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+      
+
+        <ui:define name='main'>
+             <h:form>
+                    <center>
+                        <p:graphicImage value="../resources/images/enrol/2.png" width="800" styleClass="image1" style="margin-left: -15px;" /><br/>
+                        <div class="content4">
+                            <p:calendar size="28" pattern=" dd MMM, yyyy" showButtonPanel="true" navigator="true" id="customCal" value="#{register4enroll1.date_of_birth}">
+                                <p:watermark for="customCal" value="Date of Birth"/>
+                            </p:calendar>
+<!--                            <p:calendar value="#{admissionBean.date}" id="popupButtonCal"  size="29" style="box-shadow: 2px 2px 3px #666666;" > 
+                                <p:watermark for="popupButtonCal" value="Date of Birth"/>
+                            </p:calendar><br/><br/><br/>-->
+
+                            <h:panelGrid columns="3" style="margin-top: 2px;" cellpadding="7">  
+
+                                <p:outputLabel value="Gender:"/>
+                                <p:selectOneRadio id="options" value="#{register4enroll1.gender}" >  
+                                    <f:selectItem itemLabel="Male" itemValue="1" />  
+                                    <f:selectItem itemLabel="Female" itemValue="2" />  
+
+                                </p:selectOneRadio>
+                            </h:panelGrid> 
+
+
+
+                            <p:fieldset legend="Present Address" style="width: 200px;
+                                        height: 240px;
+                                        margin-left: 7px;
+                                        margin-top: 88px;
+                                        " styleClass="field">
+                                <p:inputTextarea id="address" required="true" value="#{register4enroll1.pre_address}" style="height: 50px;width: 201px;font-size:12px;margin-left: -2px;
+                                              box-shadow: 2px 2px 3px #666666;   ">
+                                    <p:watermark for="address" value="Address"/>
+                                </p:inputTextarea> <br/><br/>
+                                <p:selectOneMenu id="country" value="#{register4enroll1.pre_country}" style="width: 210px;font-size: 14px;text-align: left;box-shadow: 2px 2px 3px #666666;"  required="true">  
+                                    <f:selectItem itemLabel="Select Country" itemValue="" />  
+                                    <f:selectItems value="#{admissionBeanArray.cities}" />  
+                                    <p:ajax update="suburbs"  
+                                            listener="#{admissionBeanArray.handleCityChange()}" />  
+                                </p:selectOneMenu> <br/><br/>
+                                <p:inputText id="suburbs" value="#{register4enroll1.pre_location}"  styleClass="txt" style="box-shadow: 2px 2px 3px #666666;"/>
+                                 <p:watermark value="Enter location" for="suburbs"/> <br/><br/>
+                                 <p:inputText id="pin" value="#{register4enroll1.pre_pin}" required="true" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;">
+                                    <p:watermark for="pin" value="Pin code"/>
+
+                                </p:inputText>
+
+                            </p:fieldset>
+
+                        </div>
+
+                        <div class="content5">
+                            <p:inputText id="fatherswork" value="#{register4enroll1.father_name}" required="true" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;">
+                                <p:watermark for="fatherswork" value="Father Name"/>
+
+                            </p:inputText><br/><br/><br/>
+
+                            <h:panelGrid columns="3" style="margin-top: -23px;" cellpadding="7">  
+
+                                <p:outputLabel value="Guardian:"/>
+                                <p:selectOneRadio id="options1" value="#{register4enroll1.guardian}"  >  
+                                    <f:selectItem itemLabel="Father" itemValue="1" />  
+                                    <f:selectItem itemLabel="Other" itemValue="2" />  
+
+                                </p:selectOneRadio>
+                            </h:panelGrid>
+                            <p:inputText id="lastname" value="#{register4enroll1.guardian_name}" required="true" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;">
+                                <p:watermark for="lastname" value="Guardian Name"/>
+
+                            </p:inputText><br/><br/>
+
+                            <p:inputText id="fathername" value="#{register4enroll1.guardian_occupation}" required="true" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;">
+                                <p:watermark for="fathername" value="Guardian Ocupation"/>
+
+                            </p:inputText><br/>
+                            <br/>
+
+                            <p:fieldset legend="Permanent Address" style="width: 200px;
+                                        height: 240px;
+                                        margin-left: 20px;
+                                        
+                                        " styleClass="field">
+                                <p:inputTextarea id="address2" required="true" value="#{register4enroll1.perm_address}" style="height: 50px;width: 201px;font-size:12px;margin-left: -2px;
+                                                box-shadow: 2px 2px 3px #666666; ">
+                                    <p:watermark for="address2" value="Address"/>
+                                </p:inputTextarea> <br/><br/>
+                                <p:selectOneMenu id="country1" value="#{register4enroll1.perm_country}" style="width: 210px;font-size: 14px;text-align: left;box-shadow: 2px 2px 3px #666666;"  required="true">  
+                                    <f:selectItem itemLabel="Select Country" itemValue="" />  
+                                    <f:selectItems value="#{admissionBeanArray.cities}" />  
+                                    <p:ajax update="suburbs1"  
+                                            listener="#{admissionBeanArray.handleCityChange()}" />  
+                                </p:selectOneMenu> <br/><br/>
+                                <p:inputText id="suburbs1" value="#{register4enroll1.perm_location}" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;"/>
+<!--                                <p:selectOneMenu id="suburbs1" value="#{admissionBeanArray.suburb}" style="width: 210px;font-size: 14px;text-align: left;" >  
+                                    <f:selectItem itemLabel="Select City" itemValue="" />  
+                                    <f:selectItems value="#{admissionBeanArray.currentlocation}" />  
+                                </p:selectOneMenu>-->
+                                <p:watermark value="Enter location" for="suburbs1"/><br/><br/>
+                                <p:inputText id="pin2" value="#{register4enroll1.perm_location}" required="true" styleClass="txt" style="box-shadow: 2px 2px 3px #666666;">
+                                    <p:watermark for="pin2" value="Pin code"/>
+
+                                </p:inputText>
+
+                            </p:fieldset>
+                        </div>
+<!--                        <a href="moharto_student_register_education.xhtml"><button type="button" class="btn" style="width: 90px;
+                                                                                   height: 32px;float: right;margin-right: 400px;margin-top: 180px;">Next</button></a>-->
+
+                        <a href="moharto_student_register_basic.xhtml"><button type="button" class="btn" style="width: 90px;
+                       
+                                                                               height: 32px;float: right;margin-right: 15px;margin-bottom: 8px;margin-top: 180px;">Previous</button></a><br/><br/>
+                                                                               <p:commandButton id="btn"  value="Next" ajax="false" action="#{reg1.navigate()}" actionListener="#{reg1.store()}" style="width: 90px;
+                                                                                   height: 32px;float: right;margin-right: 400px;margin-top: 180px;"> </p:commandButton><br/><br/>
+                    </center>  
+                 <div id="grd">
+                     
+                     
+                     
+                 </div>
+
+                </h:form>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+

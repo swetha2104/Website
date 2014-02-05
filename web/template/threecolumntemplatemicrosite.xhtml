@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head> 
+        <title>
+            <ui:insert name="pageTitle">
+                Moharto
+            </ui:insert>
+        </title>
+
+        <h:outputStylesheet library="css" name="style_microsite.css"/>
+        <h:outputStylesheet library="css" name="style_header.css"/>
+        <h:outputStylesheet library="css" name="style2.css"/>
+        <h:outputStylesheet library="css" name="pagetype.css"/>
+
+    </h:head>
+    <h:body>
+        <div class="mainContainer_common">
+            <div>
+                <ui:insert name="pageHeader" >
+                    <ui:include src="/template/commonHeader_microsite.xhtml" />
+                </ui:insert>
+            </div>
+
+            <div class="stage" style="color: rgb(95, 86, 86);">
+                <div class="leftcolumn">
+                    <ui:insert name="leftcolumn" >
+
+                    </ui:insert>
+                </div>
+                <div class="main">
+                    <ui:insert name="main" >
+
+                    </ui:insert>
+                </div>
+                <div class="rightcolumn">
+<!--                    <ui:include src="/blocks/iwanttodo.xhtml" /> -->
+                    <ui:insert name="rightcolumn" >
+
+                    </ui:insert>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ui:insert name="pageFooter" >
+                <ui:include src="/template/commonFooter.xhtml" />
+            </ui:insert>
+        </div>
+    </h:body>
+</html>

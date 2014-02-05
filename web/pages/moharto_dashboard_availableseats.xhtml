@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="dashboard_availableseats.css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template/commonTemplate.xhtml">
+
+            <ui:define name='pageContent'>
+                <f:view>
+                    <div class="dashboard_availableseats_maincontainer" style="width: 980px;margin: 0px auto;">
+                        <div class="dashboard_availableseats_table" style="margin-top: 10px;margin-bottom: 10px;">
+                            <h:form id="form">
+
+                                <p:menubar autoDisplay="false">
+
+                                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                                    <p:submenu label="My College" styleClass="dashboard" >
+                                        <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                                    </p:submenu>                                   
+                                    <p:submenu label="Admissions"  styleClass="dashboard">
+                                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Ads" styleClass="dashboard">
+                                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                    </p:submenu>
+
+                                    <p:submenu label="Messages"  styleClass="dashboard">
+                                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                    </p:submenu>
+
+                                </p:menubar>
+                                <br/>
+                                <br/>
+                                <p:growl id="messages" />  
+                                <p:dataTable id="sa" var="as" value="#{availableSeatsBean.courses}" editable="true">
+                                    <p:ajax event="rowEdit" listener="#{availableSeatsBean.onEdit}" update=":form:messages"/>  
+                                    <p:ajax event="rowEditCancel" listener="#{availableSeatsBean.onCancel}" update=":form:messages"/>
+                                    <f:facet name="header">  
+                                        Seats Availability
+                                    </f:facet>  
+
+                                    <p:columnGroup type="header">  
+                                        <p:row>  
+                                            <p:column rowspan="2" headerText="Course" />  
+                                            <p:column colspan="2" headerText="Seats Available" />  
+                                        </p:row>  
+                                    </p:columnGroup>  
+                                    <p:subTable var="sc" value="#{as.subcourse}" >  
+                                        <f:facet name="header">  
+                                            #{as.coursename}   
+                                        </f:facet>  
+
+                                        <p:column>  
+                                            <p:cellEditor>  
+                                                <f:facet name="output">  
+                                                    <h:outputText value="#{sc.stream}" />  
+                                                </f:facet>  
+                                                <f:facet name="input">  
+                                                    <p:inputText value="#{sc.stream}" style="width:100%"/>  
+                                                </f:facet>  
+                                            </p:cellEditor>  
+                                        </p:column>  
+
+                                        <p:column>  
+                                            <p:cellEditor>  
+                                                <f:facet name="output">  
+                                                    <h:outputText value="#{sc.seats}" />  
+                                                </f:facet>  
+                                                <f:facet name="input">  
+                                                    <p:inputText value="#{sc.seats}" style="width:100%"/>  
+                                                </f:facet>  
+                                            </p:cellEditor>  
+
+                                        </p:column>  
+                                        <p:column style="width:6%">  
+                                            <p:rowEditor />  
+                                        </p:column> 
+                                    </p:subTable>  
+                                </p:dataTable>  
+
+                            </h:form>
+                        </div>
+
+                    </div>
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

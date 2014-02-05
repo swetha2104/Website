@@ -1,0 +1,36 @@
+.ads_main{
+   margin: 0 auto;
+    width: 980px;
+    height:651px;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+  
+    border: 1px solid #ddd;
+    
+}
+
+.one{
+    width: 599px;
+    height: auto;
+/*        border: 1px solid red;*/
+        float: left;
+    margin-left: 6px;
+}
+.two
+{
+width: 349px;
+height: 649px;
+/*border: 1px solid blue;*/
+border-left: 1px solid black;
+float: right;
+
+margin-left: -4px;
+margin-right: 21px;
+}
+    
+
+.clear
+{
+    clear: both;
+}

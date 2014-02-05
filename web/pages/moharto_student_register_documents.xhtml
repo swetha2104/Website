@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="register_steps.css"/>
+         <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+
+        <ui:define name='main'>
+
+            <center>
+                        
+                <p:graphicImage value="../resources/images/enrol/4.png" width="800" styleClass="image1" style="margin-left: -33px;" />
+                        <p:graphicImage value="#{fileUploadController.handleFileUpload}" id="upload" width="800" styleClass="image1" />
+                    </center>
+
+                    <div style="margin:0px auto; padding-left: 120px;">            
+                        <div style="float: left; ">
+                            <h:outputText value="Current Photo"/><br/>
+                            <div style="width: 75px; height: 75px; background-image: url(../resources/images/pages/no-image.jpg)"><h:graphicImage value="#{fileUploadController.upload}" width="75" height="75"/></div>                    
+                            <h:graphicImage  value="../resources/images/pages/tick1.png" width="25" height="25" />                       
+                            <h:outputText value="jpeg/jpg"/>
+                            <h:outputText value="max/min 1MB"/>
+                            <h:panelGrid columns="2" style="padding-top: 20px">                     
+                            <p:commandButton id="btn5"   value="Upload" style="height: 28px;width: 77px;font-size: 14px;" />
+                            <p:fileUpload   label="true" value="Upload" fileUploadListener="#{fileUploadController.handleFileUpload}" mode="simple"  
+                                                update="messages,upload" auto="true" sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />  
+                                <p:growl id="messages" showDetail="true"/>
+                            </h:panelGrid>
+                        </div>  
+                        <div id="photocam" style="padding-left: 310px;">
+                            <p:photoCam  id="photcamera" widgetVar="pc" listener="#{photoCamBean.oncapture}" 
+                                         update="photos" 
+                                         style="border: 1px; border-style: solid; width: 380px;height: 250px;" />
+                        </div>                                                     
+                        <p:imageSwitch effect="zoom" id="photos"> 
+                            <ui:repeat value="#{photoCamBean.photos}" var="photo">  
+
+                                . <p:graphicImage value="/photocam/#{photo}.png" />  
+                            </ui:repeat>  
+                        </p:imageSwitch>
+                        <p:commandButton type="button" value="Capture" style="height: 28px;width: 100px; margin-left: 450px;margin-top: 10px; font-size: 14px;" onclick="PF('pc').capture()"/>
+
+                    </div>
+
+
+                    
+                    <div class="Certificate">
+                        <div class="certif" style="float: left">
+                        <div class="content10">
+                            <div >
+                                <h:outputText style="padding-left: 17px;" value="certificate1"/>
+                                <h:graphicImage value="../resources/images/pages/tick1.png" width="25" height="25" onclick="" style="float: right"/>
+                            </div>
+                            <p:graphicImage value="../resources/images/pages/File1.png" onclick="dialog.show()"  width="100" height="100"/><br/>
+
+                            <p:commandLink value="Edit" style="padding-left: 20px;"/>
+                            <p:commandLink value="Delete" style="padding-left: 10px;"/>
+                        </div>
+
+
+
+                        <div class="content11">
+                            <div>
+                                <h:outputText style="padding-left: 5px;" value="certificate2"/>
+                                <h:graphicImage value="../resources/images/pages/wrong1.png" width="25" height="25" style="float: right;"/>
+
+                            </div>
+                            <p:graphicImage value="../resources/images/pages/File1.png" onclick="dialog.show()" width="100" height="100"/><br/>
+                            <p:dialog header="Images" widgetVar="dialog" modal="true" draggable="false" resizable="false" width="auto" height="auto">  
+                                <p:imageSwitch effect="fade">  
+                                    <ui:repeat value="#{imageSwitchBean.images}" var="image">  
+                                        <p:graphicImage value="/images/#{image}" />  
+                                    </ui:repeat>  
+                                </p:imageSwitch>  
+                            </p:dialog> 
+
+                            <p:commandLink value="Edit" style="padding-left: 20px;"/>
+                            <p:commandLink value="Delete" style="padding-left: 10px;"/>
+                        </div>
+                        </div>
+                        <div class="preview">
+                            <div class="preview_box" >
+                                <p:graphicImage value="../resources/images/pages/apll_prev.1.jpg" width="300px" height="230px" />
+                            </div>
+                            <div style="padding-top: 10px;">
+                            <div class="pre_btn" style="float: left">
+                              <p:commandButton value="Application Preview" onclick="dialog.show()"/>
+                              <p:dialog header="Images" widgetVar="dialog" modal="true" draggable="false"  resizable="false" width="auto" height="600px">  
+                                <p:imageSwitch effect="fade">  
+                                    <ui:repeat value="#{imageSwitchBean.images}" var="image">  
+                                        <p:graphicImage value="/images/#{image}" />  
+                                    </ui:repeat>  
+                                </p:imageSwitch>  
+                            </p:dialog>
+                            </div>
+                            <div class="pre_btn" style="float: left"><p:commandButton value="Save"/></div>
+                            <div class="pre_btn" style="float: left"><p:commandButton value="Print"/></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content13">
+                         <a href="moharto_student_register_payment.xhtml"><button type="button" class="btn" >Next</button></a>
+                        <a href=" moharto_student_register_education.xhtml "><button type="button" class="btn11" >Previous</button></a>
+                       
+                                                                                   
+                                                                                 
+                      
+                                                                                 
+                    </div>
+            
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+

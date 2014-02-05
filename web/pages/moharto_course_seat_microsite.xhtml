@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="colleges_moharto.css"/>
+        <h:outputStylesheet library="css" name="colleges_under_moharto_micosite.css"/>
+        <h:outputStylesheet library="css" name="colleges_under_moharto1.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <style>
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+
+    
+    <ui:composition template="/template/threecolumntemplatemicrosite.xhtml">
+
+
+        <ui:define name='leftcolumn'>
+
+        </ui:define>
+
+
+
+        <ui:define name='main'>
+            <div class="center_column" style="margin-left: 123px;">
+<!--                    <center><h2 style="color: rgb(18, 101, 156);font-size: 25px;">Brindavan College</h2></center>-->
+                   <center> <div class="pagetitle">
+                              Courses Offered
+                            </div>
+                       </center>
+                    <div class="content2">
+                        <h:outputText value="Courses Name" style="font-weight: bold;font-size: 14px;margin-left: 74px" />
+                        
+
+                        <h:outputText value="Seats Available" style="font-weight: bold;font-size: 14px;margin-left: 188px;"/>
+                        <h:outputText value="Actions" style="font-weight: bold;font-size: 14px;margin-left: 116px;"/>
+
+                    </div>
+
+                    <div class="clear"/>
+
+
+                    <div class="college1">
+                       
+
+                        <div class="college1_details">
+                            <h:outputText value="Master of Business Administration(MBA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+
+                           
+                        </div>
+                        <div class="seate_avalable"><!--include code to appear in right column -->
+
+                            <h:outputText value="25"/>
+                        </div>
+                        <div class="actions">
+                            <!--                            <a href="#"><button type="button" class="btn" style="width: 70px;
+                                                                                                      height: 25px;float: right;">Enroll Now</button></a><br/>
+                                                        <a href="#"><button type="button" class="btn" style="width: 70px;
+                                                                                                      height: 25px;float: right;">View College</button></a><br/>
+                                                        <a href="#"><button type="button" class="btn" style="width: 70px;
+                                                                                                      height: 25px;float: right;">Ask Question</button></a><br/>
+                                                        <a href="#"><button type="button" class="btn" style="width: 70px;
+                                                                                                      height: 25px;float: right;">Reviews</button></a><br/>-->
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <!--<a href="microsite_home.xhtml" style="" target="_blank">View Details</a><br/>-->
+                             <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+                            <!--<a href="moharto_ask_a_question.xhtml" target="_blank">Ask Question</a><br/>-->
+                            <!--<a href="moharto_review.xhtml">Reviews</a>-->
+
+                        </div>
+                    </div>
+
+                    <div class="clear"/>
+
+                    <div class="college1">
+                       
+
+                        <div class="college1_details">
+                             <h:outputText value="Master of Technology(M.Tech)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="22"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a>-->
+  
+
+                        </div>
+                    </div>
+
+                    <div class="clear"/>
+
+                    <div class="college1">
+                        
+
+                        <div class="college1_details" >
+                               <h:outputText value="Master of Technology(M.Tech)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>                       
+
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="8"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>-->
+
+                        </div>
+                    </div>
+
+                    <div class="clear"/>
+
+                    <div class="college1">
+                        
+
+                        <div class="college1_details" >
+                             <h:outputText value="Bachleor of Buisness Management(BBM)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="15"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>-->
+
+                        </div>
+                    </div>
+
+                    <div class="clear"/>
+
+                    <div class="college1">
+                       
+
+                        <div class="college1_details" >
+                             <h:outputText value="Bachleor of Computer Application(BCA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="55"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>-->
+
+                        </div>
+                    </div>
+                      <div class="clear"/>
+  <div class="college1">
+                        
+
+                        <div class="college1_details" >
+                             <h:outputText value="Bachleor of Engineering(B.E)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="13"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>-->
+
+                        </div>
+                    </div>
+                       <div class="clear"/>
+  <div class="college1">
+                        
+
+                        <div class="college1_details" >
+                             <h:outputText value="Master of Computer Application(MCA)" style="font-size: 15px;color: rgb(18, 101, 156);"/><br/>
+                            
+                            <h:outputText value=" Group: 4,75,000"/><br/>
+                            <h:outputText value="Enroll Fee: 10,000"/><br/>
+                            <h:outputText value="Anual Fee: 5,75,000 "/><br/>
+                        </div>
+                        <div class="seate_avalable">
+                            <h:outputText value="22"/>
+                        </div>
+                        <div class="actions">
+
+                            <a href="moharto_student_register_basic.xhtml" >Enroll Now</a><br/>
+                            <a href="microsite_course_view_finance.xhtml" style="" >More Details</a><br/>
+<!--                            <a href="microsite_home.xhtml" style="" target="_blank">View College</a><br/>
+                              <a href="microsite_course_view.xhtml" style="" target="_blank">More Details</a><br/>-->
+
+                        </div>
+                    </div>
+                  </div>
+        </ui:define>
+
+
+
+        <ui:define name='rightcolumn'>
+        </ui:define>
+
+    </ui:composition>
+</html>

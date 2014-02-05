@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+       <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+       <h:outputStylesheet library="css" name="style1.css"/>
+       <h:outputStylesheet library="css" name="toppernews.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="topper_news_header_title">
+                <div class="pagetitle">
+                           A short history of English language
+                         </div> 
+                        <div style="float: right;margin-top: -30px;">
+                            <h:outputText value="Share with :"/>
+                            <h:graphicImage url="../resources/images/pages/Facebook.png" style="cursor: pointer;"/>
+                            <h:graphicImage url="../resources/images/pages/In.png" style="cursor: pointer;" />
+                        </div>
+                      <div style="border-bottom: 1px solid #ddd;">
+                        <h:outputText value="Posted On: September 18, 2013 02:49 pm" style="color: #666666;padding-left: 10px;"/>
+                      </div>  
+                        <br/>
+                        <br/>
+                        <br/>
+                        
+                        </div>
+            <div class="topper_news_content" style="text-spacing:6px; ">
+                        <p style="line-height: 15px;padding-top: 8px;">
+                        The language English has become an important part of our lives and one need to be abreast with this language to have an effective communication. It is vast language and one can keep learning it lifelong. But do you know the history of English language? Well, many of us just take it as a simple language which it is not! Let us throw some light on this language.
+ 
+                        <br/>
+                        <br/>
+                        <h:outputText value="The name English" style="font-weight: bold;"/><br/><br/>
+Germanic tribes - the Angles, Saxons, and Jutes - invaded Britain in the 5th century AD. Among the three Germanic tribes, the Angles were culturally dominant and the word English comes from their language Englisc.
+ 
+                        <br/>
+                        <br/>
+                        <h:outputText value="Old, Middle and Modern English" style="font-weight: bold;"/><br/><br/>
+
+The English can be divided into three parts- Old English, Middle English and Modern English. The old English is a bit difficult as it is a mixture of Germanic languages. Middle English has many French words and thus it is also not easy to understand. Modern English is the one which are aware of.
+ 
+                        <br/>
+                        <br/>
+                        <h:outputText value="India and English" style="font-weight: bold;"/><br/><br/>
+
+British rule in India, led to the spread of English in the country. The English was introduced in India as a part of the British policy to have ‘cheap clerks’ and to spread their religion.
+ <br/>
+ <br/>
+After the end of the British era in India, it was decided to retain English only for official purpose and Hindi was declared as the official language.  But English too had a firm hold in India and thus its reach kept on growing.
+  <br/>
+ <br/>
+Our constitution has given English the status of subsidiary language after Hindi.
+  <br/>
+ <br/>
+Today, English is spoken extensively in India.
+  <br/>
+ <br/>
+India has its own unique concept for English. Some of the words or the pronunciations used in the Indian version of English are different and difficult to understand for non-Indians.
+  <br/>
+ <br/>
+In India, English serves variety of purposes… one of them being - it unites people who speak different language thereby becoming a link language.
+                    </p>
+                    </div>
+                    <br/>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <h:graphicImage url="../resources/images/pages/ad4.png" width="230px"/>
+            <h:graphicImage url="../resources/images/pages/capture.png" width="230px" height="240px" style="margin-top: 15px;"/>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+
+

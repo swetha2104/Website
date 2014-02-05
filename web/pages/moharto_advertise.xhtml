@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="css_advertise.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="main">
+                    <div class="first">
+
+                        <br/>
+                        <h:outputText value="Advertise in Moharto" style="float: left;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      margin-top: -5px;
+                                      margin-left: 249px;color: cyan #00aeef" /> <br/>
+
+
+                        <h:outputText value="Please Fill The Requirements" style="float: left;
+                                      margin-left: 253px;
+                                      font-size: 13px;
+                                      margin-top: 13px;
+                                      margin-right: -78px;"/> 
+
+                        <h:panelGrid columns="3" style="float: left;
+                                     margin-top: 44px;
+                                     margin-left: -200px;" cellpadding="10px">
+                            <h:outputText value="Name" class="txts" />
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText/>
+                            <h:outputText value="Email" class="txts"/>
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText/>
+                            <h:outputText value="MobileNo" class="txts" />
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText/>
+                            <h:outputText value="Types of Ad " class="txts" />
+                            <h:outputText value=":" style="txts"/>
+
+                            <p:selectOneMenu style="width: 155px;font-size: 11px;"> 
+                                <f:selectItem itemLabel="select ad type" itemValue="3" />  
+                                <f:selectItem itemLabel="Home Page" itemValue="1" />  
+                                <f:selectItem itemLabel="Search Based Ad" itemValue="2" />  
+
+                            </p:selectOneMenu>  
+                            <h:outputText value="Period of time" class="txts"/>
+                            <h:outputText value=":" style="txts"/>
+                            <p:selectOneMenu style="width: 155px;font-size: 11px;">  
+                                <f:selectItem itemLabel="select time period" itemValue="1" /> 
+                                <f:selectItem itemLabel="1 month" itemValue="1" />  
+                                <f:selectItem itemLabel="2 month" itemValue="2" />  
+                                <f:selectItem itemLabel="3 month" itemValue="2" />  
+                                <f:selectItem itemLabel="6 month" itemValue="2" />  
+                                <f:selectItem itemLabel="1 year" itemValue="2" />  
+                            </p:selectOneMenu>  
+                            <h:outputText value="Ad Processing price"  class="txts"/>
+
+                            <h:outputText value=":" style="txts"/>
+
+                            <h:panelGrid columns="2" width="50px;">
+                                <h:outputText value="Rs" style="txts"/>
+                                <p:inputText value="50000" style="
+
+                                             float: left;
+                                             width: 61px;font-weight: normal;height: 12px;
+                                             "/></h:panelGrid>
+
+                        </h:panelGrid>
+
+
+
+
+                        <a href="moharto_advertise_payment.xhtml"><button type="button" class="btn" style="width: 142px;
+                                                                          height: 27px;
+                                                                          float: left;
+                                                                          margin-right: 426px;
+                                                                          margin-left: 259px;
+                                                                          margin-top: 10px;">Proceed to Payment</button></a>
+
+                    </div>
+                    <div class="second">
+                        <h:graphicImage value="/resources/images/pages/Hurry Up.png" style="width: 230px;
+                                        height: 178px;
+                                        "/>
+                        <h:graphicImage value="/resources/images/pages/boy.png" style="width: 230px;
+                                        height: 178px;margin-top: 7px;
+                                        "/> 
+                        <!--                         <h:graphicImage value="/resources/images/pages/capture.png" style="width: 230px;
+                        height: 78px;margin-top: -1px
+                        "/> -->
+                    </div>
+                    <p:spacer height="50px;"/>
+                </div>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

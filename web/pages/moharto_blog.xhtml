@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="blog.css"/>
+
+        <style>
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="blog_left_container">
+
+                <div class="blog_moharto_heading">
+                    <div class="pagetitle">Moharto blog</div>
+                </div>
+                <div class="blog_header">
+                    <div class="paratitle">Recent Posts </div>
+                </div>
+
+                <div class="blog_content">
+                    <div class="blog_content_header">
+                        <h:form>
+                            <h:panelGrid columns="2">
+                                <p:panelGrid columns="1" >
+                                    <h:outputText value="15 Jun"/>
+                                    <h:outputText value="17:35"/>
+                                </p:panelGrid>
+                                <h:panelGrid columns="1">
+                                    <h:commandLink value="Many Paths to Excellence: Lessons from Finland" action="/pages/moharto_blog_comment.xhtml" class="commandlink-ManyPaths" />
+                                    <h:panelGrid columns="2">
+                                        <h:outputText value="Justin Timber" class="commandlink-Rereading-out"/>
+                                        <h:commandLink value="| 5 comments" action="/pages/moharto_blog_comment.xhtml"/>
+                                    </h:panelGrid>    
+                                </h:panelGrid>     
+                            </h:panelGrid>
+                        </h:form>
+                        <br/>
+                    </div>
+                    <div class="blog_content_content">
+
+
+                        Today I attended the first of four lectures in an annual speaker series hosted by Houston A+ Challenge and Chevron. 
+                        The focus for this year’s speaker series is Global Perspectives on Education and today’s speaker was Pasi Sahlberg, the author of the book Finnish Lessons.
+                        <br/><br/>
+
+                        My biggest take-away from this lecture: His first points about how the Finnish system is built on the ideas of American thinkers, especially those thinkers who promoted a more progressive model of an education system… Jefferson… Dewey…
+                        <br/><br/>
+                        Another big takeaway: That attention to equity must first come before attention to student achievement. We have this completely backwards in current education reform models in our country.
+                        <br/><br/>
+                        Final big takeaway: Importance of allowing children plenty of time to move around and to play — to not lock children into desks at an early age and to not focus exclusively on test-prep. AMEN!!!!!
+                        <br/><br/>
+                        Much of the Finnish innovation is a result of the innovative work done over the past 100 years in the United States
+                        – influenced by the thoughts of Thomas Jefferson and John Dewey
+                        <br/><br/>
+                        In Finland we can see what American education can be at its best because it is built on American ideas (ideas of American thinkers)
+                        <br/><br/>
+                        Most people have an image of Finland that includes snowy mountains and northern lights
+                        <br/><br/>
+                        Children begin school at age 7 and only have 9 years of compulsory school attendance…At about age 16 they are free to leave school or stay on
+                        <br/><br/>
+                        Preschool begins at age 6 and all children have the right in Finland to a high quality daycare before that
+                        <br/><br/>
+                        Very few private schools — nearly all students attend free, public school
+                        Against the law to charge tuition for quality education — ed considered a basic human right
+
+                        No streaming or tracking in the basic education system — very diverse and principals are not allowed to implement any sort of tracking…
+                        <br/><br/>
+                        High school — General (50%) and Vocational (45%)
+                        HS is fully personalized — designed around the individual personal needs and interests of the student
+                        No grade levels in the the school — so no one repeats a grade (like here)
+
+                        Higher Ed / University system — all free, about 60% attend either Universities or Polytechnics
+
+                        Finland also is a very equal system — very little economic diversity
+                        BIG key factor to success of their school system
+
+
+                    </div>
+
+                    <p:separator id="separator1"/>  
+
+                    <div class="blog_content_header">
+                        <h:form>
+                            <h:panelGrid columns="2">
+                                <p:panelGrid columns="1" >
+                                    <h:outputText value="11 Jun"/>
+                                    <h:outputText value="09:35"/>
+                                </p:panelGrid>
+                                <h:panelGrid columns="1">
+                                    <h:commandLink value="Re-reading A New Culture of Learning" action="/pages/moharto_blog_comment.xhtml" class="commandlink-Rereading"/>
+                                    <h:panelGrid columns="2">
+                                        <h:outputText value="Jay Cross" class="commandlink-Rereading-out"/>
+                                        <h:commandLink value="| Leave comment" action="/pages/moharto_blog_comment.xhtml"/>
+                                    </h:panelGrid>    
+                                </h:panelGrid>     
+                            </h:panelGrid>
+                        </h:form>
+                        <br/>
+                    </div>
+                    <div class="blog_content_content">
+
+
+                        In the new culture of learning, people learn through their interaction and participation with one another in fluid relationships that are the result of shared interests and opportunity. In this environment, the participants all stand on equal ground—no one is assigned to the traditional role of teacher or student. 
+                        Instead, anyone who has particular knowledge of, or experience with, a given subject may take on the role of mentor at any time. Mentors provide a sense of structure to guide learning, which they may do by listening empathically and by reinforcing intrinsic motivation to help the student discover a voice, a calling, or a passion. 
+                        Once a particular passion or interest is unleashed, constant interaction among group members, with their varying skills and talents, functions as a kind of peer amplifier, providing numerous outlets, resources, and aids to further an individual’s learning.
+                        <br/><br/>
+                        Learning from others is neither new nor revolutionary; it has just been ignored by most of our educational institutions. The college experience is a perfect example. When students set foot on campus in their freshman year, they begin a learning experience that is governed only in part by their classroom interactions. 
+                        Assuming they live on campus, sleep eight hours a night, and attend classes three hours a day, students are immersed in a learning environment for an additional thirteen hours a day. 
+                        Simply by being among the people around them—in study groups, for instance—students are learning from their environment, participating in an experience rich in resources of deep encounters.
+                        <br/><br/>
+                        Students learn best when they are able to follow their passion and operate within the constraints of a bounded environment. Both of those elements matter. Without the boundary set by the assignment of playing the prelude, there would be no medium for growth. But without the passion, there would be nothing to grow in the medium. Yet the process of discovering one’s passion can be complicated.
+                        <br/><br/>
+                        Our ability to produce, consume, and distribute knowledge in an unlimited, unfiltered, and immediate way is the primary reason for the changes we see today. One no longer needs to own a television station, a printing press, or a broadcast transmitter to disseminate information, for example. With just a computer and access to the internet, one can view or consume an almost unimaginably diverse array of information and points of view.
+                        <br/><br/>
+
+
+                    </div>
+
+                    <p:separator id="separator2"/>
+
+                    <div class="blog_content_header">
+                        <h:form>
+                            <h:panelGrid columns="2">
+                                <p:panelGrid columns="1" >
+                                    <h:outputText value="05 Jun"/>
+                                    <h:outputText value="01:15"/>
+                                </p:panelGrid>
+                                <h:panelGrid columns="1">
+                                    <h:commandLink value="The Perks of Joining College Organizations" action="/pages/moharto_blog_comment.xhtml" class="commandlink-Perks-of-Joining" />
+                                    <h:panelGrid columns="2">
+                                        <h:outputText value="Sherry Franklin" class="commandlink-Rereading-out" />
+                                        <h:commandLink value="| 63 comments" action="/pages/moharto_blog_comment.xhtml"/>
+                                    </h:panelGrid>    
+                                </h:panelGrid>     
+                            </h:panelGrid>
+                        </h:form>
+                        <br/>
+                    </div>
+                    <div class="blog_content_content">
+
+
+                        There is more to college than studying, going to classes and submitting essays on time. These are four-five years of your life that you’ll be spending in one place so you need to make the most of it.
+                        <br/><br/>
+                        It is true that learning is the main reason while you are in college but “learning” is not confined inside the four walls of the classroom. 
+                        Meeting new people and experiencing things you haven’t done before add up to the lessons and memories you are bound to remember about college in the future.
+                        With that in mind, joining an organization in college is a great way to experience all of that and more! From academic clubs, regional organizations or hobby-based groups; there is one or two out there that’s bound to suit your needs.
+                        <br/><br/>
+                        Here are a few more reasons why joining a college organization should be added to your bucket list while in college:
+                        <br/><br/>
+                        Joining a college organization affords you the chance to experience loads of fun and exciting experiences, but it also requires a lot of work to commit yourself to one. Members must work together to keep the club afloat with activities, fund-raising initiatives and programs. As this can be too demanding to be handled by one leader, most organizations are divided into committees each with a specific task at hand (Finance, Publicity, Internal Relations, etc.) and a head to lead or delegate tasks. Working in an organization can thus be likened to working for a small office or company. You may not get paid for the work you are giving to your organization but the responsibilities and structure are quite similar. Given this fact, take this opportunity to serve your organization to hone your management and leadership skills which you can use when you finally get to the “real world”. Become an active member and get yourself involved in your club’s activities. Better yet, seek out a leadership position if you are up for it. When the time comes for you to seek employment, these experiences would make for an impressive resume content.
+                        <br/><br/>
+                        By joining an organization, you’ll be given loads of opportunities to meet folks who can help you in various means and ways. It can be as simple as meeting people who can help you choose which class or professor to enroll in, to those who can give you a spot at their company for your internship. Good referrals will come into play here as well.
+                        <br/><br/>
+                        The laughter, those little secrets, fun chats and banters shared between friends will comprise your college life’s most memorable moments. The relationships you make here now may turn into those life-long friendships that you will treasure until you are old and gray.
+                        <br/><br/>
+                        Now that we have established that joining college organizations is a kind of work in itself, this next “perk” must be stressed. Balancing your academics with your org work can be a bit tricky, especially come finals time. It is possible to work on the two without sacrificing anything but it requires strict time management. This is where a great planner comes in handy. Learning what is important is key when prioritizing tasks but oftentimes multi-tasking is required. This is another great lesson that you can take with you when you graduate and start working professionally.
+
+                    </div>
+
+                    <p:separator id="separator3"/>  
+
+                    <div class="blog_content_header">
+                        <h:form>
+                            <h:panelGrid columns="2">
+                                <p:panelGrid columns="1">
+                                    <h:outputText value="28 May"/>
+                                    <h:outputText value="20:50"/>
+                                </p:panelGrid>
+                                <h:panelGrid columns="1">
+                                    <h:commandLink value="Educating Through Technology" action="/pages/moharto_blog_comment.xhtml" class="commandlink-Educating" />
+                                    <h:panelGrid columns="4">
+                                        <h:outputText value="Linda W" class="commandlink-Rereading-out"/>
+                                        <h:commandLink value="| 5 comments" action="/pages/moharto_blog_comment.xhtml"/>
+                                    </h:panelGrid>    
+                                </h:panelGrid>     
+                            </h:panelGrid>
+                        </h:form>
+                        <br/>
+                    </div>
+                    <div class="blog_content_content">
+
+                        Once upon a time homeschoolers might have been considered old-fashioned.
+                        This is probably because of the stereotype that homeschoolers are generally homeschooling for religious reasons, sitting around a dining room table doing copy work from historical icons, and learning to read from old public school readers. Like all stereotypes there is probably some basis in truth but today’s homeschoolers are breaking out of that stereotype.
+                        <br/><br/>
+                        Today’s homeschoolers are often at least as technologically advanced as their traditionally educated counterparts. 
+                        Part of the reason this is true is because homeschooled students are not sitting isolated in their homes poring over outdated textbooks but are studying the latest available material by means of technology. 
+                        Many homeschooled students are taking part in distance learning, self-guided learning, and online curricula.
+                        <br/><br/>
+                        Distance learning or distance education is a method of presenting educational material through correspondence work, or lectures presented on the internet. It allows students to have access to professors and other specialists that might not be available locally. Students generally use the internet to attend classes and are not required to be present at the school at all.
+                        There are many different variations of using technology for distance learning. Some courses are broadcast at a certain time on the internet and all students are expected to log in, similar to an online meeting site. This type of distance learning is called synchronous or live learning. Other courses are uploaded to the internet for the students to use when they have the time. This type of distance learning is sometimes called asynchronous distance education.
+                        <br/><br/>
+                        Self-guided learning is similar to distance learning. Some universities offer free courses online. While the courses are usually offered not-for-credit, they still represent a large body of information. Most of these courses are online, free, and often contain both video and searchable lecture notes. An example of this type of educational material is MIT Open Courseware. By searching the internet for open course ware it is seen that a number of prestigious universities offer similar open course ware.
+                        <br/><br/>
+                        Another option for self-guided learning is Khan Academy. Courses available there are not offered for credit. In fact, it might even be considered free online tutoring as many complex topics in math and science are broken down into easily digestible, short lectures.     <br/><br/>
+                        Much of the Finnish innovation is a result of the innovative work done over the past 100 years in the United States
+                        – influenced by the thoughts of Thomas Jefferson and John Dewey
+                        <br/><br/>
+                        While this coursework is offered on the internet for free and is a great way for a student to gain knowledge, it is generally not offered for credit. However, there is no argument that this work is an attractive addition to homeschool transcripts and can be a great preparation for taking college entrance as well as CLEP tests.
+                        <br/><br/>
+                        Online curriculum for homeschool students is offered from Pre-K through 12th grade. Sometimes it is difficult to see the difference between distance learning and online curriculum. Probably the main difference is that with online curriculum most of the instruction is presented online as well as most of the coursework. This online curriculum type of learning generally does not have a “live” instructor that the student answers.
+                        <br/><br/>
+                        Much of the testing is done by the program in the form of multiple choice or fill in the blank answers though in higher grade there are often writing assignments that parents will have to grade for their for their homeschooled students. Online curricula can be used for core education as well as supplemental coursework. One example of an online curriculum is Time4Learning
+                        <br/><br/>
+                        There are many other opportunities for homeschooled students to take advantage of technology in their educational endeavors. The internet is, in some cases, taking the place of the library. Since many families no longer buy sets of encyclopedias the internet is a great research vehicle. There are many subject specific sites that provide instructional material as well as educational games. Homeschooled students often do not have access to the same textbooks that traditionally educated students do, so learning to use technology affords homeschooled students with opportunities to learn and expand their horizons that they might not have otherwise.
+
+
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="blog_right_container">
+                <h:graphicImage value="../resources/images/pages/ielts.png" class="right-graphicImage1" width="230px"/>
+                <h:graphicImage value="../resources/images/pages/ad4.png" class="right-graphicImage2" width="230px" />
+                <h:graphicImage value="../resources/images/pages/ad3.png" class="right-graphicImage3" width="230px" />
+                <h:graphicImage value="../resources/images/pages/ad5.png" class="right-graphicImage4" width="230px" />
+            </div> 
+        </ui:define>
+
+
+    </ui:composition>
+</html>

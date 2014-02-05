@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="style1.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="clear"></div>
+            <div class="abt_moharto">
+                <div class="video11" >
+                    <p:media value="http://www.youtube.com/v/KZnUr8lcqjo" width="213" height="150" player="flash"  style="margin-left: 10px;
+                             margin-top: 10px;margin-bottom: 6px;"/>
+                    <h:outputLabel value="About Moharto" class="head"/>
+                    <div class="hr"></div>
+                    <p class="abt_moharto_text">
+                        Moharto intends to bring all colleges onto a common platform for ONLINE ADMISSIONS, so that Course seekers can enrole themselves online with the college of their choice.
+                    </p>
+
+                </div>
+                <div class="video21">
+                    <p:media value="http://www.youtube.com/v/KZnUr8lcqjo" width="213" height="150" player="flash"  style="margin-left: 10px;
+                             margin-top: 10px;margin-bottom: 6px;"/>
+                    <h:outputLabel value="Taking Admission Online ?" class="head1"/><br/>
+                    <div class="hr"></div>
+
+                    <p class="abt_moharto_text" >
+                        15 Min process<br/>
+                        Select the City and select the College<br/>
+                        --> Check for Seat Availability<br/> 
+                        --> Agree the terms of Admission
+                    </p>
+                </div>
+                <div class="moharto_partner">
+                    <h3>Moharto's Partner Colleges</h3>
+                    <div style="margin-left: 44px;
+                         margin-top: -17px;">
+                        <a href="#"><h:graphicImage url="../resources/images/partner/Gopalan college.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/Pes.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/acharya.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> <br/>
+                        <a href="#"><h:graphicImage url="../resources/images/partner/aiimspeenya.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/alvas.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/aradhya.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a>  <br/>
+                        <a href="#"><h:graphicImage url="../resources/images/partner/banglorecollege.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/brindavancollege.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a> 
+                        <a href="#"><h:graphicImage url="../resources/images/partner/isb.png" height="75" width="120" style="border: 1px solid #ddd;margin: 1px;"/></a>  <br/>
+                        <h:form>                    
+
+                            <!--<h:commandLink value="VIEW MORE" action="#"/>-->
+                            <a href="#" class="view_more">View More</a>
+                        </h:form> 
+                    </div>   
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr class="hr1_home"></hr>
+
+            <div class="clear"/>
+
+            <div class="student_actions">
+                <div class="avalable_seats">
+                    <h2>Check Seats Availability</h2>
+                    <!--<p:panel header="AVAILABLE SEATS FOR ONLINE ADDMISSION" style="text-align: center;width: 275px;height: 187px;">-->
+                    <!--<h:panelGrid columns="2">-->
+                    <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;" styleClass="abc" effect="scale">
+                        <p:tab id="pgtab" title="PG" titleStyleClass="tab_bgi" >
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course " />
+                                    <h:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" >
+                                        <f:selectItem itemLabel="M.COM" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.TECH" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="MBA" itemValue="MBA"/>
+                                    </h:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <h:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;">
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    </h:selectOneMenu>
+                                </h:panelGrid>
+                                <!--                                <p:commandButton value="GO" style="margin-left: 18px;
+                                                                                 margin-top: 19px;"  action="moharto_available_seats_new"/>-->
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 19px;">View</button></a>
+                                <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                            </h:form>
+                        </p:tab>
+                        <p:tab id="ugtab" title="UG" >
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course " />
+                                    <h:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" >
+                                        <f:selectItem itemLabel="B.COM" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.TECH" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="BBA" itemValue="MBA"/>
+                                    </h:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <h:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;">
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    </h:selectOneMenu>
+                                </h:panelGrid> 
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 19px;">View</button></a>
+                                <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                            </h:form>
+                        </p:tab>
+                        <p:tab id="aftr10tab" title="AFTER 10th" >
+                            <h:form>
+                                <h:panelGrid columns="2">
+                                    <h:outputLabel for="" value="Select Course" />
+                                    <h:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:110px;" >
+                                        <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                        <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                        <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                    </h:selectOneMenu>
+
+                                    <h:outputLabel for="city" value="Select City" />
+                                    <h:selectOneMenu id="selcity" value="#{myBean.username}" style="width:110px;">
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="Dharwada" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Hubli" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="Kochi"/>
+                                    </h:selectOneMenu>
+                                </h:panelGrid>
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 18px;
+                                                                                    margin-top: 19px;">View</button></a>
+                                <h:outputText value=" Seats Available:25 " style="font-size: 12px; color: red; "/>
+                            </h:form>
+                        </p:tab>
+                    </p:tabView>
+                    <!--</h:panelGrid>-->
+                    <!--</p:panel>-->
+                </div>
+                <div class="admission_online">
+                    <h2>Courses Available though Online Admission</h2>
+                    <p:tabView id="tv2" style="border: 0px;"  effect="slide" styleClass="adm_online_tab">
+                        <p:tab id="pgtab" title="PG Courses" >
+                            <h:form>
+                                <ul class="course_list">
+                                    <li ><h:commandLink value="Master of Business Administration" style="text-decoration: none"/></li>
+                                    <li ><h:commandLink value="Master of Commerce" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Arts" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Philosophy" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Psychology" style="text-decoration: none"/></li> 
+
+                                </ul>
+
+                                <ul class="course_list_sub" style="line-height: 23px;">
+                                    <li ><h:commandLink value="Master of Dental Sciences" style="text-decoration: none"/></li>
+                                    <li ><h:commandLink value="Master of Social work" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Technology" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Pharmacy" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Master of Fine Arts" style="text-decoration: none"/></li> 
+
+                                </ul>
+                                <a href="moharto_courses_more_view.xhtml" style="text-decoration: none; float: right;color: #49a4c8;font-weight: bold; margin-right: 14px;">View More</a> 
+
+                            </h:form>
+                        </p:tab>
+                        <p:tab id="ugtab" title="UG Courses">
+                            <h:form>
+                                <ul class="course_list">
+                                    <li ><h:commandLink value="Bachelor of Arts" style="text-decoration: none"/></li>
+                                    <li ><h:commandLink value="Bachelor of Commerce" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Business Administration" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Philosophy" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Psychology" style="text-decoration: none"/></li> 
+
+                                </ul>
+
+                                <ul class="course_list_sub" style="line-height: 23px;">
+                                    <li ><h:commandLink value="Bachelor of Dental Sciences" style="text-decoration: none"/></li>
+                                    <li ><h:commandLink value="Bachelor of Social work" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Technology" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Pharmacy" style="text-decoration: none"/></li> 
+                                    <li ><h:commandLink value="Bachelor of Fine Arts" style="text-decoration: none"/></li> 
+
+                                </ul>
+                                <a href="moharto_courses_more_view.xhtml" style="text-decoration: none; float: right;color: #49a4c8;font-weight: bold; margin-right: 14px;">View More</a> 
+                            </h:form>
+                        </p:tab>
+
+                        <p:tab id="aftr10tab1" title="AFTER 10th">
+                            <div>
+                                <h:form>
+                                    <ul class="course_list">
+                                        <li ><h:commandLink value="Diploma in Automobile Engineering" style="text-decoration: none"/></li>
+                                        <li ><h:commandLink value="Diploma in Agricultural Engineering" style="text-decoration: none"/></li> 
+                                        <li ><h:commandLink value="Diploma in Civil Engineering" style="text-decoration: none"/></li> 
+                                        <li ><h:commandLink value="Diploma in Mechanical Engineering" style="text-decoration: none"/></li> 
+                                        <li ><h:commandLink value="Diploma in Computers" style="text-decoration: none"/></li> 
+                                    </ul>
+
+                                    <ul class="course_list_sub" style="line-height: 23px;">
+                                        <li ><h:commandLink value="Diploma in Electrical Engineering" style="text-decoration: none"/></li>
+                                        <li ><h:commandLink value="Diploma in Instrumentation" style="text-decoration: none"/></li> 
+                                        <li ><h:commandLink value="Dialysis Technician" style="text-decoration: none"/></li> 
+                                        <li ><h:commandLink value="Health Inspector" style="text-decoration: none"/></li> 
+
+                                    </ul>
+
+                                    <a href="moharto_courses_more_view.xhtml" style="text-decoration: none; float: right;color: #49a4c8;font-weight: bold; margin-right: 14px;">View More</a> 
+                                </h:form>
+                            </div>
+                        </p:tab>
+
+                    </p:tabView>
+                </div>
+                <div class="testimonials" style="height: 229px;
+                     width: 232px;
+                     float: left;
+                     font-size: 13px;">
+                    <h3 style="margin-top: 13px;
+                        font-size: 15px;
+                        text-align: center;">TESTIMONIALS</h3>
+                    <!--<p:panel header="TESTIMONIALS" style="" styleClass="panel" >-->
+                    <h:panelGrid columns="1">
+                        <p style="padding: 3px;margin-top: -9px;
+                           margin-bottom: 17px;">I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."</p>
+
+                        <div style="float: left;">
+                            <h:panelGrid columns="2" style="margin-top: -13px;">
+                                <h:graphicImage url="../resources/images/home/male.gif" height="75px" width="75px"/>
+                                <h:panelGrid columns="1">
+                                    <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" /> 
+                                    <h:outputText value="-PSIT, Bangalore" style="font-style: italic" /> 
+                                </h:panelGrid>
+                            </h:panelGrid>
+                        </div>   
+                    </h:panelGrid>
+                    <a href="moharto_testimonials.xhtml" style="float: right;
+                       margin-top: -15px;
+                       margin-right: 5px;
+                       color: #49a4c8;font-weight: bold;">View More</a>
+                    <!--</p:panel>-->
+                </div>
+            </div>
+
+            <!--<div class="clear"/>-->
+
+            <hr class="hr1_home"/>
+
+            <div class="clear"/>
+
+            <div class="moharto_fee_ad">
+                <div class="left_ads">
+                    <h:graphicImage value="../resources/images/home/Gradmen.png" width="230" height="78" />
+                    <h:graphicImage value="../resources/images/home/Crash course.png" style="margin-top: 8px;" width="230" height="78" />
+
+                    <h:graphicImage value="../resources/images/home/vertical ad.png" style="margin-top: 8px;" width="230" height="418"/>
+                    <h:graphicImage value="../resources/images/home/Capture.png"  width="230" height="178" style="margin-top: 7px;"/>
+                    <h:graphicImage value="../resources/images/home/Teachers.png"  width="230" height="78" style="margin-top: 7px;"/>
+
+                </div>
+                <div class="moharto_fee_bring">
+                    <div class="search">
+                        <h:form>
+                            <h:panelGrid columns="2" >
+                                <h:inputText value="#{myBean.username}" id="search" styleClass="searchit" style="width: 422px;
+                                             height: 29px;"/>
+                                <h:commandButton value="GO" action="#" style="width: 42px;
+                                                 height: 33px;color: white;
+                                                 background: rgba(6, 127, 238, 0.8);font-weight: bold;"/>
+                            </h:panelGrid>
+                            <p:watermark for="search" value="Searchingn for "/>
+                        </h:form>   
+                    </div>
+                    <div class="course_fee">
+                        <h:panelGrid columns="2" style="width: 456px;
+                                     height: 313px;font-family: Arial,sans-serif; padding: 4px;
+                                     font-size: 1.1em;" cellspacing="0" cellpadding="0" >
+
+                            <h:outputText value="Course Name" style="font-weight: bold; font-size: 14px;" />
+                            <h:outputText value="Fee Range per year"  style="font-weight: bold; font-size: 14px;"/>
+                            <h:outputText  value="Master of Business Administration"  />
+                            <h:outputText  value="50000 to 150000/-" />
+                            <h:outputText  value="Computer Science Engineering" />
+                            <h:outputText  value="75000 to 100000/-" />
+                            <h:outputText  value="Bachelor of Hotel Management" />
+                            <h:outputText  value="500000 to 1150000/-" />
+                            <h:outputText  value="Diploma in Animation"/>
+                            <h:outputText  value="45000 to 250000/-" />
+                            <h:outputText  value="Master of Technology" />
+                            <h:outputText  value="60000 to 250000/-" />
+                            <h:outputText  value="Staff Nurse"/>
+                            <h:outputText  value="55000 to 165000/-"/>
+                            <h:outputText  value="Bachelor of Computer Applications"/>
+                            <h:outputText  value="50000 to 100000/-" />
+                            <h:outputText  value="Bachelor of Business Administration" />
+                            <h:outputText  value="50000 to 250000/-" />
+                            <h:outputText  value="Bachelor in Commerce"/>
+                            <h:outputText  value="35000 to 1350000/-" />
+                        </h:panelGrid>
+                        <h:form><h:commandLink value="View More" style="margin-top: -4px;text-decoration: none;color: #49a4c8; font-weight: bold; margin-left: -12px;float: right"/></h:form>
+                    </div>
+                    <div class="moharto_bring">
+                        <!--<p:panel header="Moharto Brings you.." style="background-color: #1B9C9C;height: 178px;">-->
+
+                        <h2 style="margin-left: 21px;
+                            margin-top: 10px;"> Moharto Brings you.. </h2>
+                        <ul style="line-height: 21px;">
+                            <li><h:outputText value="Online Admission Platform" style="font-family: Arial,sans-serif;
+                                              font-size: 15px;"/></li>
+                            <li>    <h:outputText value="Online Admission Benefits" style="font-family: Arial,sans-serif;
+                                                  font-size: 15px;"/></li>
+                            <li>   <h:outputText value="Block a seat in the College of your choice" style="font-family: Arial,sans-serif;
+                                                 font-size: 15px;"/></li>
+                            <li>    <h:outputText value="No room for fraudsters" style="font-family: Arial,sans-serif;
+                                                  font-size: 15px;"/></li>
+                            <li>    <h:outputText value="Direct Interaction with College Reps" style="font-family: Arial,sans-serif;
+                                                  font-size: 15px;"/></li>
+                            <li>    <h:outputText value="Platform for colleges to give admissions online" style="font-family: Arial,sans-serif;
+                                                  font-size: 15px;"/></li>
+                        </ul>   
+
+                        <!--</p:panel>-->
+                        <h:graphicImage value="../resources/images/home/Indian School of Business.png"  width="470" height="84" style="margin-top: 11px;"/>
+
+                        <div class="announcement" style="color: black;">
+                            <h2 style="color: rgb(185, 53, 122);">Hurry Up!!</h2>
+
+                            <p style="font-size: 15px;
+                               padding: 6px;
+                               margin-top: -19px;"> "Due to immense success in teaching, Moharto has launched Online admission" </p>
+
+                            <h:outputLabel value="Contact: 98451 98451" style="float: right;
+                                           font-weight: bold;
+                                           color: green;
+                                           font-size: 15px;
+                                           margin-top: -22px;
+                                           margin-right: 6px;"/>
+                        </div>
+
+                        <h:graphicImage value="../resources/images/home/RETRO BANNER.png"  width="470" height="80" style="margin-top: 11px;"/>
+
+                    </div>
+
+                </div>
+                <div class="register_right_ad">
+                    <div class="joinmoharto">
+                        <p>Join Moharto for the best information on taking admission online as per your preference</p>
+                    </div>
+
+                   
+                    <h:form>
+                        <div style="margin-top: 9px;
+                             margin-left: 8px;">
+                            <span style="font-size: 11px">Already registered with Moharto ?</span>&nbsp; 
+                            <h:commandLink value="Login" style="text-decoration: none;color: darkgreen;font-weight: bold;"/>
+                            <div style="background-image: url('../resources/images/headfoot/facebook.png');"></div>
+
+                            <h:graphicImage  value="../resources/images/pages/FacebookNew.png" style="margin-top: 8px;
+                                             margin-left: 22px;
+                                             "/>
+
+                        </div>
+                        <p:inputText id="name" value="#{myBean.username}" style="width: 206px;margin-top: 10px;height: 18px;margin-left: 7px;"/><br/>
+                        <p:watermark for="name" value="Name*" /> 
+
+                        <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 10px;height: 18px;margin-left: 7px;"/><br/>
+                        <p:watermark for="email" value="Email*" /> 
+                        <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 10px;height: 18px;margin-left: 7px;"/>
+                        <p:watermark for="mn" value="Mobile Number" /> 
+                        <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width: 213px;
+                                         margin-top: 11px;
+                                         height: 24px;
+                                         margin-left: 7px;
+                                         margin-bottom: -3px;"><br/>
+                            <f:selectItem itemLabel="Current City*" itemValue=""/>
+                            <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                            <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                            <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                        </p:selectOneMenu>
+                        <p:inputText id="mnn" value="#{myBean.username}" style="width: 206px;margin-top: 10px;height: 18px;margin-left: 7px;margin-bottom: 6px;"/>
+                        <p:watermark for="mnn" value="Date of Birth[DD/MM/YYYY]" /> 
+                        <h:outputText value="Educational Details" style="margin-top: 6px;font-weight: bold;margin-left: 6px;"/><br/>
+                        <p:selectOneMenu id="seldeg" value="#{myBean.username}" style="width: 213px;margin-top: 10px;
+                                         margin-left: 7px;"><br/>
+                            <f:selectItem itemLabel="My Academics*" itemValue=""/>
+                            <f:selectItem itemLabel="B.Tech" itemValue="Bangalore"/>
+                            <f:selectItem itemLabel="BBA" itemValue="chennai"/>
+                            <f:selectItem itemLabel="10th" itemValue="Kochi"/>
+                            <f:selectItem itemLabel="Intermediate/ +2" itemValue="Kochi"/>
+                        </p:selectOneMenu>
+
+                        <p:inputText  id="yog" value="#{myBean.username}" style="width: 202px;
+                                      margin-top: 5px;
+                                      margin-bottom: 4px;
+                                      height: 18px;
+                                      margin-left: 8px;"/><br/>
+                        <p:watermark for="yog" value="Year of Graduation" /> 
+                        <p:selectOneMenu id="edupref" value="#{myBean.username}" style="width: 212px;margin-top: 8px;margin-bottom: 4px;margin-left: 8px;"><br/>
+                            <f:selectItem itemLabel="Education Preferences*" itemValue=""/>
+                            <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                            <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                        </p:selectOneMenu><br/>
+                        <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-left: 10px;">
+                        </h:selectBooleanCheckbox> 
+                        <p style="margin-left: 27px;
+                           padding: 0px;
+                           margin-top: -18px;">I agree to the <span style="color: #4251A2;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-style: italic;">Privacy Policy</span></p>
+
+                        <h:commandButton value="JOIN" action="#" style="margin-top: -3px;margin-left: 10px;"/>
+                    </h:form>
+
+                    <h:graphicImage value="../resources/images/home/Hurry Up for MBA ADMISSION.png" style="margin-top: 14px;"/>
+                    <h:graphicImage value="../resources/images/home/Gradmen.png" width="230" height="78" style="margin-top: 8px;"/>
+                    <h:graphicImage value="../resources/images/home/Crash course.png" style="margin-top: 8px;" width="230" height="62" />
+
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>

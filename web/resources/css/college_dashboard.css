@@ -1,0 +1,107 @@
+
+.college_dashboard_maincontainer{
+    margin: 0 auto;
+    width: 980px;
+    height: auto;
+    background-color: white;
+    margin-top: 19px;
+    /*margin-bottom: 14px;*/
+    
+    /*min-height: 900px;*/
+    
+    
+    
+}
+
+.fs1 legend
+{
+                background: none!important;
+                border: none!important;
+                margin-top: 15px;
+}
+ .r1{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_5_1.png"); }
+            .r2{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_2_2.png"); }
+            .r3{height: 144px; width: 166px; float: left; margin-left: 10px; margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_3_3.png");}
+            .r4{height: 144px; width: 166px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4_2.png");}
+
+            .c1{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_1_1.png");}
+            .c2{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_2_1.png");}
+            .c3{height: 144px; width: 166px;  float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_3_1.png");}
+            .c4{height: 144px; width: 166px; float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_4_1.png");}
+
+            .t1{height: 144px; width: 144px;  float:left; margin-left: 40px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_1.png");}
+            .t2{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_2.png");}
+            .t3{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_3.png");}
+            .t4{height: 144px; width: 144px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4.png");}
+
+            .rectanglebox{
+                padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);
+            }
+            .linkcolors
+            {
+                color: white;
+            }
+            .triangletext{
+               padding-top: 50px;
+            }
+            .numericvaluelabel{
+               font-size: 38pt; font-weight: bold;color: white;
+            }
+            .updatebutton{
+                float: right;margin-top: 125px;
+            }
+            .fieldsetmargin{
+                margin-top: 15px;
+            }
+            .viewmorebtn{
+                float: right;padding: 9px;font-weight: 700;
+            }
+            .btnstyle{
+              width: 50px;
+                                                                          
+                height: 29px;
+            }
+            .dashboard {
+    padding-left: 10px!important;
+    padding-right:10px!important;
+}
+
+.advertisemoharto{
+ float: left;
+    font-size: 16px;
+   font-weight: bold;
+ margin-top: -5px;                                                          
+ margin-left: 249px;
+ color: #00aeef;
+}
+.fillrequirment{
+    float: left;
+    margin-left: 253px;
+   font-size: 13px;
+   margin-top: 13px;
+ margin-right: -78px;
+}
+
+.selectmenu {
+    width: 155px!important;
+    font-size: 11px;
+}
+.paymentbtn{
+    width: 142px;
+  height: 27px;
+ float: left;
+margin-right: 426px;
+margin-left: 259px;
+margin-top: 10px;
+}
+.processprice{
+     float: left!important;
+     width: 61px!important;
+     font-weight: normal!important;
+     height: 12px!important;
+}
+.panelgrid{
+    float: left!important;
+   margin-top: 44px!important;
+ margin-left: -200px!important;
+}

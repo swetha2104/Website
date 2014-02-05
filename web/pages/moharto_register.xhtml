@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+
+
+        <h:outputStylesheet library="css" name="registration_1.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+
+        <!--<script src="../resources/js/jquery-1.7.1.min.js"></script>-->
+
+        <script>
+            $(document).ready(function() {
+
+//                alert("hi");
+
+
+                $('.rej').click(function() {
+//                    $('.stud').slideUp(100);
+                    $('.regconfirm').slideDown(100);
+
+                });
+
+
+            });
+
+        </script>
+        <style>
+            #text{
+                margin-left: -61px;
+                margin-top: 24px;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <ui:composition template="/template/twocolumnwithheadertemplate.xhtml">
+
+            <ui:define name='contentwideheader'>
+                <div class="heading" >
+                    Hundreds and thousands of students seeking admissions for UG courses,PG courses and Diplomas are taking benefits of Moharto. Will you not be..!!
+                </div>
+            </ui:define>
+            <ui:define name='leftcolumn'>
+                
+                <div class="stud" style="margin-bottom: 46px;margin-top: 28px;">
+                    
+                    <center> <p class="pagetitle" >Register Now!</p></center>
+                    <div class="stud1">
+                        <h:form id="frm" >
+                            <p:inputText styleClass="text1" id="fname" required="true"   value="#{moharto_Student_Register_Basic_Bean.first_Name}" style="box-shadow: 2px 2px 3px #666666;" placeholder="First Name*"/>  <br/><br/>
+
+
+                            <p:inputText styleClass="text1" id="lname" required="true"   value="#{moharto_Student_Register_Basic_Bean.last_Name}"  style="box-shadow: 2px 2px 3px #666666;" placeholder="Last Name*"/>  <br/><br/>
+
+                            <p:inputText styleClass="text1" id="email" required="true" requiredMessage="Please enter your email address."  size="20" validatorMessage="Invalid email format"  value="#{moharto_Student_Register_Basic_Bean.email}" style="box-shadow: 2px 2px 3px #666666;" > 
+                                <f:validateRegex  pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+                                 <f:validateLength minimum="6" />  
+
+                            </p:inputText><br/><br/>
+                             <p:message for="email" />
+
+                            <p:watermark for="email" value=" Email*" />
+
+                            <p:password styleClass="text1" id="pw" required="true" requiredMessage="Please enter your password."  feedback="true"  match="cpw" value="#{moharto_Student_Register_Basic_Bean.password}"  style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="pw" value=" Password*" />
+                            <p:message for="pw" />
+
+                            <p:password styleClass="text1" id="cpw" required="true" requiredMessage="Please confirm your password." feedback="true"   value="#{moharto_Student_Register_Basic_Bean.password}"  style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="cpw" value=" Confirm Password*" />
+                            <p:message for="cpw" />
+
+                            <p:inputText styleClass="text1" id="phone" required="true" requiredMessage="Please enter your mobile no."  value="#{moharto_Student_Register_Basic_Bean.mobile_No}" style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="phone" value=" Mobile No.*" />
+                             <p:message for="phone" />
+
+                            <p:inputText styleClass="text1" id="city" required="true"   value="#{moharto_Student_Register_Basic_Bean.current_City}" style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="city" value="Current City *" />
+
+                            <p:inputText styleClass="text1" id="edu" required="true"   value="#{moharto_Student_Register_Basic_Bean.education_Prefence}" style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="edu" value="Education Preference *" />
+
+                            <p:inputText styleClass="text1" id="colginterest" required="true"   value="#{moharto_Student_Register_Basic_Bean.college_of_Interest}" style="box-shadow: 2px 2px 3px #666666;" />  <br/><br/>
+                            <p:watermark for="colginterest" value="College of Interest " />
+
+                            <p:inputText styleClass="text1" id="plceinterst" required="true"   value="#{moharto_Student_Register_Basic_Bean.place_of_Interest}" style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="plceinterst" value="Place of Interest " />
+
+                            <p:inputText styleClass="text1" id="whenstudy" required="true"   value="#{moharto_Student_Register_Basic_Bean.join}" style="box-shadow: 2px 2px 3px #666666;"/>  <br/><br/>
+                            <p:watermark for="whenstudy" value="When you want to study " />
+
+
+                            <h:selectBooleanCheckbox value="#" style="margin-left: 0px;">
+                            </h:selectBooleanCheckbox> 
+                            <p style="margin-left: 27px;
+                               padding: 0px;
+                               margin-top: -18px;">I agree to the <span style="color: #4251A2;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-style: italic;">Privacy Policy</span></p>
+
+                            <!--                            <h:commandButton value="JOIN" action="#" style="margin-top: -3px;margin-left: 10px;"/>-->
+
+
+                            <p:commandButton id="btn1" value="Register" update="frm" actionListener="#{moharto_Student_Register_Basic.store()}" action="#{moharto_Student_Register_Basic.valid()}" styleClass="rej" style=" box-shadow: 2px 2px 3px #666666;"  /> 
+                            <p:commandButton id="btn2" value="Clear"  actionListener="#{personBean.savePerson}" style=" box-shadow: 2px 2px 3px #666666; "  />
+
+                            <br/>
+                            <div class="clear"/>
+                            <center><p style="font-size: 15px;"> If you  already Registered<a href="moharto_login.xhtml" class="clk" style="text-decoration: 
+                                                                                              none;color: #0d75a0;"> Click Here </a></p></center>
+                        </h:form>                                                                     
+                    </div>
+
+                    <!--                    /* Massage div is start from here    */-->
+
+
+
+                    <!--      /*                          Massage div is close here   */-->
+
+                </div>
+
+                <div class="regconfirm" style="display: none;"> 
+
+
+                    <div class="stud1">
+                        <div id="text" >
+                            <h:form >
+
+                                <div class="para">
+                                    Thank You for Registering with moharto.you are now eligible to post your review and ask
+                                    any question in our Forum and help moharto community by answering to their concern.Please
+                                    <u><a href="moharto_login.xhtml" class="login" style="text-decoration:  none;color: #0d75a0; font-weight: bold;"> Click Here </a></u>
+                                    to login,<br/>
+                                    Note : You may modify your personal information by 
+                                    <u><a href="moharto_login.xhtml" class="login" style="text-decoration:  none;color: #0d75a0; font-weight: bold;"> Login into yor Area</a></u>
+
+
+                                </div>
+
+
+                            </h:form>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </ui:define>
+
+
+
+            <ui:define name='rightcolumn'>
+                <div style="width: 502px;margin-top: 29px;">
+                    <p:graphicImage value="../resources/images/pages/quickeasy 2.png" style="margin-left: 60px;"/>
+                    <div class="content">
+                        <h:outputText value="Quick and Easy:" style="font-size: 16px;"/>
+                        <br/>
+                        <p class="para" style="margin-left: 0px;">
+                            Students can access information at the click of a mouse about the courses colleges offer, Enrollment Fee, Yearly Fee, 
+                            college facilities and more without visiting their premises.
+                        </p>
+                    </div>
+                    <br/><br/><br/>
+                    <p:graphicImage value="../resources/images/pages/online admission 2.png" style="margin-top: 19px;margin-left: 60px;"/>
+                    <div class="content">
+                        <h:outputText value="Online Admissions:" style="font-size: 16px;"/>
+                        <br/>
+                        <p class="para" style="margin-left: 0px;">
+                            This is one of the unique features of Moharto, as it not only allows students to search for information on various colleges but it also enables them to apply and get admission online. 
+                            Students can easily block a seat in the college of their choice without doing the rounds of colleges every day. 
+                        </p>
+                    </div>
+                    <br/><br/><br/>
+                    <p:graphicImage value="../resources/images/pages/no-entry.png" style="margin-top: 19px;margin-left: 60px;"/>
+                    <div class="content">
+                        <h:outputText value="No entry to fraudsters:" style="font-size: 16px;"/>
+                        <br/>
+                        <p class="para" style="margin-left: 0px;">
+                            Full-STOP to Middle men and agents trying to fraud the student community and make money in the bargain. 
+                            Moharto offers a platform that is completely transparent thereby allowing students to collaborate in a hassle free and systematic manner. 
+                        </p>
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+    </h:body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

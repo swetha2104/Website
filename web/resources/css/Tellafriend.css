@@ -1,0 +1,83 @@
+.mainContainer{
+    width: 980px;
+    height: auto;
+/*    min-height: 900px;*/
+    background-color: #ffffff;
+    margin: -20px auto;
+}
+.head{
+    width: 730px;
+    height: 150px;
+    // border: 1px solid #ddd;
+     margin-top: 25px;
+}
+#tell{
+    color: #009A49;
+    padding-top:0px;
+    margin-left: 15px;
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+#parag{
+    margin-top: 23px;
+margin-left: 16px;
+font-size: 13px;
+}
+.left{
+    width: 740px;
+    height: 300px;
+/*     border: 1px solid #ddd;*/
+     float: left;margin-top: -30px;
+     
+}
+.right{
+    width: 230px;
+    height: 230px;
+    border: 1px solid #ddd;
+    float: right;
+    margin-top: -124px;
+}
+.one{
+    width: 380px;
+    height: 210px;
+/*    border: 1px solid #ddd;*/
+    float: left;
+}
+.two{
+    width: 355px;
+    height: 210px;
+/*    border: 1px solid #ddd;*/
+    float: right;
+}
+.btn{
+    margin-left: 343px;
+    margin-top: -41px;
+}
+.i-agree
+{
+    margin: -19px 0px 43px 37px;
+}
+
+.below{
+    margin-left:15px;margin-top: 10px;
+}
+#firstname{
+    margin-left: 17px;margin-top: 8px;width: 200px;
+}
+#lastname{
+    margin-left: 17px;margin-top: 8px;width: 200px;
+}
+#frndemail{
+    margin-left: 33px;margin-top: 8px;width: 200px;
+}
+#youremail{
+    margin-left: 52px;margin-top: 8px;width: 200px;
+}
+#title{
+    margin-left: 13px;margin-top: 8px;width: 215px;height: 30px;
+}
+#message{
+    margin-left: 32px;
+}

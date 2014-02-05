@@ -1,0 +1,253 @@
+.content{
+    width: 980px;
+    margin: 0px auto;
+
+}
+
+.abt_moharto{
+    height: 332px;
+    width: 100%;padding-top: 14px;
+}
+.abt_moharto h3{ text-align: center; padding: 10px; font-size: 18px;}
+
+.hr{ border-bottom: 1px dotted #fff;
+     width: 201px;
+     padding: 5px 0 0 4px;
+     margin: 0 auto;
+     padding-top: 4px;
+}
+
+.video11{
+    /*background: lightgreen;*/
+    background-image: url('../resources/images/home/video1.png');background-position: top;
+    width: 23.5%;
+    height: 320px;
+    float: left;
+    margin-top: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 14px ; color: white;
+}
+
+.video21{
+    width: 23.5%;
+    /*background: lightcoral;*/
+    background-image: url('../resources/images/home/video2.png');background-position: top;
+    height: 320px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 14px;color: white;
+}
+
+.moharto_partner{
+    width: 48%;
+    border: 1px solid #ddd;
+    height: 321px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.moharto_partner .view_more{text-height: 15px; float: right; padding: 7px;color: #49a4c8;font-weight: bold; margin-right: 48px;}
+.hr1_home{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.student_actions{
+    /*    background: #E8E8E8;
+        border: 1px solid #999999;*/
+    width: 100%;
+    height: 250px;
+    margin-top: 13px;
+    /*margin-bottom: 10px;*/
+}
+
+.avalable_seats{
+    width: 23.5%;
+    /*margin-left: 9px;*/
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    height: 230px;
+    float: left;
+}
+
+/*.abc .ui-tabs-nav li.ui-tabs-selected a{background-image: url('../resources/images/home/Black patch.png')!important;*/
+                                        /*padding: 9px;border-radius: 6px;}*/
+
+/*.ui-tabs.ui-tabs-top .ui-tabs-nav li.ui-tabs-selected{border: 0px;background-image: url('../resources/images/home/Black patch.png')!important;}*/
+
+.avalable_seats h2{padding: 3px;
+                   font-size: 15px;
+                   font-weight: 600;
+                   text-align: center;margin-bottom: -4px;}
+
+.avalable_seats #tv:j_idt63:j_idt73{margin-left: 80px!important;
+                                    margin-top: 19px;}
+
+.admission_online{
+    width: 48%;
+    margin-left: 21px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    height: 230px;
+    float: left;
+}
+
+/*.tab_bgi{background-image: url('../resources/images/home/Black patch.png')!important;}*/
+.adm_online_tab ul{border: 0px;background: 
+                       none!important;}
+
+.admission_online h2{
+    padding: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 6px;
+    margin-top: 8px;
+}
+
+.testimonials{
+    width: 23.5%;
+    margin-left: 17px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    height: 229px;
+    float: left;
+}
+
+.moharto_fee_ad{
+    width: 100%;
+    height: 880px;
+    /*background: #E8E8E8;*/
+    /*border: 1px solid #999999;*/
+    margin-bottom: 10px;
+}
+
+.left_ads{
+    width: 23.5%;
+    /*margin-left: 9px;*/
+    margin-top: 10px;
+    /*border: 1px solid activecaption;*/
+    height: 880px;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.search{
+    width: 48%;
+    /*border: 1px solid #49a4c8;*/
+    height: 40px;
+    float: left;
+    margin-left: 20px; margin-top: 10px;
+}
+
+.course_fee{
+    width: 47%;
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 327px;
+    float: left;
+    margin-left: 23px; margin-top: 10px;
+}
+
+    .course_fee tr{ padding: 3px;}
+
+.moharto_bring{
+    width: 48%;
+    border: 1px solid #ddd;
+    height: 194px;
+    float: left;
+    margin-left: 23px; margin-top: 10px;background: rgba(10, 153, 189, 0.97);;
+    color: white;
+}
+
+.register_right_ad{
+    width: 23.5%;
+    border: 1px solid #ddd;
+    height: 517px;
+    float: left;
+    margin-left: 18px;
+    margin-top: -387px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.head{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 57px;
+}
+
+.head1{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 12px;
+}
+
+.abt_moharto_text{
+    font-size: 13px;
+    padding: 13px;
+    line-height: 17px;
+    text-align: justify;margin-top: -3px;
+}
+
+.ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all{border: 0px!important;}
+
+.abc ul{border: 0px;background: none!important;margin-left: 22px!important;}
+
+.panel #j_idt185_header{background: red;}
+
+.btn1{
+    float: right;
+
+    margin-top: 10px;
+    margin-right: 66px;
+}
+.img4{
+
+    border: 1px solid black;
+    float: left;
+
+    margin: -58px 33px -43px 92px;
+    background: white;
+
+    height: 28px;
+
+    width: 43px;  
+}
+
+/*.ui-tabs .ui-tabs-nav li a {color: white;}*/
+
+/*.abc .tab1{background-image:url('../resources/images/home/Black patch.png');}*/
+
+/*.ui-tabs.ui-tabs-top > .ui-tabs-nav{margin-left: 
+                                        28px;}*/
+
+.course_list{float: left;
+             width: 54%;
+             margin-left: -28px;
+             margin-top: 0px;
+             line-height: 23px;
+             list-style-image: url('sqpurple.gif');
+}
+.course_fee tbody tr:first-child{ background-color: #EB8E5B;}
+
+.course_list_sub{margin-top: -8px;}
+
+.joinmoharto{height: 58px;
+             width: 230px;
+             background-color: #A866C7;color: white;
+             border-radius: 8px 8px 0px 0px;}
+
+.joinmoharto p{ padding: 5px; margin-top: 0; line-height: 16px;}
+
+.announcement{
+    width: 468px;
+    height: 84px;
+    /*border: 1px solid #ddd;*/
+    margin-top: 3px;
+}

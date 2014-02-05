@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="application_form.css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template/commonTemplate.xhtml">
+
+            <ui:define name='pageContent'>
+                <f:view>
+                    <div class="application_form_maincontainer">
+                        <div class="application_form_content" >
+
+
+                            <h:form id="applnform">
+                                
+                                <h:panelGroup id="appform" >
+                                    <div class="application_form_header">
+                                        <h:outputText value="APPLICATION FOR ENROLLMENT" style="font-weight: bold;font-size: 20px; color: #49a4c8;" />
+                                    </div>   
+                                    <br/>
+                                    <br/>
+                                    
+                                     <div style="float: right;margin-top: 8px;border: 1px solid #ddd;">
+                                       
+                                        <h:graphicImage url="../resources/images/partner/passport.jpg" height="150px" width="150px;" style="padding: 5px;"/>
+                                    </div>
+                                    <div style="float: right;margin-top: 8px;margin-right: 30px;">
+                                     
+                                     <h:graphicImage url="../resources/images/partner/submitted to college.png" height="150px" width="150px;" style="padding: 5px;"/>
+                                    </div>
+                                    <h:panelGrid columns="2" style="border: none;" cellpadding="7" >
+                                        
+                                        <h:outputText value="Name:"  />
+                                        <h:outputText value="Amitabh Bachchan"  />
+                                        <h:outputText value="Application No:" />
+                                        <h:outputText value="MH001058" />
+                                        <h:outputText value="Course Applying for:"  />
+                                        <h:outputText value="MBA(Finance)"  />
+                                        <h:outputText value="Choosen College:"  />
+                                        <h:outputText value="Brindavan College of Engineering"  />
+                                        <h:outputText value="Date and Time of Application:"  />
+                                        <h:outputText value="24-12-2013, 6:35PM"  />
+                                        <h:outputText value="Hostel Preferences:"  />
+                                        <h:outputText value="With Hostel"  />
+                                    </h:panelGrid>   
+                                      <br/>
+                                     <h:outputText value="Personal Details" style="font-weight: bold;font-size: 15px;"  />
+                                    <br/>
+                                    <div style="margin-left: -10px;">
+                                        <h:panelGrid columns="2">
+                                        <h:panelGrid columns="2"  cellpadding="10px">
+                                        <h:outputText value="Date of Birth:"  />
+                                        <h:outputText value="24-08-1992"  />
+                                        <h:outputText value="Father Name:"  />
+                                        <h:outputText value="Harivanshrai Bachchan"  />
+                                        <h:outputText value="Gaurdian's Occupation:"  />
+                                        <h:outputText value="Busines"  />
+                                        <p:spacer height="1" width="161px"/>
+                                        <p:spacer height="1" width="161px"/>
+                                        
+                                        </h:panelGrid>
+                            
+                                        <h:panelGrid columns="2"  cellpadding="10px">
+                                        <h:outputText value="Gender:"  />
+                                        <h:outputText value="Male"  />
+                                        <h:outputText value="Gaurdian Name:"  />
+                                        <h:outputText value="Karthik"  />
+                                        <h:outputText value="Category:"  />
+                                        <h:outputText value="OBC"  />
+                                        <p:spacer height="1" width="120px"/>
+                                        </h:panelGrid>
+                                        </h:panelGrid>
+                           
+                                    </div>
+                                                        
+                                    <h:panelGrid columns="2" style="margin-top: -40px;margin-left: -8px;">
+                                        <h:panelGrid columns="1" cellpadding="7" >
+                                            <h:outputText value="Present Address" style="font-weight: bold;font-size: 13px;"  />
+                                            <h:outputText value="4/3, 3rd Cross"  />
+                                            <h:outputText value="Govindappa Road"  />
+                                            <h:outputText value="RS Palya"  />
+                                            <h:outputText value="Kammanahalli Main Road"  />
+                                            <h:outputText value="Bangalore-36"  />
+                                            <h:outputText value="Karnataka"  />
+                                            <p:spacer width="190" height="10" />
+                                        </h:panelGrid>
+                                        <h:panelGrid columns="1" cellpadding="7" style="margin-left: -25px;">
+                                            <h:outputText value="Permanent Address" style="font-weight: bold;font-size: 13px;"  />    
+                                            <h:outputText value="H.no : 3-5-195/4D"  />
+                                            <h:outputText value="Manjeera Nagar"  />
+                                            <h:outputText value="Near IB"  />
+                                            <h:outputText value="Sangareddy"  />
+                                            <h:outputText value="Medak (Dist.)-502001"  />
+                                            <h:outputText value="Andhra Pradesh"  />
+                                            <p:spacer width="190" height="10" />
+                                        </h:panelGrid>
+                                    </h:panelGrid>
+                                    <div style="margin-top: -20px;">
+                                    <h:outputText value="Educational Details" style="font-weight: bold;font-size: 15px;"/>
+                                    </div>
+                                    <br/>
+      
+                                    
+                                    <p:dataTable id="adt" var="acd" value="#{academicDetailsBean.academics}" styleClass="academicdt">
+                                        <p:column headerText="S.No">
+                                            <h:outputText  value="#{acd.sno}"/>
+                                        </p:column> 
+                                        <p:column headerText="Course and Stream">
+                                            <h:outputText  value="#{acd.course}"/>
+                                        </p:column> 
+                                        <p:column headerText="Year of passing">
+                                            <h:outputText  value="#{acd.yop}"/>
+                                        </p:column> 
+
+                                        <p:column headerText="Institute Name">
+                                            <h:outputText  value="#{acd.institute}"/>
+                                        </p:column> 
+
+                                        <p:column headerText="Aggregate">
+                                            <h:outputText  value="#{acd.aggregate}"/>
+                                        </p:column> 
+
+                                        <p:column headerText="Final Year Percentage">
+                                            <h:outputText  value="#{acd.fyp}"/>
+                                        </p:column> 
+                                    </p:dataTable>
+                                    <br/>
+                                   <h:outputText value="Payment Details" style="font-weight: bold;font-size: 15px;"  />
+                                   <br/>
+                                    <h:panelGrid columns="2"  cellpadding="7" >
+                                        
+                                        <h:outputText value="Course Fee Details:"  />
+                                        <h:outputText value="Rs 4,75,000/-"  />
+                                        <h:outputText value="Resident Type:" />
+                                        <h:outputText value="NRI" />
+                                        <h:outputText value="Application Processing Fee:"  />
+                                        <h:outputText value="Rs 5000/-"  />
+                                        <h:outputText value="Payment Type:"  />
+                                        <h:outputText value="Netbanking"  />
+                                        <h:outputText value="Transaction Id:"  />
+                                        <h:outputText value="0777361130739318"  />
+                                        <h:outputText value="Transaction Date and Time:"  />
+                                        <h:outputText value="24-12-2013, 6:35PM"  />
+                                        <p:spacer height="1" width="170px"/>
+                                    </h:panelGrid>   
+                                    <br/>
+                                    <br/>
+                                    <!--
+                                    <div style="float: right">
+                                        <h:outputText value="Signature of Candidate" style="font-weight: bold;"/><br/>
+                                        <p:spacer height="6px"/>
+                                        <h:outputText value="Amitabh Bachchan" style="text-align: center;" />
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    -->
+                                </h:panelGroup>   
+
+                                <center>  
+                                    <p:commandButton value="Save">   
+                                     <p:dataExporter type="pdf" target="appform" fileName="application_form"/>  
+                                    </p:commandButton>  
+                                    <p:commandButton value="Print" type="button" >  
+                                        <p:printer target="appform" />  
+                                    </p:commandButton>  
+                
+                                </center>
+                            </h:form>    
+                        </div>  
+                    </div>   
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

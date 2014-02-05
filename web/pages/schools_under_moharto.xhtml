@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="colleges_under_moharto.css"/>
+        <style>
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+
+            .ui-datatable * {
+                border : 0px !important;
+            }
+            .ui-datatable .ui-widget-content {
+                border: 1px solid white;
+                border-right: 1px solid lightgray !important;
+            }
+
+
+
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                height: 10px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 10px;
+                background-color: transparent;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+            .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+                padding: 0px;
+
+            }
+            .ui-datatable.borderless .ui-datatable-data tr, .ui-datatable.borderless .ui-datatable-data-empty tr{
+                border-style: none; 
+            }
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/threecolumntemplate_ads.xhtml">
+
+        <!--include code to appear in left column -->
+
+        <ui:define name='leftcolumn'>
+            <p:dataTable id="dataTable" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable1"   
+                         emptyMessage="No Data found" style=" font-size: 12px;width: 100%; " scrollable="true" scrollHeight="80" >
+                <f:facet name="header">  
+                    <p:outputPanel>  
+                        <h:outputText value="City" />  <br/>
+                        <p:inputText id="globalFilter" onkeyup="carsTable1.filter()" style="font-size: 12px;" />  
+                    </p:outputPanel>  
+
+                </f:facet> 
+
+                <p:column id="colorColumn" filterBy="#{car.city}" > 
+                    <h:selectBooleanCheckbox id="sbc" label=""/>
+                    <h:outputText value="#{car.city}" style="font-size: 12px;" />
+
+                </p:column>
+
+
+            </p:dataTable><br/>
+            <p:dataTable id="dataTable1" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable2"   
+                         emptyMessage="No Data found" style=" font-size: 12px;
+                         width: 100%; " scrollable="true" scrollHeight="100" >
+                <f:facet name="header">  
+                    <p:outputPanel>  
+                        <h:outputText value="Board" />  <br/>
+                        <p:inputText id="globalFilter" onkeyup="carsTable2.filter()" style="font-size: 12px;" />  
+                    </p:outputPanel>  
+
+                </f:facet> 
+
+                <p:column id="colorColumn" filterBy="#{car.board}"  > 
+                    <h:selectBooleanCheckbox id="sbc1" label=""/>
+                    <h:outputText value="#{car.board}" style="font-size: 12px;" />
+
+                </p:column>
+            </p:dataTable><br/>
+            <p:inputText id="txt1" size="33" style="height: 24px;">
+                <p:watermark for="txt1" value="School Lookup"/>
+            </p:inputText>  
+            
+            <div class="askaq">
+                <h:graphicImage value="../resources/images/pages/Gradmen1.png" height="78" width="230" />
+            </div>
+
+            <div class="ad_right">
+                <h:graphicImage value="../resources/images/pages/ielts.png"  width="230" height="275"/>
+            </div>
+
+
+        </ui:define>
+
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <p:panel style="font-size: 12px;border: none;" header="SCHOOLS UNDER MOHARTO" styleClass="cpanel" >
+                <h:form id="fmid">
+                    <p:dataGrid var="sch" value="#{schoolBean.school}" paginator="true" paginatorPosition="bottom" columns="1" rows="5" styleClass="dg">
+                        <h:panelGrid columns="2">
+                            <h:graphicImage url="../resources/images/pages/#{sch.schoollogo}" height="100px"  width="100px" style="border: 1px solid #ddd;"/>
+                            <h:panelGrid columns="1">
+                                <h:outputText value="#{sch.schoolname}, #{sch.schoolcity}" style="color:  #49a4c8;font-size: 15px;font-weight: bold;" />
+                                <p:rating  value="#{sch.rating}" readonly="true" />
+                                <div style="margin-top: 5px;">
+                                    <h:outputText value="#{sch.affiliated}" />
+                                </div>
+                                <!--    <h:outputText value="Admissions done :#{sch.admissions}" /> -->                                  
+
+                                <h:panelGrid columns="2" style="">
+
+                                    <a href="microsite_home.xhtml" style="color: #990000;padding-right: 20px; text-decoration: none;">View More</a>
+                                    <a href="microsite_courses_offered.xhtml" style="color: #990000;padding-right: 20px; text-decoration: none;">Check Seats Availability</a>
+
+                                </h:panelGrid>
+                            </h:panelGrid>
+
+                        </h:panelGrid>
+                    </p:dataGrid>
+                </h:form>
+            </p:panel>
+        </ui:define>
+
+        <!--include code to appear in right column -->
+
+
+        <ui:define name='rightcolumn'>
+            <div>
+                <h:graphicImage value="../resources/images/pages/Crashcourse.png" width="230" height="78" style="margin-top: 10px;"/>
+            </div>
+
+            <div class="featcolleges">
+                <h:graphicImage value="../resources/images/pages/capture.png" height="178" width="230" style="border: 1px solid;"/>
+
+            </div>
+
+            <div class="ad_right">
+                <h:graphicImage value="../resources/images/pages/ad3.png"  width="230" height="185"/>
+            </div>
+        </ui:define>
+
+    </ui:composition>
+</html>
+

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="css_subscriptionpackages.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="main">
+                    <div class="first">
+                        <center>
+                        <p:menubar autoDisplay="false" style="width:960px">
+
+                                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" style="padding-left: 10px;padding-right:10px;"/>
+                                    <p:submenu label="My College"  style="padding-left: 10px;padding-right:10px;" >
+                                        <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions" url="moharto_subscription.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Add Course" url="moharto_college_dashboard_add_course.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Admissions"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Ads"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" url="moharto_college_dashboard_ad.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                    </p:submenu>
+
+                                    <p:submenu label="Messages"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Enquiry" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_person.xhtml"/>
+
+                                    </p:submenu>
+
+                                </p:menubar> 
+                            </center>
+                        <br/>
+                        <h:outputText value="Subscription Packages" style="float: left;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      margin-top: -5px;
+                                      margin-left: 249px;color: cyan #00aeef" /> <br/>
+
+
+
+                        <h:panelGrid columns="3" style="float: left;
+                                     margin-top: 20px;
+                                     margin-left: 155px;" cellpadding="10px">
+                            <h:outputText value="Package Name:" class="txts" />
+                            <h:outputText value=":" style="txts"/>
+                            <p:selectOneMenu style="width: 155px;font-size: 11px;"> 
+
+                                <f:selectItem itemLabel="Select Package Name" itemValue="3" />  
+                                <f:selectItem itemLabel="Platinum" itemValue="3" />  
+                                <f:selectItem itemLabel="Gold" itemValue="1" />  
+                                <f:selectItem itemLabel="Silver" itemValue="2" />  
+
+                            </p:selectOneMenu>  
+                            <h:outputText value="Package Price" class="txts"/>
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText value="5000" style="font-weight: normal;font-size: 11px;width: 148px;"/>
+                            
+                            <h:outputText value="Package Validity" class="txts" />
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText value="12 months" style="font-size: 10px;font-weight: normal;width: 148px;"/>
+                            
+                            <h:outputText value="Types of Ad " class="txts" />
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText value="Vertical Ad" style="font-size: 10px;font-weight: normal;width: 148px;"/>
+
+                            <h:outputText value="Ad Position" class="txts"/>
+                            <h:outputText value=":" style="txts"/>
+                            <p:inputText value="Home Page and Search Based Ad" style="font-size: 10px;font-weight: normal;width: 148px;"/>
+
+
+                            <h:panelGrid columns="2" width="50px;">
+                            </h:panelGrid>
+
+                        </h:panelGrid>
+
+
+
+
+                        <a href="moharto_subscription_payment.xhtml"><button type="button" class="btn" style="width: 142px;
+                                                                             height: 27px;
+                                                                             float: left;
+                                                                             margin-right: 426px;
+                                                                             margin-left: 244px;
+                                                                             margin-top: -5px;">Proceed to Payment</button></a>
+
+                    </div>
+
+                    <div class="second">
+                        <h:graphicImage value="/resources/images/pages/Hurry Up.png" style="width: 230px;
+                                        height: 178px;
+                                        "/>
+                        <h:graphicImage value="/resources/images/pages/boy.png" style="width: 230px;
+                                        height: 178px;margin-top: -1px;
+                                        "/> 
+
+                    </div>
+                    <br/>       <br/>  
+
+                </div>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
+

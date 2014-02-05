@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="register_steps.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+
+        <script>
+            $(document).ready(function() {
+
+//                alert("hi");
+                $('.listview1').hide();
+                $('.log').hide();
+                $('.link1').click(function() {
+                    $('.listview1').slideDown(250);
+                });
+                $('.login').click(function() {
+                    $('.alignm').slideUp(100);
+                    $('.log').slideDown(100);
+
+
+                });
+                $('.reg').click(function() {
+                    $('.log').slideUp(100);
+                    $('.alignm').slideDown(100);
+                });
+
+            });
+
+        </script>
+        <style>
+
+        </style>
+    </h:head>
+    <h:body>
+        <f:view> 
+            <h:form>
+                <ui:composition template="/template/twocolumntemplate.xhtml">
+
+
+                    <ui:define name='leftcolumn'>
+
+
+                        <p:graphicImage value="../resources/images/enrol/1.png" width="800" styleClass="image1" /><br/>
+
+
+                        <div class="seting">
+
+                            You have chosen MBA in Brindavan college of Engineering,
+                            Bangalore. Select the Category :
+                        </div>
+
+                        <p:selectOneMenu id="catag" value="#{admissionBeanArray.selectedcategory}" style="width: 210px;
+                                         font-size: 14px;
+                                         text-align: left;
+                                         box-shadow: 2px 2px 3px #666666;margin-left: 80px;margin-top: 28px;
+                                         " label="Universities"  panelStyle="width:220px">  
+                            <f:selectItem itemLabel="Select Category" itemValue="" /> 
+                            <f:selectItems value="#{admissionBeanArray.categories}" />  
+                        </p:selectOneMenu>  <br/><br/>
+                        <div id="bbbtn1">
+                            <p:commandButton styleClass="link1"  value="Fee Details"  />
+                        </div>
+
+
+
+
+
+                        <p:dataTable styleClass="listview1" value="#{registerBasicBean.agents}" id="FeeStructture1" var="fee"   style="width: 350px;  margin-left: 88px;margin-top: 16px;">
+                            <p:column  headerText="Select" style="width: 60px;font-size: 13px;margin-left:10px;text-align: left;" >
+
+<!--                                <h:outputText value="#{fee.place}" style="color: black;font-size: 11px;"/>-->
+                                <p:selectOneRadio id="options1" value="#{admissionBean3.options}">  
+                                    <f:selectItem itemLabel="" itemValue="1" />  
+
+                                </p:selectOneRadio><br/>
+
+                            </p:column>
+
+                            <p:column  headerText="Specialization" style="width: auto;font-size: 13px;" >
+
+                                <h:outputText value="#{fee.place}" style="color: black;font-size: 13px;"/><!--
+                                     <h:outputText value="Marketing" style="color: black;font-size: 11px;"/>
+                                     <h:outputText value="Hr" style="color: black;font-size: 11px;"/>
+                                     <h:outputText value="" style="color: black;font-size: 11px;"/>
+                                -->
+                            </p:column>
+
+                            <p:column  headerText="Enrollment Fee" style="width: auto;font-size: 13px;" >
+
+                                <h:outputText value="#{fee.enrollfee}" style="color: black;font-size: 11px;"/>
+
+                            </p:column>
+
+                            <p:column headerText="Course Fee" style="width:auto;font-size: 13px;">
+
+                                <h:outputText value="#{fee.cost}" style="width: 100px;color: black;font-size: 11px;"/>
+
+                            </p:column>
+
+                        </p:dataTable>
+
+                        <div id="host"> <h:outputLabel id="labelsss" value="Hostel Fee : 30,000/-"/></div><br/><br/>
+                        <div id="hostn">
+
+                            <h:outputText id="payment" value="Select Choose Hostel Preference :"/></div>
+                        <div id="rds">
+
+                            <p:selectOneRadio id="options2" value="#{admissionBean3.options}">  
+                                <f:selectItem itemLabel="With Hostel" itemValue="1" />  
+                                <f:selectItem itemLabel="Without Hostel" itemValue="2"/></p:selectOneRadio><br/>
+
+
+                        </div>
+
+
+
+
+                    </ui:define>
+
+
+                    <ui:define name='rightcolumn'>
+
+                        <div  class="line" >
+
+                        </div>
+
+                        <div class="log">
+
+                            <div class="pagetitle1" >
+                                <center> Login Here</center>
+                            </div><br/><br/><br/>
+                            <p:inputText id="username" required="true" label="Firstname"  
+                                         value="#" style=" box-shadow: 2px 2px 3px #666666;font-size: 13px;width: 207px;" >  
+                                <p:watermark for="username" value=" Enter Username*"/> 
+
+                            </p:inputText> <br/><br/>
+
+
+                            <p:password id="password" value="#{register4enroll.password}" feedback="true" style=" box-shadow: 2px 2px 3px #666666; width: 207px;font-size: 13px;"/> 
+
+                            <p:watermark for="password" value=" Enter Password*" /> 
+                            <br></br><br/>
+                            <a href="moharto_student_register_personal.xhtml"><button type="button" class="btn" style="width: 66px;
+                                                                                      height: 27px;margin-right: 211px;">Login</button></a><br/><br/><br/>
+
+                            <span style="">If new User,</span> <a href="#" class="reg" style="text-decoration: underline;color: #49a4c8;">Click Here</a>                                                              
+
+                        </div>
+
+                        <div class="alignm">
+                            <h:form id="regfm">
+                                <center>
+
+
+                                    <center><p id="para" style="font-size: 13px;"> If you are already Registered<a href="#" class="login" style="text-decoration: 
+                                                                                                                   none;color: #0d75a0;"> Click Here </a></p></center>
+                                    <p:inputText id="fname" required="true"   value="#{register4enroll.first_Name}"  />  <br/><br/>
+                                    <p:watermark for="fname" value="First Name*" />
+
+                                    <p:inputText id="lname" required="true"   value="#{register4enroll.last_Name}"  />  <br/><br/>
+                                    <p:watermark for="lname" value="Last Name*" />
+
+                                    <!--                            <p:password id="password" value="" feedback="true" style=" box-shadow: 2px 2px 3px #666666;width: 207px;"/> <br/><br/>
+                                                                <p:watermark for="password" value="  Password*" /> -->
+
+                                    <p:inputText id="email" required="true"   value="#{register4enroll.email}"  />  <br/><br/>
+                                    <p:watermark for="email" value=" Email*" />
+
+                                    <p:inputText id="pw" required="true"   value="#{register4enroll.password}"  />  <br/><br/>
+                                    <p:watermark for="pw" value=" Password*" />
+
+                                    <p:inputText id="cpw" required="true"   value="#{register4enroll.password}"  />  <br/><br/>
+                                    <p:watermark for="cpw" value=" Confirm Password*" />
+
+                                    <p:inputText id="phone" required="true"   value="#{register4enroll.mobile_No}" />  <br/><br/>
+                                    <p:watermark for="phone" value=" Mobile No.*" />
+
+                                    <p:inputText   styleClass="text1" id="city" required="true"   value="#{register4enroll.current_City}" />  <br/><br/>
+                                    <p:watermark for="city" value="Current City *" />
+
+                                    <p:inputText id="edu" required="true"   value="#{register4enroll.education_Prefence}" />  <br/><br/>
+                                    <p:watermark for="edu" value="Education Preference *" />
+
+
+                                    <p:inputText id="colginterest" required="true"   value="#{register4enroll.college_of_Interest}" />  <br/><br/>
+                                    <p:watermark for="colginterest" value="College of Interest " />
+
+                                    <p:inputText id="plceinterst" required="true"   value="#{register4enroll.place_of_Interest}" />  <br/><br/>
+                                    <p:watermark for="plceinterst" value="Place of Interest " />
+
+                                    <p:inputText id="whenstudy" required="true"   value="#{register4enroll.join}" />  <br/><br/>
+                                    <p:watermark for="whenstudy" value="When you want to Join " />
+                                    <p:commandButton id="btn"  value="Save and Continue" ajax="false"  actionListener="#{regbeanstore.store()}" style="width: 143px;
+                                                     height: 32px;float: right;margin-right: 169px;margin-bottom: 8px;font-size: 12px;"> </p:commandButton><br/><br/>
+
+                                                     
+                                </center><br/><br/>
+                            </h:form>
+                        </div>
+
+
+                    </ui:define>
+
+                </ui:composition>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
+
+
+
+
+
+
+
+

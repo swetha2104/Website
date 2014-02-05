@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="dashboard.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <!--MAIN CONTAINER STARTS-->
+            <div class="maincontainer" style="font-size: 15px;width: 980px;margin: 0px auto; fon"> 
+                <h:form id="student_profile_form">
+                    <!--BIG DIV STARTS-->
+                    <div class="big_div" >
+                        <!--STUDENT FROFILE LEFT STARTS-->
+                        <div class="student_profile_left" style="float:left;width: 450px;margin-top: 9px; ">
+
+                            <div class="student_prifile_image" style="width: 50px ">
+                                <!--                            <p:inplace label="Profile pic" effect="slide" editor="true" >-->
+                                <!--                            <p:graphicImage value="../images/profile.png" alt="prifile picture" ></p:graphicImage>
+                                                            <p:fileUpload fileUploadListener="#{fileUploadController.handleFileUpload}" mode="simple"  -->
+                                <!--update="messages" auto="true" sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"  dragDropSupport="true" />--> 
+                                <!--<p:growl id="messages" showDetail="true"/>--> 
+                                <!--</p:inplace>-->
+                            </div>
+                            <h:outputLabel value="Student Area" style="color: #49a4c8;font-size: 18px;"/><br/><br/>
+                            <h:outputLabel value="Personal Details" style="font-size: 13px;"/>
+                            
+                            <h:panelGrid columns="2" cellpadding="3" cellspacing="10" style="font-size: 13px;">
+                                <p:outputLabel value="First Name"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="firstname" value="Mike" required="true"  >
+                                        <!--<p:watermark for="firstname" value="Alex"/>-->
+                                    </p:inputText> 
+                                </p:inplace>    
+                                <p:outputLabel value="Last Name"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="lastname" value="Kristen" required="true" >
+                                        <!--<p:watermark for="lastname" value="John"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+                                <p:outputLabel value="Father Name"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="fathername" value="John" required="true" >
+                                        <!--<p:watermark for="fathername" value="Simpson"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="Date of birth"></p:outputLabel>
+
+                                <p:calendar value="#{admissionBean.date}" id="popupButtonCal" styleClass="txt"> 
+                                    <p:watermark for="popupButtonCal" value="12/12/90"/>
+                                </p:calendar>
+
+                                <p:outputLabel value="Nationality"></p:outputLabel>
+                                <p:inplace editor="true" label="American">
+                                    <p:selectOneMenu value="#{admissionBeanArray.selectedNationality}"  >  
+                                        <!--<f:selectItem itemLabel="American" itemValue="" />--> 
+                                        <f:selectItems value="#{admissionBeanArray.nationalities}" />  
+                                    </p:selectOneMenu>
+                                </p:inplace>
+                                <p:outputLabel value="Current Location"></p:outputLabel>
+                                <p:inplace editor="true" label="Bangalore">
+                                    <p:selectOneMenu value="#{admissionBeanArray.selectedNationality}" >  
+                                        <!--<f:selectItem itemLabel="Current Location" itemValue="" />--> 
+                                        <f:selectItems value="#{admissionBeanArray.currentlocation}" />  
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+                                <p:outputLabel value="Gender"></p:outputLabel>
+                                <p:inplace editor="true" label="Male">
+                                    <p:selectOneRadio id="options" value="#{admissionBean.gender}" style="padding-top: 9px;">  
+                                        <f:selectItem itemLabel="Male" itemValue="1" />  
+                                        <f:selectItem itemLabel="Female" itemValue="2" />  
+                                    </p:selectOneRadio>
+                                </p:inplace>
+
+                                <p:outputLabel value="Category"></p:outputLabel>
+                                <p:inplace editor="true" label="Gen">
+
+                                    <p:selectOneMenu value="#{admissionBeanArray.selectedcategory}" >  
+                                        <!--<f:selectItem itemLabel="Select Category" itemValue="" />--> 
+                                        <f:selectItems value="#{admissionBeanArray.categories}" />  
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+
+                                <p:outputLabel value="Address Line 1"></p:outputLabel>                           <p:inplace editor="true">
+                                    <p:inputText id="address" value="#123,RT nagar" required="true" >
+                                        <!--<p:watermark for="address" value="Address Line 1"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="City"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="city" value="Bangalore" required="true" >
+                                        <!--<p:watermark for="city" value="City"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="Country"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="country" value="India" required="true" >
+                                        <!--<p:watermark for="country" value="Country"/>-->
+                                    </p:inputText>
+                                </p:inplace> 
+
+                                <p:outputLabel value="Pin code"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="pin" value="580032" required="true" >
+                                        <!--<p:watermark for="pin" value="Pin code"/>-->
+                                    </p:inputText>
+                                </p:inplace>   
+
+                                <p:outputLabel value="Mobile"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="mobile" value="08923541816" required="true" >
+                                        <!--<p:watermark for="mobile" value="Mobile"/>-->
+                                    </p:inputText>
+                                </p:inplace> 
+
+                                <p:outputLabel value="Email"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="email" value="Mike@gmail.com" required="true" >
+                                        <!--<p:watermark for="email" value="Email"/>-->
+                                    </p:inputText>
+                                </p:inplace>    
+
+
+
+
+
+<!--                            <p:fileUpload fileUploadListener="#{fileUploadController.handleFileUpload}" mode="advanced"  
+                                          update="messages" auto="true" sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"  dragDropSupport="true" />  -->
+                                <!--<p:growl id="messages" showDetail="true"/>--> 
+
+<!--                                <p:commandButton id="btn3" value="Update" style="margin-left: 190px;" />-->
+                            </h:panelGrid>
+                        </div>
+                        <!--STUDENT FROFILE LEFT ENDS-->
+
+
+                        <!--          STUDNET PROFILE RIGHT STARTS  -->
+                        <div class="student_profile_right" style="float:left;margin-top: 9px;margin-left: -58px;">
+                            <!--STUDENT EDUCATIONAL LIST1 STARTS-->
+                            
+                            <br/><br/><h:outputLabel value="Education Details" style="font-size: 13px;"/>
+                            <h:panelGrid columns="2" cellpadding="3" cellspacing="10" style="font-size: 13px;">
+
+
+                                <p:outputLabel value="Institute Name"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_inst1" value="Brindavan College of Engineering" required="true"  >
+                                        <!--<p:watermark for="firstname" value="Alex"/>-->
+                                    </p:inputText> 
+                                </p:inplace>  
+
+                                <p:outputLabel value="Acadamics"></p:outputLabel>
+                                <p:inplace editor="true" label="PG">
+                                    <p:selectOneMenu value="PG" >  
+                                        <!--<f:selectItem itemLabel="Current Location" itemValue="" />--> 
+                                        <f:selectItem itemValue="PG" itemLabel="PG"/>  
+                                        <f:selectItem itemValue="UG" /> 
+                                        <f:selectItem itemValue="After 10th" /> 
+                                        <f:selectItem itemValue="PUC" /> 
+                                        <f:selectItem itemValue="DIPLOMA" />   
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+                                <p:outputLabel value="Course"></p:outputLabel>
+                                <p:inplace editor="true" label="MBA">
+                                    <p:selectOneMenu value="MBA" >  
+                                        <f:selectItem itemValue="MBA" itemLabel="MBA"/>
+                                        <f:selectItem itemValue="MCA" itemLabel="MCA"/>
+                                        <!--<f:selectItem itemLabel="Current Location" itemValue="" />--> 
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+                                <p:outputLabel value="Aggrigate Percentage"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_agrgate1" value="70" required="true" >
+                                        <!--<p:watermark for="lastname" value="John"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+                                <p:outputLabel value="Final Year Percetage"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_fnl1" value="72" required="true" >
+                                        <!--<p:watermark for="fathername" value="Simpson"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="Year of passing"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_passyear1" value="2012" required="true" >
+                                        <!--<p:watermark for="lastname" value="John"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+                            </h:panelGrid>
+                            <br/><!--STUDENT EDUCATIONAL LIST1 ENDS-->
+                            <!--STUDENT EDUCATIONAL LIST2 STARTS-->
+                            <h:panelGrid columns="2" cellpadding="3" cellspacing="10"  style="font-size: 13px;" >
+                                <p:outputLabel value="Institute Name"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_inst2" value="PES college of Engineering" required="true"  >
+                                        <p:watermark for="firstname" value="Alex"/>
+                                    </p:inputText> 
+                                </p:inplace>  
+
+                                <p:outputLabel value="Acadamics"></p:outputLabel>
+                                <p:inplace editor="true" label="UG">
+                                    <p:selectOneMenu value="UG" >  
+                                        <f:selectItem itemLabel="Current Location" itemValue="" /> 
+                                        <f:selectItem itemValue="PG" itemLabel="PG"/>  
+                                        <f:selectItem itemValue="UG" /> 
+                                        <f:selectItem itemValue="After 10th" /> 
+                                        <f:selectItem itemValue="PUC" /> 
+                                        <f:selectItem itemValue="DIPLOMA" />   
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+                                <p:outputLabel value="Course"></p:outputLabel>
+                                <p:inplace editor="true" label="BE">
+                                    <p:selectOneMenu value="BE" >  
+                                        <f:selectItem itemValue="BE" itemLabel="MBA"/>
+                                        <f:selectItem itemValue="BTECH" itemLabel="MCA"/>
+                                        <f:selectItem itemLabel="Current Location" itemValue="" /> 
+                                    </p:selectOneMenu>
+                                </p:inplace>
+
+                                <p:outputLabel value="Aggrigate Percentage"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_agrgate2" value="70" required="true" >
+                                        <p:watermark for="lastname" value="John"/>
+                                    </p:inputText>
+                                </p:inplace>
+                                <p:outputLabel value="Final Year Percetage"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_fn2" value="72" required="true" >
+                                        <p:watermark for="fathername" value="Simpson"/>
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="Year of passing"></p:outputLabel>
+                                <p:inplace editor="true">
+                                    <p:inputText id="student_profile_edu_passyear2" value="2010" required="true" >
+                                        <!--<p:watermark for="lastname" value="John"/>-->
+                                    </p:inputText>
+                                </p:inplace>
+
+                                <p:outputLabel value="Uploaded files"></p:outputLabel>
+                                <p:inplace label="Certificate1.doc" effect="slide" editor="true">
+                                    <p:graphicImage value="images/marks_memo.jpg" width="150" height="150" />
+                                </p:inplace>
+
+                                <!--                            <p:outputLabel value="Upload new files"></p:outputLabel>
+                                                            <p:fileUpload  mode="simple"  
+                                                                           update="messages" auto="true" sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"  dragDropSupport="true" />-->
+                            </h:panelGrid>    
+                            <!--STUDENT EDUCATIONAL LIST2 ENDS-->
+                        </div>
+                                            <div class="clear" style="clear: both;"></div>
+
+                        <!--STUDNET PROFILE RIGHT ENDS-->
+                        <div class="student_profile_right" style="float: right;margin-top: -544px;margin-right: -60px;">
+                        <h:graphicImage value="../resources/images/partner/passport.jpg" width="100" height="100"/><br/>
+                        <h:form enctype="multipart/form-data" >
+                           <h:inputFile  />
+                       </h:form>
+                        </div>
+                    </div>
+                    <div class="clear" style="clear: both;"></div>
+                    <!--BIG DIV ENDS-->
+
+                    <!--STUDENT PROFILE TABLE STARTS-->
+                    
+                    <div class="student_profile_table1">
+                        <h4>Enrollment History</h4>
+                        <p:dataTable id="dataTable" var="car" value="#{history_array.array1}"    
+                                     emptyMessage="No Data found" style=" font-size: 12px;width: 100%; "  >
+                            <f:facet name="header">  
+
+
+                            </f:facet> 
+
+                            <p:column  headerText="SI NO" > 
+
+                                <h:outputText value="#{car.id}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="College Name" > 
+
+                                <h:outputText value="#{car.college_name}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="University" > 
+
+                                <h:outputText value="#{car.university}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="Location" > 
+
+                                <h:outputText value="#{car.location}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="Course" > 
+
+                                <h:outputText value="#{car.course}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="Branch" > 
+
+                                <h:outputText value="#{car.branch}" style="font-size: 10px;" />
+
+                            </p:column>
+                            <p:column  headerText="Action" > 
+
+                                <p:commandLink value="Delete"/>
+
+                            </p:column>
+
+                        </p:dataTable>
+                    </div>
+                    <br/>
+                    <div class="student_profile_table2">
+                        <h4>Transaction History</h4>
+                        <p:dataTable id="dataTable1" var="car" value="#{transaction_array.array}"    
+                                     emptyMessage="No Data found" style=" font-size: 12px;width: 100%; "  >
+                            <f:facet name="header">  
+
+
+                            </f:facet> 
+                            <p:column  headerText="SI NO" > 
+                                <h:outputText value="#{car.tx_id}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="College Name" > 
+                                <h:outputText value="#{car.tx_college}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Tx Date" > 
+                                <h:outputText value="#{car.tx_date}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Tx Time" > 
+                                <h:outputText value="#{car.time}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Source" > 
+                                <h:outputText value="#{car.source}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Tx Amount" > 
+                                <h:outputText value="#{car.tx_amonut}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Tx Status" > 
+                                <h:outputText value="#{car.tx_status}" style="font-size: 10px;" />
+                            </p:column>
+                            <p:column  headerText="Action" > 
+
+                                <p:commandLink value="Delete"/>
+
+                            </p:column>
+                        </p:dataTable>
+                    </div>
+                    <div class="clear" style="clear: both;"></div> <br/>  
+                    <h4 style="padding: 5px;">My Questions and Answers</h4>
+                    <div class="student_profile_faq" style="margin-bottom: 10px;">
+                        <h:form>
+                            <p:scrollPanel  style="width:980px;height:300px">
+
+
+                                <!--                      <div class="second1">
+                                                <p:inputText id="question" size="45" style="margin-top: 8px;margin-left: 31px;">
+                                                    <p:watermark for="question" value="Ask your question"/>
+                                                </p:inputText><br/>
+                                                <p:commandButton value="Submit my question" style="margin-top: 11px;margin-left: 185px;height: 28px;"/>
+                                                <p:graphicImage value="../resources/images/pages/questionmark.png" style="margin-left: 865px;margin-top: -61px;margin-bottom: 8px;"/>
+                                            </div>-->
+                                
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="I want to study diploma. how much will be the cost?"   style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;" />  
+                                       </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="02-01-2014" style="font-size: 12px;"/><br/>
+                                       
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="me" style=" text-decoration: none;margin-left: -51px;"  />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 48px
+                                                        ;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                      <a href="QuesAns.xhtml">
+                                            <h:outputText value="I want to study diploma. how much will be the cost?"  style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                       </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="25-11-2013" style="font-size: 12px;"/><br/>
+                                        <h:outputText value="Ans:It would be around 2 lakhs including hostel fees." style="margin-left: -33px; text-decoration: none;color: darkmagenta;font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="How can i take admission through lateral entry?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="23-11-2013" style="font-size: 12px;"/><br/>
+<!--                                        <h:outputText value="Not Answered." style="margin-left: -33px; text-decoration: none;color: darkmagenta;font-size: 12px;"/>-->
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="me" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 50px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="Can i study diploma civil engineering through distance?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="20-11-2013" style="font-size: 12px;"/><br/>
+                                        <h:outputText value="Ans:Yes,Enquire in any distance education center." style="margin-left: -33px; text-decoration: none;color: darkmagenta;font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="joseph" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 25px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="How much rank i need to join diploma?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="14-11-2013" style="font-size: 12px;"/><br/>
+                                        <h:outputText value="Ans:Depends on the number of students appearing for the exam." style="margin-left: -33px; text-decoration: none;color: darkmagenta;font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="farhan" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 25px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="what is the last year closing rank?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="10-11-2013" style="font-size: 12px;"/><br/>
+                                         <h:outputText value="Ans:10,000" style="margin-left: -33px; text-decoration: none;color: darkmagenta;font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="anil" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 48px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+<!--                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="Send me the fee course?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="7-11-2013" style="font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="salman" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 25px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="can i get direct admission?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="6-11-2013" style="font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="third1">
+                                    <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                                    <div class="welcome1">
+                                        <a href="QuesAns.xhtml">
+                                            <h:outputText value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                                        </a>
+                                    </div>
+                                    <div class="time">
+                                        <h:outputText value="2-11-2013" style="font-size: 12px;"/>
+                                    </div>
+                                    <div class="time1">
+                                        <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -51px;" />
+                                        <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                                    </div>
+                                </div>-->
+                            </p:scrollPanel>
+                        </h:form>
+                        <div class="clear"/>
+                        <a href="moharto_home_new_1.xhtml" style="float: right;padding: 10px;font-weight: 700;color: rgb(182, 176, 26);">Go to Home</a>
+                    </div>
+
+
+
+
+
+                </h:form>
+
+            </div>
+            <!--MAIN CONTAINER ENDS-->
+        </ui:define>
+    </ui:composition>
+</html>

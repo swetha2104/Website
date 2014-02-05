@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <!--<h:outputStylesheet library="css" name="testimonials.css"/>-->
+        <h:outputStylesheet library="css" name="ContactusCss.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate_microsite.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="maincontainer">
+
+
+<!--                <div class="p1">
+                    <p:graphicImage value="../resources/images/pages/imgn1.png"  width="700px" height="250px"/>
+                </div>-->
+                <div class="p2">
+                    <p id="p2a">Contact Us</p>
+                    <p  id="p2b">College Adress :</p>
+                    <div class="p3" style="font-size: 13px;">
+                        <p>Dwarakanagar, Bagalur Main Road, Yelahanka,</p>
+                        <p>Bengaluru-560063, Karnataka, India</p>
+                        <p>Phone: +91 80 2847 8388 / 8423</p>
+                        <p>Fax: +91-80-2847 8766</p>
+                        <p style="color: cornflowerblue;">E-mail: enquiry@brindavancollege.com, info@brindavancollege.com</p>
+                    </div>
+                    
+                </div>
+                <div class="p6">
+                    <p id="sm">Site Map</p>
+                    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false">
+                    </script>
+                    <p:gmap center="41.381542, 2.122893" zoom="15" type="HYBRID" style="width:800px;height:400px" model="#{mapBean.simpleModel}" /> 
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>

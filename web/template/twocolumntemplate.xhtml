@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head> 
+        <title>
+            <ui:insert name="pageTitle">
+                Moharto
+            </ui:insert>
+        </title>
+
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="style_header.css"/>
+        <h:outputStylesheet library="css" name="style2.css"/>
+        <h:outputStylesheet library="css" name="pagetype.css"/>
+
+         <script type="text/javascript" >
+
+            $(document).ready(function() {
+                $('.supportBtn').click(function() {
+                    $(this).animate({right: '130px'}, {duration: 400, queue: false});
+                    $(this).addClass('close');
+                    //alert('hey dont touch me');
+                    $('.contentBox').show({duration: 400, queue: false});
+                    $('.closeBtn').fadeIn({duration: 500, queue: false});
+                    //alert('hi');
+
+                })
+
+                $('.closeBtn').click(function() {
+                    $(this).fadeOut({duration: 100, queue: false});
+                    $('.supportBtn').animate({right: '0'}, {duration: 400, queue: false});
+                    $('.supportBtn').removeClass('close');
+                    //alert('hey dont touch me');
+                    $('.contentBox').hide({duration: 400, queue: false});
+
+                    //alert('hi');
+
+                })
+            });
+        </script>
+    </h:head>
+    <h:body>
+        <div class="mainContainer_common">
+            <div>
+                <ui:insert name="pageHeader" >
+                    <ui:include src="/template/commonHeader.xhtml" />
+                </ui:insert>
+            </div>
+
+            <div class="stage" style="color: rgb(95, 86, 86);">
+                <div class="wideleftcolumn">
+                    <ui:insert name="leftcolumn" >
+
+                    </ui:insert>
+                </div>
+
+                <div class="widerightcolumn">
+                    <ui:insert name="rightcolumn" >
+
+                    </ui:insert>
+                </div>
+                 <!-- Customer Support starts  -->
+                <div class="social">
+                    <div class="contentBox">
+                        <img src="../resources/images/enrol/closeBtn.png"  alt="" class="closeBtn" />
+                        <h6>Help Line Call us at:</h6>
+                        <ul>
+                            
+                            <li class="phone noBorder">9849442658</li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0);" onClick="supportBtn();" class="supportBtn"></a>
+                </div>
+                <!--Customer support ends-->
+            </div>
+        </div>
+        <div>
+            <ui:insert name="pageFooter" >
+                <ui:include src="/template/commonFooter.xhtml" />
+            </ui:insert>
+        </div>
+    </h:body>
+</html>

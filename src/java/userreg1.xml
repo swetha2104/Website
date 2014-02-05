@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mangium.Moharto_Student_Register_Personal_Bean" table="tbl_student_personal_details">
+       
+        <id name="edu_id" type="java.lang.Integer">
+            <column name="stu_edu_det_id_pk" />
+            <generator class="identity" />
+        </id>
+         <many-to-one name="moharto_Student_Register_Basic_Bean" class="com.mangium.Moharto_Student_Register_Basic_Bean" fetch="select">
+            <column name="student_id_pk" not-null="true" />
+        </many-to-one>
+        <property name="date_of_birth" type="java.lang.String">
+            <column name="stu_date_of_birth" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="stu_gender" />
+        </property>
+        <property name="pre_address" type="java.lang.String">
+            <column name="stu_pre_address" />
+        </property>
+        <property name="pre_country" type="java.lang.String">
+            <column name="stu_pre_country_id_fk" />
+        </property>
+        <property  name="pre_location">
+            <column name="pre_location"/>
+        </property>
+        <property name="pre_pin" type="java.lang.String">
+            <column name="stu_pre_pincode" />
+        </property>
+        <property name="father_name" type="java.lang.String">
+            <column name="stu_father_name" />
+        </property>
+        <property name="guardian" type="java.lang.String">
+            <column name="stu_guardian" />
+        </property>
+          <property name="guardian_name" type="java.lang.String">
+            <column name="stu_guardian_name" />
+        </property>
+          <property name="guardian_occupation" type="java.lang.String">
+            <column name="stu_guardian_occupation" />
+        </property>
+          <property name="perm_address" type="java.lang.String">
+            <column name="stu_perm_address" />
+        </property>
+<!--         <property name="perm_country" type="java.lang.String">
+            <column name="stu_perm_country_id_fk" />
+        </property>-->
+        <id name="perm_country" type="java.lang.Integer">
+            <column name="stu_perm_country_id_fk" />
+            <generator class="identity" />
+        </id>
+         <property name="perm_location" type="java.lang.String">
+            <column name="stu_perm_location" />
+        </property>
+          <property name="perm_pin" type="java.lang.String">
+            <column name="stu_perm_pincode" />
+        </property>
+           
+    </class>
+  
+
+</hibernate-mapping>

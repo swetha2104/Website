@@ -1,0 +1,51 @@
+
+.topper_news_right_container{
+    margin-left: 26px;
+    float: left;
+    width: 230px;
+    height: initial;
+
+}
+
+.topper_news_content{
+    margin: 0 auto;
+    width: 680px;
+    font-size: 12px;
+
+}
+
+.topper_news_header_title{
+
+    margin: 0 auto;
+    height: 34px;
+    width: 680px;
+/*    border-bottom: 1px solid #ddd;*/
+   
+
+
+}
+
+topper_news_header_title_readmore{
+
+    margin: 0 auto;
+    height: 44px;
+    width: 680px;
+    border-bottom: 1px solid #ddd;
+}
+
+.headertxt{
+
+    font: bold 16px Arial, Helvetica, sans-serif;
+    color: #2154a3;
+}
+
+.filter_by_date{
+    margin: 0 auto;
+    height: 44px;
+    width: 680px;
+    margin-top: 20px;
+    padding-top: 2px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+
+}

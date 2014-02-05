@@ -1,0 +1,76 @@
+.contactus_maincontainer{
+    
+width:100%;
+margin: 0 auto;
+}
+
+.contactus_content{
+    width: 815px; 
+    margin: 0 auto;
+}
+
+.contactus_contactinformation{
+    
+    border-radius: 7px;
+    width: 390px;
+    border : 1px solid #ddd;
+    min-height: 550px;
+    float: left;
+    margin-bottom: 12px;
+}
+
+.contactus_getintouch{
+    border-radius: 7px;
+    margin-left: 4px;
+    width: 390px;
+    width: 390px;
+    border : 1px solid #ddd;
+    min-height: 550px;
+    float: left;
+}
+
+.contactus_contactinformation_header{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.contactus_getintouch_header{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.contactus_contactinformation_content{
+margin-top: 10px;
+}
+.contactus_getintouch_content{
+    margin-left: 20px;
+    margin-right: 35px;
+}
+.contact-information{
+/*    border: 1px solid #ddd;*/
+/*    width: 300px;*/
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.getintouch{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top:5px;
+    
+}
+#btn{
+/*    float: right;
+    margin-right: 100px;*/
+    margin-left: 261px;
+    margin-top: -5px;
+}
+/*#label{
+    font-size: 14px;
+}
+#text{
+    width: 326px;
+}
+#ta{
+    width: 326px;
+    height: 190px;
+}*/

@@ -1,0 +1,176 @@
+.mainContainer{
+    margin: 0px auto;
+    width: 980px;
+    height: auto;
+    margin-top: 8px;
+}
+
+.left_column{
+    width: 200px;
+    float: left;
+}
+
+.right_column{
+    width: 230px;
+    float: left;
+    margin-left: 7px;
+
+}
+
+.center_column{
+    width: 530px;;
+    border: 1px solid #ddd;
+    float: left;
+    margin-left: 10px;
+}
+
+.dt1{
+    /*border: 1px solid lightgrey;*/
+    /*float: left;*/
+    /*margin: -1px 1px -43px 0px;*/
+    background: white;
+
+    /*height: 140px;*/
+    width: 200px;
+    font-size: 13px;
+}
+
+.dt2{
+    /*border: 1px solid lightgrey;*/
+    /*float: left;*/
+
+
+    background: white;
+
+    margin-top: 
+        8px;
+    width: 200px;
+    font-size: 12px;
+
+
+}
+
+.dt3{
+    border: 1px solid lightgrey;
+    /*float: left;*/
+
+    /*margin: 54px 1px -43px 0px;*/
+    /*background: lightgrey;*/
+
+    /*height: 126px;*/
+    width: 200px;
+    font-size: 12px;
+    margin-top: 8px;
+
+
+}
+
+.dt4{
+    border: 1px solid lightgrey;
+    /*float: left;*/
+
+    /*margin: 54px 1px -43px 0px;*/
+    background: white;
+
+    /*height: 138px;*/
+    width: 200px;
+    font-size: 12px;
+    margin-top: 8px;
+
+}
+
+.dt5{
+    border: 1px solid lightgrey;
+    /*float: left;*/
+    margin-top: 8px;
+    /*margin: 54px 1px -43px 0px;*/
+    /*background: lightgrey;*/
+
+    height: 65px;;
+    width: 200px;
+    font-size: 12px;
+}
+
+.content2{
+    border: 1px solid lightgray;
+    float: left;
+
+    /*margin: 2px 33px 23px 8px;*/
+/*    background: #4861C2;*/
+
+
+    width: 509px;  
+    background: rgb(105, 163, 218);
+
+    color: white;
+    /*text-align: center;*/
+    padding: 10px;
+} 
+
+.college1{
+    /*border: 1px solid #ddd;*/
+    width: 509px;
+    font-size: 13px;
+}
+
+.college1_details{
+    width: 300px;
+    float: left;
+    line-height: 18px;
+    padding: 6px;
+}
+
+.logo1{
+    float: left;
+}
+
+.seate_avalable{
+    float: left;
+    padding: 6px;
+    font-size: 14px;
+    color: saddlebrown;
+    font-weight: 700;
+    width: 15px;
+}
+
+.actions{
+    float: right;
+    /*margin-left: 47px;*/
+    margin-top: 1px;
+    line-height: 25px;
+    width: 74px;
+}
+
+.actions a{
+    font-size: 13px;
+    color: rgb(173, 21, 76);
+    text-align: justify;
+    /*font-weight: 700;*/
+    text-decoration: underline;
+
+}
+
+.actions a:hover{
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+.tab1 ul{
+    line-height: 22px;
+}
+
+.ad{
+    margin-left: -55px;
+    margin-top: -8px;
+}
+#btn{
+    
+   width: 88px;
+height: 23px;
+/*margin-left: -24px;*/
+font-size: 10px;
+background-color: gray;
+}

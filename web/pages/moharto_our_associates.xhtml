@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+         <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+         <h:outputStylesheet library="css" name="moharto_our_associates.css"/>
+        
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+           <div class="pagetitle">
+              Our Associates
+           </div> 
+            <p:dataTable id="dt1" var="as" value="#{associateBean.associates}" style="width:740px;">
+
+
+                        <p:column id="colorColumn" headerText="Name"  >            
+                            <h:outputText value="#{as.name}" style="font-size: 12px;" />
+                        </p:column>
+
+                        <p:column id="colorColumn" headerText="Email"  >            
+                            <h:outputText value="#{as.email}" style="font-size: 12px;" />
+                        </p:column>
+                        <p:column id="colorColumn" headerText="Phone"  >            
+                            <h:outputText value="#{as.phone}" style="font-size: 12px;" />
+                        </p:column>
+                        <p:column id="colorColumn" headerText="Location" sortBy="#{as.location}" >            
+                            <h:outputText value="#{as.location}" style="font-size: 12px;" />
+                        </p:column>
+                    </p:dataTable><br/>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="right-border">  
+            <div class="blocktitle">
+                 Reach us to become our Associate
+            </div> 
+            
+            <div>
+                   
+                        <p:inputText id="reachust1" value="#{myBean.username}" /><br/>
+                        <p:watermark for="reachust1" value="First Name *" />
+                  
+                  
+                        <p:inputText id="reachustext1" value="#{myBean.username}" /><br/>
+                        <p:watermark for="reachustext1" value="Email *" /> 
+               
+                
+                        <p:inputText id="reachustext2" value="#{myBean.username}"   /><br/>
+                        <p:watermark for="reachustext2" value="Mobile Number *" /> 
+                
+                
+                        <p:inputText id="reachustext3" value="#{myBean.username}" /><br/>
+                        <p:watermark for="reachustext3" value="Location *" />
+                
+              
+                        <p:inputText id="reachustext4" value="#{myBean.username}" /><br/>
+                        <p:watermark for="reachustext4" value="Current Occupation *" /> 
+               
+               
+                        <p:inputText id="reachustext5" value="#{myBean.username}" />
+                        <p:watermark for="reachustext5" value="Educational Qualification *" /> 
+               
+                        <div>
+                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="">Register</button></a><br/>
+                        </div>
+
+                    </div>
+              </div>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+

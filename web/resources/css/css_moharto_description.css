@@ -1,0 +1,23 @@
+.heading
+{
+    font-size: 13px;
+font-weight: bold;
+float: left;
+margin-top: -1px;
+margin-left: 12px;
+    
+    
+}
+.para1
+{
+    text-align: left;
+    font-size: 13px;
+    margin-left: 13px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+.image
+{
+    margin-top: 10px;
+    margin-left: 2px
+}

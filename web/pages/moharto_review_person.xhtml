@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="css_review_person.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="review_main">
+                    
+                    <p:menubar autoDisplay="false">
+
+                        <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" styleClass="dashboard"/>
+                        <p:submenu label="My College" styleClass="dashboard" >
+                            <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Subscriptions"/>
+                            <p:menuitem icon="ui-icon-docunent" value="Add Course"/>
+                        </p:submenu>                                   
+                        <p:submenu label="Admissions"  styleClass="dashboard">
+                            <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                            <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                            <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                        </p:submenu>
+                        <p:submenu label="Ads" styleClass="dashboard">
+                            <p:menuitem icon="ui-icon-docunent" value="Post Ad" />
+                            <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                        </p:submenu>
+
+                        <p:submenu label="Messages"  styleClass="dashboard">
+                            <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                            <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                        </p:submenu>
+
+                    </p:menubar>
+                    <br/>
+
+
+                    <br/>
+                    <h:graphicImage value="/resources/images/home/p.png" style="margin-left: 14px;
+                                    width: 62px;
+                                    height: 63px;"/>
+                    <div class="clear"/>
+                    <h:panelGrid columns="2" style="float: left;
+                                 margin-left: 84px;
+                                 margin-top: -63px;">
+
+                        <h:outputText value="Mukesh,12/13/2013 7:57am"/>
+
+                        <p:rating value="#{askTableBean.rating1}" readonly="true" style="margin-left: 623px;" />
+                    </h:panelGrid>
+                    <p style="text-align: left;
+                       margin-left: 87px;
+                       font-size: 13px;
+                       margin-top: -32px;
+                       margin-right: 5px;">
+                        Faculty is  good and
+                        good companies come for placements, but their is no guarantee you will be placed, 
+                        getting placed depends on your knowledge and skills
+                        Extra Curricular activities and Projects
+                        Amazing Peer Crowd (best in Karnataka)
+                        College is not strict. You have lots of freedom to do what you want and college provides
+                        very good sports entertainment with full fledged amentities and finally it motivates students to do 
+                        Research in various areas
+
+                    </p>
+                    <h:panelGrid columns="2" style="margin-left: 272px;">
+                        <button type="button" class="btn" style="width: 105px;
+                                height: 29px;
+                                float: left;">Add to Reviews</button>
+
+                        <button type="button" class="btn" style="margin-left: 5px;
+                                width: 69px;
+                                height: 29px;"
+                                >Delete</button>
+                    </h:panelGrid>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

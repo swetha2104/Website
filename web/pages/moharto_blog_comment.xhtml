@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="blog_comments.css"/>
+
+        <style>
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="blog_left_container">
+
+                <div class="pagetitle">Moharto blog</div>   
+
+                <div class="blog_content">
+                    <div class="blog_content_header">
+                        <h:form>
+                            <h:panelGrid columns="2">
+                                <p:panelGrid columns="1" >
+                                    <h:outputText value="15 Jun"/>
+                                    <h:outputText value="17:35"/>
+                                </p:panelGrid>
+                                <h:panelGrid columns="1">
+                                    <h:outputText value="Many Paths to Excellence: Lessons from Finland" class="commandlink-ManyPaths"/>
+                                    <h:panelGrid columns="2">
+                                        <h:outputText value="Justin Timber  " class="out-bold"/>
+                                        <h:commandLink value="| 5 comments"/>
+                                    </h:panelGrid>    
+                                </h:panelGrid>     
+                            </h:panelGrid>
+                        </h:form>
+                        <br/>
+                    </div>
+                    <div class="blog_content_content">
+
+
+                        Today I attended the first of four lectures in an annual speaker series hosted by Houston A+ Challenge and Chevron. 
+                        The focus for this year’s speaker series is Global Perspectives on Education and today’s speaker was Pasi Sahlberg, the author of the book Finnish Lessons.
+                        <br/><br/>
+
+                        My biggest take-away from this lecture: His first points about how the Finnish system is built on the ideas of American thinkers, especially those thinkers who promoted a more progressive model of an education system… Jefferson… Dewey…
+                        <br/><br/>
+                        Another big takeaway: That attention to equity must first come before attention to student achievement. We have this completely backwards in current education reform models in our country.
+                        <br/><br/>
+                        Final big takeaway: Importance of allowing children plenty of time to move around and to play — to not lock children into desks at an early age and to not focus exclusively on test-prep. AMEN!!!!!
+                        <br/><br/>
+                        Much of the Finnish innovation is a result of the innovative work done over the past 100 years in the United States
+                        – influenced by the thoughts of Thomas Jefferson and John Dewey
+                        <br/><br/>
+                        In Finland we can see what American education can be at its best because it is built on American ideas (ideas of American thinkers)
+                        <br/><br/>
+                        Most people have an image of Finland that includes snowy mountains and northern lights
+                        <br/><br/>
+                        Children begin school at age 7 and only have 9 years of compulsory school attendance…At about age 16 they are free to leave school or stay on
+                        <br/><br/>
+                        Preschool begins at age 6 and all children have the right in Finland to a high quality daycare before that
+                        <br/><br/>
+                        Very few private schools — nearly all students attend free, public school
+                        Against the law to charge tuition for quality education — ed considered a basic human right
+
+                        No streaming or tracking in the basic education system — very diverse and principals are not allowed to implement any sort of tracking…
+                        <br/><br/>
+                        High school — General (50%) and Vocational (45%)
+                        HS is fully personalized — designed around the individual personal needs and interests of the student
+                        No grade levels in the the school — so no one repeats a grade (like here)
+
+                        Higher Ed / University system — all free, about 60% attend either Universities or Polytechnics
+
+                        Finland also is a very equal system — very little economic diversity
+                        BIG key factor to success of their school system
+                    </div>
+
+                    <p:separator id="separator1"/>  
+                    <div class="blog_comments">
+                        <div class="blog_comments_header">
+                            <h:outputText value="Comments" class="blog-comment-out" />
+                        </div>
+                        <br/>
+                        <h:form>
+                            <div class="blog_comment_content">
+
+                                <h:panelGrid columns="3">
+                                    <h:outputText value="Prashant Joshi "  class="out-bold"/>
+                                    <h:outputText value="| June 18,2013 |" />
+                                    <h:outputText value="  3:12 pm" />  
+                                </h:panelGrid>   
+                                <br/>
+                                The finland education system has good concepts to imbibe.
+                                Its inspiring to see country like finland having a very good education system.
+                                <br/>
+                                <br/>
+
+                                <a href="#blog_postcomments" class="a-color">[Reply]</a>  
+                            </div> 
+                            <br/>
+                            <br/>
+                            <div class="blog_comment_content">
+
+                                <h:panelGrid columns="3">
+                                    <h:outputText value="Abhyiog " class="out-bold"/>
+                                    <h:outputText value="| June 18,2013 |" />
+                                    <h:outputText value="  5:30 pm" />  
+                                </h:panelGrid>   
+                                <br/>
+                                Thanks man great info.
+                                <br/>
+                                <br/>
+
+                                <a href="#blog_postcomments" class="a-color" >[Reply]</a>
+                            </div>     
+
+                            <br/>
+                            <br/>
+
+                            <div class="blog_comment_content">
+
+                                <h:panelGrid columns="3">
+                                    <h:outputText value="Vinod malo " class="out-bold"/>
+                                    <h:outputText value="| June 19,2013 |" />
+                                    <h:outputText value="  8:12am" />  
+                                </h:panelGrid>   
+                                <br/>
+                                Amazing techniques,should be implemented in india also..  
+                                <br/>
+                                <br/>
+
+                                <a href="#blog_postcomments" class="a-color" >[Reply]</a>
+                            </div> 
+
+                            <br/>
+                            <br/>
+
+                            <div class="blog_comment_content">
+
+                                <h:panelGrid columns="3">
+                                    <h:outputText value="Kishore Kumar " class="out-bold"/>
+                                    <h:outputText value="| June 20,2013 |" />
+                                    <h:outputText value="  12:20pm" />  
+                                </h:panelGrid>   
+                                <br/>
+                                This system has so many loop holes like in the belgium system.  
+                                <br/>
+                                <br/>
+
+                                <a href="#blog_postcomments" class="a-color" >[Reply]</a>
+                            </div>  
+                            <br/>
+                            <br/>
+
+
+
+                            <div class="blog_comment_content">
+
+                                <h:panelGrid columns="3">
+                                    <h:outputText value="Jaffa reddy " class="out-bold"/>
+                                    <h:outputText value="| June 20,2013 |" />
+                                    <h:outputText value="  12:20pm" />  
+                                </h:panelGrid>   
+                                <br/>
+                                This is not possible in india.  
+                                <br/>
+                                <br/>
+
+                                <a href="#blog_postcomments" class="a-color" >[Reply]</a>  
+                            </div>  
+                            <br/>
+                            <br/>
+                        </h:form>
+                        <p:separator id="cmmsep" />
+
+                        <div id="blog_postcomments">
+                            <h:outputText value="Post Comments" class="blog-comment-out"/>
+                            <h:panelGrid columns="2"  id="panelgrid" cellpadding="10px">
+                                <p:outputLabel value="Name" />
+                                <p:inputText id="inputtext" value=""   />
+                                <p:outputLabel value="Email" />
+                                <p:inputText value="" id="inputtext"/>
+                                <p:outputLabel value="Comments" />
+                                <p:inputTextarea cols="60" rows="3" />
+                                <h:outputLabel value=""/>
+                                <p:commandButton value="Post Comment" />
+                            </h:panelGrid> 
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="blog_right_container">
+                <h:graphicImage value="../resources/images/pages/ad4.png" width="230px"/>
+                <h:graphicImage value="../resources/images/pages/ielts.png" width="230px" class="right-graphicImage2"/>
+                <h:graphicImage value="../resources/images/pages/ad3.png" width="230px" class="right-graphicImage3"/>
+                <h:graphicImage value="../resources/images/pages/ad5.png" width="230px" class="right-graphicImage4"/>
+            </div> 
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+

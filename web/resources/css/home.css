@@ -1,0 +1,177 @@
+
+.clear{
+    clear: both;
+}
+
+.mainContainer_home{
+    width: 980px;
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.video_dem{
+    width: 228px;
+    height: 300px;
+    float: left;
+    border: 1px solid #CCCCCC;
+    border-radius: 14px ; 
+    background-image: url('../resources/images/home/video1.png');
+    background-position: top;
+    color: white;
+}
+
+.abt_moharto_text{
+    font-size: 12px;
+    padding: 13px;
+    line-height: 17px;
+    text-align:  left;margin-top: -3px;
+}
+
+.head {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 57px;
+}
+
+.hr {
+    border-bottom: 1px dotted #fff;
+    width: 201px;
+    padding: 5px 0 0 4px;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+
+.ad_home_left{
+    width: 230px;
+    float: left;
+}
+
+.ad_home_middile{
+    width: 460px;
+    float: left;
+    margin-left: 20px;
+}
+
+.ad_home_right{
+    margin-left: 20px;
+    float: left;
+    width: 230px;
+}
+
+.add_top{
+    margin-bottom: 0px;
+}
+
+.content_middle{
+    margin-top: 12px;
+    height: auto;
+
+}
+
+.checkseats{
+    float: left;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    height: 298px;
+}
+
+.partner{
+    width: 453px;
+    float: left;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+}
+
+.search{
+    padding-top: 4px;
+}
+
+.moharto_partner h3{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.moharto_partner .view_more{text-height: 15px; float: right; padding: 7px;color: #49a4c8;font-weight: bold; margin-right: 48px;}
+
+
+.content_bottom{
+    /*border: 1px solid #ddd;*/
+    height: auto;
+    margin-top: 16px;
+}
+
+.testimonial{
+    width: 228px;
+    float: left;
+    font-size: 13px;
+    /*border: 1px solid #ddd;*/
+    height: auto;
+}
+
+.testimonial1{
+    width: 230px;
+    float: left;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    height: 243px;
+}
+
+.fee_range{
+    width: 460px;
+    float: left;
+    /*border: 1px solid #ddd;*/
+    padding: 5px;
+    margin-left: 18px; 
+}
+
+.fee_range1{
+    width: 460px;
+    float: left;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-left: -1px;
+    margin-top: -4px;
+}
+.fee_range tr{ padding: 3px;}
+
+.fee_range tbody tr:first-child{ background-color: #8280BB;
+                                 color: white;}
+
+.register_form{
+    float: left;
+    width: 200px;
+    border: 1px solid #ddd;
+    height: auto;
+}
+
+.reg_form{
+    float: left;
+    width: 228px;
+    border: 1px solid #ddd;
+    height: auto;
+    margin-left: 23px;
+}
+.joinmoharto{
+    height: 58px;
+    width: 230px;
+    background-color: #A866C7;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    margin-top: -12px;
+}
+
+.partner h2
+{
+    text-align: center;
+
+
+}
+
+.hr_hme_new{
+    width: 940px;;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 27px;
+}

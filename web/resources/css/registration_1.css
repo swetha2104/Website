@@ -1,0 +1,105 @@
+.body{
+    background-color: rgb(95, 86, 86);
+    margin: 0 auto;
+}
+.maincontainer{
+    width: 980px;
+    height: auto;
+   min-height: 685px;
+    background-color: #ffffff;
+    margin: 0px auto;
+    margin-top: 3px;
+}
+.middleportion{
+
+    width: 84%;
+    height: 502px;
+    /*border: 1px solid #ddd;*/
+    margin:57px 15px 0px 80px;
+    float: left;
+}
+.stud{
+
+    width: 35%;
+    height: 691px;
+    margin-bottom: 46px;margin-top: 28px;
+    border: 1px solid #ddd;
+   
+    float: left;
+    /*background-image: url("../resources/images/pages/LoginForm.png");*/
+    background: rgb(238, 241, 241);
+   
+}
+.colg{
+    width:49%;
+    height: 544px;
+    border: 1px solid #ddd;
+    margin:0 0 0 0;
+    float: right;
+    /*background-image: url("../resources/images/pages/LoginForm.png");*/
+    background: rgb(238, 241, 241);
+}
+#tab1a{
+    font-size:15px;
+    font-weight: bold;
+    color: #0d75a0;
+}
+.stud1{
+    margin: 0 0 0 70px;
+    border-radius: 10px;
+
+    /*     box-shadow: 2px 2px 3px #666666;*/
+}
+#btn1{
+    margin: 9px 0 0 1px;
+    border-radius: 10px;
+    color: #0d75a0;
+}
+#btn2{
+    margin: 0 0 0 29px;
+    border-radius: 10px;
+    color: #0d75a0;
+    /*// color: #0d75a0*/
+}
+.colg1{
+    margin: -11px 0 0 104px;
+    border-radius: 10px;
+}
+#btn3{
+    margin: 0 0 0 0;
+    border-radius: 10px;
+    color: #0d75a0;
+}
+#btn4{
+    margin: 25px 0 0 16px;
+    border-radius: 10px;
+    color: #0d75a0;
+}
+.content{
+   margin-top: -91px;
+    width: 450px;
+float: right;
+margin-right: -127px;
+margin-top: -1px;
+color: rgb(95, 86, 86);
+}
+.heading{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: darkgrey;
+}
+.text1{
+    box-shadow: 2px 2px 3px #666666;
+    width: 210px;
+}
+.regconfirm{
+    width: 35%;
+    height: 160px;
+    margin-bottom: 46px;margin-top: 28px;
+    border: 1px solid #ddd;
+   
+    float: left;
+    /*background-image: url("../resources/images/pages/LoginForm.png");*/
+    background: rgb(238, 241, 241);
+}

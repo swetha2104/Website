@@ -1,0 +1,91 @@
+.main
+{
+   
+    width: 980px;
+    height: 960px;
+    margin-left: 175px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.first1{
+    
+    width: 730px;
+    height: 60px;
+    background: #f8f4f4;
+    margin-top: -14px;
+    
+}
+.welcome{
+  
+width: 67px;
+height: 18px;
+margin-top: 16px;
+margin-left: 36px;
+padding-top: 18px;
+font-size: 18px;
+}
+.welcome3{
+  
+width: 67px;
+height: 18px;
+margin-top: -36px;
+margin-left: 173px;
+padding-top: 18px;
+font-size: 18px;
+}
+.second1{
+   
+width: 730px;
+height: 106px;
+background: #f8f4f4;
+margin-top: 15px;
+   }
+ .third1{
+  
+    width: 730px;
+    height: 60px;
+    background: #f8f4f4;
+    margin-top: 9px;
+}  
+.welcome1{
+ width: 337px;
+height: 18px;
+margin-top: -29px;
+margin-left: 36px;
+}
+.time{
+  width: 337px;
+height: 18px;
+margin-top: 5px;
+margin-left: 47px;
+}
+.time1{
+  width: 337px;
+height: 18px;
+float: right;
+margin-top: -36px;
+margin-right: -261px;
+}
+.second2{
+
+width: 230px;
+height: 183px;
+background: white;
+margin-top: -945px;
+float: right;
+   }
+   .second3{
+
+width: 230px;
+height: 228px;
+background: white;
+margin-top: 10px;
+float: right;
+   }
+    .second4{
+ 
+width: 230px;
+height: 481px;
+
+
+   }

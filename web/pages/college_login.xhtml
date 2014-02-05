@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="log.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+
+        <style>
+
+        </style>
+    </h:head>
+
+
+    <ui:composition template="/template/singlecolumntemplate.xhtml">
+
+
+
+        <ui:define name='main'>
+            <div class="stud">
+                <br></br>
+                <center><div class="pagetitle_header_form">College Login</div></center>
+                <br></br>
+
+                <div class="stud1">
+                    <h:form>
+
+                        <p:inputText id="username1" required="true" label="Firstname" > 
+
+                            <p:watermark for="username1" value=" Enter Username*" /> 
+
+                        </p:inputText> <br/><br/>
+
+
+                        <p:password id="password1"/> 
+
+                        <p:watermark for="password1" value=" Enter Password*" /> 
+
+                        <br></br>
+                        <br></br>
+                        <center>
+
+                            
+
+                            <a href="moharto_college_dashboard.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                height: 29px;margin-left: -78px;
+                                                                                margin-top: 10px;">Login</button></a>    
+                        </center>
+                    </h:form>
+                </div>
+
+            </div>
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+
+
+
+

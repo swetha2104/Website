@@ -1,0 +1,25 @@
+
+.main
+{width: 980px;
+ height: auto;
+
+
+ margin: 0 auto;
+ background-color: white;
+ margin-top: 8px;
+}
+
+.fac1
+{
+    width: 732px;
+    /*height: 960px;*/
+    /*    border: 1px solid black;*/
+}
+.fac2
+{
+    width:240px;
+        float: right;
+    margin-top: -581px;
+    margin-bottom: 6px;
+    /*           border1px solid red;*/
+}

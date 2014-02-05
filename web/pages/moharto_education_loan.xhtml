@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="moharto_education_loan.css"/>
+
+
+        <style>
+
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplateplane.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+            <div class="pagetitle">
+                Educational Loan
+            </div>
+            <div class="para">
+                Education Loan aims to provide the much needed financial support to deserving students for pursuing higher professional or technical education in India and abroad. 
+                The education loan would be provided to those students who have obtained admission to career-oriented courses e.g. medicine, engineering, management etc., either at the graduate or post-graduate level.
+            </div>
+            <div class="paratitle">
+                Education Loan Eligibility Criteria
+            </div>
+            <div class="para">
+                Banks have set eligibility criteria for education loans. 
+                Some of the important pre-requisites are mentioned in brief. A loan applicant has to be:
+                <div style="margin-left: 15px;">
+                    <li>An Indian national</li>
+                    <li>Aged 16-26 years of age or any other range specified by the bank.</li>
+                    <li>Have a good academic track record.</li>
+                    <li>Have parents or guardians with stable source of income.</li>
+                    <li>Should have applied to a recognized university in India or abroad.</li>
+                    <li>Should not be a minor.</li>
+                </div>
+            </div>
+
+            <div class="paratitle">
+               Banks Providing Educational Loans
+            </div>
+
+            <div style="margin-top: 12px;margin-left: 10px;float: left;">
+                <p:dataTable var="loan" value="#{educationLoanBean.loan}" style="width: 730px;">  
+                    <p:column headerText="Sno">  
+                        <h:outputText value="#{loan.sno}" />  
+                    </p:column>  
+
+                    <p:column headerText="Bank ">  
+                        <h:outputText value="#{loan.bankname}" />  
+                    </p:column>  
+
+                    <p:column headerText="Maximum Loan Limit">  
+                        <h:outputText value="#{loan.maxlimitindia}" />  
+                    </p:column>  
+
+                    <p:column headerText="Rate (%)">  
+                        <h:outputText value="#{loan.rate}" />  
+                    </p:column> 
+
+                    <p:column headerText="Repayment Period">  
+                        <h:outputText value="#{loan.repayment}" />  
+                    </p:column> 
+
+                </p:dataTable> 
+            </div>
+            <br/>
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="regborder" style="height: 554px;">
+                <div class="blocktitle">
+                    <center> Enquire about Loan</center>
+                </div> 
+                <div>
+
+                    <p:inputText id="fname" value="#{myBean.username}" /><br/>
+                    <p:watermark for="fname" value="Name *" />
+
+                    <p:inputText id="mob" value="#{myBean.username}"/><br/>
+                    <p:watermark for="mob" value="Mobile Number *" />  
+
+                    <p:inputText id="email" value="#{myBean.username}" /><br/>
+                    <p:watermark for="email" value="Email *" />   
+
+                    <p:inputTextarea id="address" value="#{myBean.username}" style="height: 50px;"/>
+                    <p:watermark for="address" value="Address *" />    
+
+                    <p:inputText id="lname" value="#{myBean.username}" /><br/>
+                    <p:watermark for="lname" value="Father Name *" />             
+
+                    <p:inputText id="father-occup" value="#{myBean.username}" /><br/>
+                    <p:watermark for="father-occup" value="Father Occupation *" />           
+
+
+                    <p:inputText id="annual-income" value="#{myBean.username}"/>
+                    <p:watermark for="annual-income" value="Father Annual Income *" />              
+
+
+                    <p:inputText id="category" value="#{myBean.username}" />
+                    <p:watermark for="category" value="Category*" />             
+
+
+                    <p:inputTextarea id="aggregate" value="#{myBean.username}" style="height: 50px;"/>
+                    <p:watermark for="aggregate" value="Educational Details*" />              
+
+                    <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn">Register</button></a><br/>
+
+                </div>
+                <br/>
+            </div>       
+        </ui:define>
+
+
+    </ui:composition>
+</html>

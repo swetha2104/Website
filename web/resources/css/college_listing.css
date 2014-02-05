@@ -1,0 +1,59 @@
+.mainContainer{
+    margin: 0px auto;
+    width: 980px;
+    height: auto;
+    margin-top: 8px;
+}
+.college1_details{
+    width: 300px;
+    float: left;
+    line-height: 18px;
+    padding: 6px;
+}
+.college1{
+   
+    width: 509px;
+    font-size: 13px;
+    margin-top: 5px
+}
+.seate_avalable{
+    float: left;
+    padding: 33px;
+    font-size: 14px;
+    color: rgb(18, 101, 156);
+    /*font-weight: 700;*/
+    width: 15px;
+    margin-left: 50px;
+}
+.center_column{
+    width: 720px;;
+   border: 1px solid #ddd;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.actions{
+    float: right;
+    margin-top: 1px;
+    line-height: 25px;
+    width: 74px;
+    margin-right: -137px;
+}
+.ad_right{
+  
+}
+
+.Output-Courses-Name{font-weight: bold;font-size: 14px;margin-left: 74px}
+.Output-Seats-available{font-weight: bold;font-size: 14px;margin-left: 188px;}
+.Output-actions{font-weight: bold; font-size: 14px;margin-left: 116px;}
+.Output-head-MBA{font-size: 15px;color: rgb(73, 164, 200);}
+.Output-head-MTech1{ font-size: 15px; color: rgb(73, 164, 200);}
+.Output-head-MTech2{ font-size: 15px; color: rgb(73, 164, 200);}
+.Output-head-BBM{font-size: 15px; color: rgb(73, 164, 200);}
+.Output-head-BCA{font-size: 15px; color: rgb(73, 164, 200);}
+.Output-head-BE{font-size: 15px; color: rgb(73, 164, 200);}
+.Output-head-MCA{font-size: 15px; color: rgb(73, 164, 200);}
+.graphicImage1{height:303px; width:230px}
+.graphicImage2{width:230px; height:435px; padding-top: 5px}
+.center_column a{text-decoration: underline;}
+.center_column a:hover {text-decoration: none}

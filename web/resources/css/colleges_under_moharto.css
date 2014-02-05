@@ -1,0 +1,288 @@
+
+.regmoharto{
+    margin-top: 10px;
+}
+
+.askaq{
+    margin-top: 10px;
+}
+.ad_right{
+    margin-top: 10px;
+
+}
+.featcolleges{
+    margin-top: 10px;
+}
+
+.ads_bottom{
+    width: 100%;
+    height: 140px;
+
+}
+
+.ad_btm1{
+    float: left;
+
+}
+.ad_btm2{
+    margin-left: 16px;
+    float: left;
+
+}
+
+.ad_btm3{
+    width: 25%;
+    float: right;
+
+}
+.cpanel{
+    height: 756px;
+}
+.clear{
+    clear: both;
+}
+
+.tab1{
+    text-align: center;
+    background-color: #1B9C9C;
+}
+
+.tab2{
+    text-align: center;
+}
+
+/*------------component classes-------------*/
+
+.ui-corner-all{
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+
+.ui-panel{
+
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ui-widget-header{
+
+    border: 0px;
+    text-shadow: none;
+
+}
+
+.panel .ui-widget-header {
+    background: #FF9900;
+    color: white;
+}
+
+.cpanel .ui-widget-content {
+    border: 0px;
+}
+
+.cpanel .ui-panel-titlebar {
+
+    margin: 0 auto;
+    width: 91%;
+    color: white;
+    text-align: center;
+    background-color: #1784A7;
+
+}
+
+.cpanel .ui-panel-content{
+
+    padding: 0px;
+}
+.dg .ui-widget-content {
+    border: 0px;
+}
+
+.dg .ui-paginator-bottom{
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 45%;
+}
+/*
+.admission_panel .ui-panel{
+     background-color: white;
+}
+*/
+/*
+.admission_panel ui-widget-header {
+
+    background-color: white;
+}
+*/
+
+.admission_panel .ui-panel-titlebar{
+    background-color: white;
+}  
+.admission_panel .ui-panel-content{
+    padding-top: -10px;
+}
+
+.dtclg .ui-widget-header{
+    font-size: 14px;
+    background-color: white;
+}
+
+.dtclg .ui-state-default {
+    background-color: tan;
+}
+.tabview ui-tabs ui-tabs-top {
+    padding: 0px;
+}
+.tab1 {
+    width: 80px;
+}
+.tab2 {
+    width: 80px;
+}
+
+.ui-datatable * {
+    border : 0px !important;
+}
+.ui-datatable .ui-widget-content {
+    border: 1px solid white;
+    border-right: 1px solid lightgray !important;
+}
+
+
+
+.ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    height: 10px;
+    margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    background-color: transparent;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    padding: 0px;
+
+}
+.ui-datatable.borderless .ui-datatable-data tr, .ui-datatable.borderless .ui-datatable-data-empty tr{
+    border-style: none; 
+}
+
+
+/* from style of the style*/
+cityfilter .ui-datatable * {
+    border : 0px !important;
+}
+cityfilter .ui-datatable .ui-widget-content {
+    border: 1px solid white;
+    border-right: 1px solid lightgray !important;
+}
+
+
+
+cityfilter .ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    height: 10px;
+    margin: auto;
+}
+cityfilter .ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    background-color: transparent;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+cityfilter .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    padding: 0px;
+
+}
+cityfilter .ui-datatable.borderless .ui-datatable-data tr, .ui-datatable.borderless .ui-datatable-data-empty tr{
+    border-style: none; 
+}
+
+lookup{
+    height: 22px;
+}
+
+
+ 
+
+/*.ui-inputfield {
+    font-weight: normal;
+    width: 74px;
+}
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    padding-top: 5px;
+    color: #0099ff;
+}
+.ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    background-color: transparent;
+}
+
+.ui-datatable * {
+    border : 0px !important;
+}
+.ui-datatable .ui-widget-content {
+    border: 1px solid white;
+    border-right: 1px solid lightgray !important;
+}
+
+
+
+.ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    height: 10px;
+    margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    background-color: transparent;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    padding: 0px;
+
+}
+.ui-datatable.borderless .ui-datatable-data tr, .ui-datatable.borderless .ui-datatable-data-empty tr{
+    border-style: none; 
+}*/
+
+
+.clg_name a:hover{
+    text-decoration: underline;
+}
+

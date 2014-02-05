@@ -1,0 +1,30 @@
+.main
+{
+    width: 980px;
+    height: auto;
+/*   border: 1px solid #ddd;*/
+    margin-left: 195px;
+    
+}
+.first
+{float: left;
+    width: 739px;
+    height: auto;
+/*       border: 1px solid red;*/
+margin-bottom: 6px;
+}
+
+.txts
+{
+    font-size: 13px;
+    margin-left: 28px;
+}
+.second
+{
+   float: right;
+width: 239px;
+height: auto;
+/*border: 1px solid green;*/
+margin-right: 32px;
+margin-top: -386PX;
+}

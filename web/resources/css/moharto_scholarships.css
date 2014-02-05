@@ -1,0 +1,25 @@
+.scholarships-maincontainer{
+    padding-top: 10px;    
+}
+
+.outputlabael-scholarship1{font-size: 15px;font-weight: bold;color: #49a4c8;}
+.outputlabael-scholarship2{font-size: 15px;font-weight: bold;color: black;}
+
+.View-more-SRM-university{float: right;}
+
+.commandlink-SRM-university{
+    font-size: 15px;color: sienna;margin-top: -10px; margin-right: 10px;
+}
+
+.commandlink-VIT-university{
+    font-size: 15px;color: sienna;margin-top: -10px;  margin-right: 10px;
+}
+.VIT-div{
+    padding: 5px;
+}
+.link-view{
+    float: right
+}
+#scholar-image{
+    padding-top: 10px;
+}

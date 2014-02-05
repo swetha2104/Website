@@ -1,0 +1,163 @@
+root { 
+    display: block;
+}
+
+    body{
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    
+    }
+.maincontainer{
+    width: 960px;
+    margin: 0 auto;
+
+    height: auto;
+    margin-top: 14px;
+margin-bottom: 6px;
+}
+.videotest{
+    width: 210px;
+    height: 417px;  
+    border: 1px solid coral;
+    float: left;
+    margin: 8px;
+    border-radius: 25px;
+}
+.mohartopartners {
+    width: 450px;
+    height: 440px;
+    margin: 8px;
+    float: left;
+}
+.secondcontainer{
+    margin: 0 auto;
+    width: 960px;
+    height: auto;
+}
+.admission{
+    text-align: center;
+    font-size: 9px;
+    width: 230px;
+    height: 250px;
+    float: left;
+    
+}
+.courses{
+    font-size: 9px;
+    float: left;
+    width: auto;
+    height: 149px;
+}
+.thirdcontainer{
+    margin-top: 200px;
+    width: 365px;
+     margin: 0 auto;
+
+}
+.searchit{
+    width: 306px;
+height: 24px;
+border-radius: 7px;
+}
+.cmd{
+height: 29px;
+width: 50px;
+background: #0066FF;
+border-radius: 10px 0; 
+margin-left: 33px;
+}
+
+.fourthcontainer{
+   width: 365px;
+   margin: 0 auto; 
+    
+}
+.bgc{
+    background-color: #ff6666
+}
+.fifthcontainer{
+
+    width: 365px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.regcontainer{
+    font-size: 12px;
+}
+
+.testcont{
+    width: 980px;
+    height: 1500px;
+    margin: 0 auto;
+    border: 1px solid black;
+    min-height: 900px;
+    
+}
+.testpic{
+   width: 650px;
+   height: auto;
+   float: left;
+   
+   
+}
+.data{
+   
+    font-size: 11px;
+    
+    
+}
+
+.ui-paginator-bottom {
+    width: 250px!important;
+    background: white;
+    margin: 0px auto;
+    border: 0px;
+    background-image: url('../resources/images/pages/paginatorimg.png');margin-left: 218px!important;
+    margin-top: -5px;
+}
+
+.ui-paginator-first {
+    display: none;
+}
+.ui-paginator{
+     background-image: url('../resources/images/pages/paginatorimg.png')!important;
+     margin: 0px auto;
+     margin-top: -5px;
+     /*margin-left: 218px!important;*/
+}
+
+.testcontent{
+    padding-left: 4px;
+    width: 285px;
+    height: 70px;
+    background-color: springgreen;
+    text-align: justify;
+    font-size: 11px;
+    padding-top: 7px;
+    padding-right: 6px ;
+    margin-left: -4px;
+}
+
+
+.ui-datagrid-content {
+    border: 0px!important;
+}
+
+.ui-widget-content{
+    border: 0px;
+}
+
+.regform{
+    margin-top: -17px
+}
+.ui-panel{
+    border: 0px;
+}
+.ui-widget-content{
+    
+}
+
+.clear{
+    clear: both;
+}

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="testimonials.css"/>
+        <h:outputStylesheet library="css" name="mohartohome.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate_microsite.xhtml">
+
+        <ui:define name='pageContent'>
+            <f:view>
+                <div class="maincontainer"> 
+                    <div class="heading_top" >
+                        <h:outputText value="OUR TESTIMONIALS" style="font-size: 19px;font-weight: bolder;color: #00ccff;font-family: arial;"/> 
+                    </div>
+                    <div class="container_right">
+                        <div class="registration">
+                            <h:form>
+                                <p:panel header="Register Form" style="width: 265px;font-size: 14px;border: 0px;" styleClass="regpanel">    
+                                    <p:inputText id="name" value="#{myBean.username}" style="width: 206px;margin-top: 5px;height: 18px;float: right;"/><br/>
+                                    <p:watermark for="name" value="Name*" /> 
+
+                                    <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;float: right;"/><br/>
+                                    <p:watermark for="email" value="Email*" /> 
+                                    <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;float: right;"/>
+                                    <p:watermark for="mn" value="Mobile Number" /> 
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;float: right;"><br/>
+                                        <f:selectItem itemLabel="Current City*" itemValue=""/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    </p:selectOneMenu>
+                                    <p:inputText id="mnn" value="#{myBean.username}" style="width: 206px;margin-top: 10px;height: 18px;margin-left: 22px;margin-bottom: 6px;"/>
+                                    <p:watermark for="mnn" value="Date of Birth[DD/MM/YYYY]" /> 
+                                    <h:outputText value="Educational Details" style="margin-top: 6px;font-weight: bold;margin-left: 22px;"/><br/>
+                                    <p:selectOneMenu id="seldeg" value="#{myBean.username}" style="width: 213px;margin-top: 10px;
+                                                     margin-left: 22px;"><br/>
+                                        <f:selectItem itemLabel="My Academics*" itemValue=""/>
+                                        <f:selectItem itemLabel="B.Tech" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="BBA" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="10th" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Intermediate/ +2" itemValue="Kochi"/>
+                                    </p:selectOneMenu>
+            <!--                        <p:selectOneMenu id="seldeg" value="#{myBean.username}" style="margin-top: 10px;
+                                                     margin-left: 7px;"><br/>
+                                        <f:selectItem itemLabel="My Academics*" itemValue="" />
+                                        <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                        <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                    </p:selectOneMenu>-->
+
+                                    <p:inputText  id="yog" value="#{myBean.username}" style="width: 202px;
+                                                  margin-top: 5px;
+                                                  margin-bottom: 4px;
+                                                  height: 18px;
+                                                  margin-left: 22px;"/><br/>
+                                    <p:watermark for="yog" value="Year of Graduation" /> 
+                                    <!--<h:outputText value="Educational Preferences" style="margin-top: 4px;font-weight: bold;margin-left: 6px;"/><br/>-->
+                                    <p:selectOneMenu id="edupref" value="#{myBean.username}" style="width: 212px;margin-top: 8px;margin-bottom: 4px;margin-left: 22px;"><br/>
+                                        <f:selectItem itemLabel="Education Preferences*" itemValue=""/>
+                                        <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                        <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                    </p:selectOneMenu><br/>
+                                    <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-left: 10px;">
+                                    </h:selectBooleanCheckbox>
+                                    <p style="margin-left: 27px;
+                           padding: 0px;
+                           margin-top: -18px;">I agree to the <span style="color: #4251A2;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-style: italic;">Privacy Policy</span></p>
+                                    <!--
+                                    <h:selectBooleanCheckbox value="">
+                                    </h:selectBooleanCheckbox> 
+                                    <h:outputText value="I agree to Terms and conditions" style="font-size: 9px;;font-style: italic"/><br/>
+                                    -->
+                                    <h:commandButton value="JOIN" action="#" styleClass="cmd"/>
+                                </p:panel>
+                            </h:form>
+                        </div>  
+                        <h:graphicImage url="../resources/images/pages/ad4.png" style="margin-left: 33px;" height="328" width="237"/>
+                        <!--<h:graphicImage url="../resources/images/pages/ad5.png" style="margin-left: 33px;margin-top: 10px;"/>-->
+                    </div>
+                    <div class="container_left">
+                        <div class="testinomial_container">
+                            <div class="testinomial_text">
+
+                                <p:dataGrid var="dt" value="#{dGBean.data}" columns="2" rows="2" paginator="true" style="margin: 25px;"  paginatorPosition="bottom" >  
+
+                                    <div class="data">
+                                        <p:panel style="width: 309px;height: 197px;border: 1px solid;">  
+
+                                            <div class="testcontent">      
+                                                <h:outputText value="#{dt.content}" />
+                                            </div>
+
+                                            <h:panelGrid columns="2" style="background-color: white;">
+                                                <p:graphicImage value="../resources/images/#{dt.imgname}.png" height="90px" width="90px;"/>   
+                                                <h:panelGrid columns="1">
+                                                    <h:outputText value="" />  
+                                                    <h:outputText value="#{dt.name}" style="color: crimson;font-size: 14px;font-weight: bold;font-style: italic;"/>
+                                                    <h:outputText value="- #{dt.college}" style="font-size: 14px;font-style: italic;"/>  
+                                                    <h:outputText value="" />  
+
+                                                </h:panelGrid>
+                                            </h:panelGrid>
+                                        </p:panel>  
+                                    </div>      
+                                </p:dataGrid>
+                            </div>
+                            <div class="testinomial_vid" >
+                                <p:dataGrid var="dt2" value="#{vTBean.url}" columns="2" rows="2" paginator="true" paginatorPosition="bottom" >
+                                    <p:panelGrid columns="1" >
+
+                                        <p:media value="#{dt2}" width="290px" height="230px" player="flash"/>
+
+                                    </p:panelGrid>
+
+                                </p:dataGrid>   
+                            </div>
+                        </div>     
+
+
+                        <div class="ads_bottom">
+                            <h:graphicImage value="../resources/images/pages/ad1.png" width="340px" height="110px" style="margin-left: 9px; "/>
+                            <h:graphicImage value="../resources/images/pages/ad3.png" width="320px" height="240px" style="margin-left: 9px;
+                                            float: right;"/>
+
+                            <h:graphicImage value="../resources/images/pages/ad2.png" width="340px" height="120px" style="margin-left: 11px;margin-top: 11px"/>
+
+                        </div>
+                    </div>
+
+                </div>
+            </f:view>
+        </ui:define>
+    </ui:composition>
+</html>
